@@ -1,0 +1,282 @@
+{
+  "quiz_title": "Day 8: Remote Repositories",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is a remote in the context of Git?",
+      "options": [
+        "A branch that exists only on your local machine",
+        "A copy of your repository hosted on a server",
+        "A configuration file that stores user credentials",
+        "A staging area for commits before they are finalized"
+      ],
+      "answer": "A copy of your repository hosted on a server"
+    },
+    {
+      "id": 2,
+      "question": "What is the default name Git gives to the remote you cloned from or first added?",
+      "options": [
+        "upstream",
+        "main",
+        "origin",
+        "master"
+      ],
+      "answer": "origin"
+    },
+    {
+      "id": 3,
+      "question": "Which command uploads your local commits to a remote repository?",
+      "options": [
+        "git fetch",
+        "git pull",
+        "git push",
+        "git remote"
+      ],
+      "answer": "git push"
+    },
+    {
+      "id": 4,
+      "question": "What does 'git pull' do?",
+      "options": [
+        "Uploads your commits to the remote",
+        "Downloads new commits from a remote without merging",
+        "Downloads and merges new commits from a remote",
+        "Lists all remote repositories"
+      ],
+      "answer": "Downloads and merges new commits from a remote"
+    },
+    {
+      "id": 5,
+      "question": "What does 'git fetch' do differently from 'git pull'?",
+      "options": [
+        "It downloads new commits WITHOUT merging them",
+        "It uploads commits to the remote server",
+        "It deletes remote-tracking branches",
+        "It downloads and merges commits automatically"
+      ],
+      "answer": "It downloads new commits WITHOUT merging them"
+    },
+    {
+      "id": 6,
+      "question": "What does 'git remote -v' display?",
+      "options": [
+        "The version of Git installed",
+        "A verbose list of remotes with their fetch and push URLs",
+        "The commit history in verbose mode",
+        "A list of all local branches"
+      ],
+      "answer": "A verbose list of remotes with their fetch and push URLs"
+    },
+    {
+      "id": 7,
+      "question": "When running 'git remote -v', how many times does each remote appear and why?",
+      "options": [
+        "Once, for pushing and pulling combined",
+        "Twice, once for fetch and once for push",
+        "Three times, once for fetch, push, and merge",
+        "It depends on how many branches track that remote"
+      ],
+      "answer": "Twice, once for fetch and once for push"
+    },
+    {
+      "id": 8,
+      "question": "What does the '-u' flag do in 'git push -u origin main'?",
+      "options": [
+        "Forces the push to overwrite remote changes",
+        "Uploads all branches to the remote",
+        "Sets origin/main as the upstream tracking branch for local main",
+        "Undoes the most recent push"
+      ],
+      "answer": "Sets origin/main as the upstream tracking branch for local main"
+    },
+    {
+      "id": 9,
+      "question": "After running 'git push -u origin main' once, what command can you use for subsequent pushes?",
+      "options": [
+        "git push -u origin main (the -u flag is always required)",
+        "git push origin main:main",
+        "git push",
+        "git send"
+      ],
+      "answer": "git push"
+    },
+    {
+      "id": 10,
+      "question": "Which command adds a new remote named 'origin' to your local repository?",
+      "options": [
+        "git remote new origin <url>",
+        "git remote add origin <url>",
+        "git origin add <url>",
+        "git add remote origin <url>"
+      ],
+      "answer": "git remote add origin <url>"
+    },
+    {
+      "id": 11,
+      "question": "What does 'git remote show origin' display?",
+      "options": [
+        "Only the URL of the remote",
+        "Only the list of remote branches",
+        "Detailed information including URLs, tracked branches, and push/pull configuration",
+        "The commit log of the remote repository"
+      ],
+      "answer": "Detailed information including URLs, tracked branches, and push/pull configuration"
+    },
+    {
+      "id": 12,
+      "question": "Which platforms are mentioned as examples of servers that can host remote repositories?",
+      "options": [
+        "GitHub, GitLab, and Bitbucket",
+        "GitHub, SourceForge, and Heroku",
+        "GitLab, AWS, and Azure",
+        "Bitbucket, Docker Hub, and npm"
+      ],
+      "answer": "GitHub, GitLab, and Bitbucket"
+    },
+    {
+      "id": 13,
+      "question": "What command removes a remote named 'backup'?",
+      "options": [
+        "git remote delete backup",
+        "git remote rm backup",
+        "git remote remove backup",
+        "git delete remote backup"
+      ],
+      "answer": "git remote remove backup"
+    },
+    {
+      "id": 14,
+      "question": "What command renames a remote from 'origin' to 'github'?",
+      "options": [
+        "git remote rename origin github",
+        "git remote mv origin github",
+        "git rename remote origin github",
+        "git remote set-name origin github"
+      ],
+      "answer": "git remote rename origin github"
+    },
+    {
+      "id": 15,
+      "question": "Why might you have multiple remotes configured for one repository?",
+      "options": [
+        "Git requires at least two remotes to function properly",
+        "It is common in open-source to have your fork and the original repo as separate remotes",
+        "Multiple remotes are needed to push to different branches",
+        "You need one remote per collaborator on the project"
+      ],
+      "answer": "It is common in open-source to have your fork and the original repo as separate remotes"
+    },
+    {
+      "id": 16,
+      "question": "What do remote-tracking branches like 'origin/main' represent?",
+      "options": [
+        "A local branch that is automatically synced in real time",
+        "The state of branches on the remote the last time you communicated with it",
+        "A backup copy of your local main branch",
+        "A branch that can only be modified on the remote server"
+      ],
+      "answer": "The state of branches on the remote the last time you communicated with it"
+    },
+    {
+      "id": 17,
+      "question": "Which command shows all branches, including remote-tracking branches?",
+      "options": [
+        "git branch",
+        "git branch -r",
+        "git branch -a",
+        "git branch --remote-only"
+      ],
+      "answer": "git branch -a"
+    },
+    {
+      "id": 18,
+      "question": "What prefix do remote-tracking branches have when listed with 'git branch -a'?",
+      "options": [
+        "remote/",
+        "tracking/",
+        "remotes/origin/",
+        "origin-remote/"
+      ],
+      "answer": "remotes/origin/"
+    },
+    {
+      "id": 19,
+      "question": "When creating a new repository on GitHub to connect with an existing local repo, should you initialize it with a README?",
+      "options": [
+        "Yes, always initialize with a README",
+        "No, because you already have a local repo with history",
+        "Yes, but only if you have no local commits",
+        "It does not matter either way"
+      ],
+      "answer": "No, because you already have a local repo with history"
+    },
+    {
+      "id": 20,
+      "question": "After running 'git fetch origin', what happens to your working directory?",
+      "options": [
+        "It is updated with the latest remote changes",
+        "Nothing changes; fetched commits update remote-tracking branches only",
+        "All local changes are overwritten",
+        "New files from the remote appear as untracked files"
+      ],
+      "answer": "Nothing changes; fetched commits update remote-tracking branches only"
+    },
+    {
+      "id": 21,
+      "question": "Which command lets you see where 'origin/main' is relative to your local 'main' after fetching?",
+      "options": [
+        "git status -v",
+        "git diff origin main",
+        "git log --oneline --all --graph",
+        "git remote show main"
+      ],
+      "answer": "git log --oneline --all --graph"
+    },
+    {
+      "id": 22,
+      "question": "What is the primary purpose of remotes in Git?",
+      "options": [
+        "To create backups of configuration files",
+        "To enable collaboration by allowing multiple people to push and pull changes",
+        "To enforce branch naming conventions",
+        "To automatically resolve merge conflicts"
+      ],
+      "answer": "To enable collaboration by allowing multiple people to push and pull changes"
+    },
+    {
+      "id": 23,
+      "question": "What is the correct sequence to make a change and push it to an already-configured remote?",
+      "options": [
+        "git push, git commit, git add",
+        "git add, git push, git commit",
+        "git add, git commit, git push",
+        "git commit, git add, git push"
+      ],
+      "answer": "git add, git commit, git push"
+    },
+    {
+      "id": 24,
+      "question": "Which command is used to manage remote connections in Git?",
+      "options": [
+        "git connect",
+        "git server",
+        "git remote",
+        "git link"
+      ],
+      "answer": "git remote"
+    },
+    {
+      "id": 25,
+      "question": "What happens if you run 'git push' without first setting an upstream branch with '-u'?",
+      "options": [
+        "Git automatically creates a remote repository for you",
+        "Git pushes to all configured remotes",
+        "Git may display an error asking you to set the upstream branch",
+        "Git silently discards the push"
+      ],
+      "answer": "Git may display an error asking you to set the upstream branch"
+    }
+  ]
+}

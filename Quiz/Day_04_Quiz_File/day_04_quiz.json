@@ -1,0 +1,282 @@
+{
+  "quiz_title": "Day 4: Staging and Committing",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which command stages all changes within a specific directory?",
+      "options": [
+        "git add <dir>/",
+        "git stage <dir>/",
+        "git commit <dir>/",
+        "git push <dir>/"
+      ],
+      "answer": "git add <dir>/"
+    },
+    {
+      "id": 2,
+      "question": "What does 'git add .' do?",
+      "options": [
+        "Stages only the files in the root directory",
+        "Stages everything in the current directory and below",
+        "Commits all changes in the current directory",
+        "Deletes all untracked files in the current directory"
+      ],
+      "answer": "Stages everything in the current directory and below"
+    },
+    {
+      "id": 3,
+      "question": "Which command would you use to stage all '.txt' files?",
+      "options": [
+        "git add --type=txt",
+        "git add *.txt",
+        "git stage *.txt",
+        "git commit *.txt"
+      ],
+      "answer": "git add *.txt"
+    },
+    {
+      "id": 4,
+      "question": "What does 'git add -p' do?",
+      "options": [
+        "Stages all files in the project",
+        "Pushes staged changes to the remote",
+        "Interactively choose which hunks to stage",
+        "Prints the list of staged files"
+      ],
+      "answer": "Interactively choose which hunks to stage"
+    },
+    {
+      "id": 5,
+      "question": "Which command unstages a file while keeping the changes in the working directory?",
+      "options": [
+        "git delete <file>",
+        "git rm <file>",
+        "git restore --staged <file>",
+        "git checkout <file>"
+      ],
+      "answer": "git restore --staged <file>"
+    },
+    {
+      "id": 6,
+      "question": "After running 'git restore --staged temp2.txt', what happens to temp2.txt?",
+      "options": [
+        "The file is deleted from disk",
+        "The file is committed automatically",
+        "The file is removed from the staging area but still exists in the working directory",
+        "The file is pushed to the remote repository"
+      ],
+      "answer": "The file is removed from the staging area but still exists in the working directory"
+    },
+    {
+      "id": 7,
+      "question": "How do you unstage all currently staged files at once?",
+      "options": [
+        "git restore --staged .",
+        "git unstage --all",
+        "git remove --staged .",
+        "git reset --hard"
+      ],
+      "answer": "git restore --staged ."
+    },
+    {
+      "id": 8,
+      "question": "What is the recommended maximum length for the first line of a commit message?",
+      "options": [
+        "30 characters",
+        "50 characters",
+        "72 characters",
+        "100 characters"
+      ],
+      "answer": "50 characters"
+    },
+    {
+      "id": 9,
+      "question": "What should a good commit message explain?",
+      "options": [
+        "Only what files were changed",
+        "Why a change was made, not just what was changed",
+        "The exact lines of code that were modified",
+        "Who requested the change"
+      ],
+      "answer": "Why a change was made, not just what was changed"
+    },
+    {
+      "id": 10,
+      "question": "Which of the following is an example of a BAD commit message?",
+      "options": [
+        "Fix off-by-one error in loop boundary check",
+        "Add input validation to user registration form",
+        "update files",
+        "Remove deprecated API endpoint /v1/users"
+      ],
+      "answer": "update files"
+    },
+    {
+      "id": 11,
+      "question": "In a multi-line commit message, what should the optional longer description be wrapped at?",
+      "options": [
+        "50 characters",
+        "60 characters",
+        "72 characters",
+        "80 characters"
+      ],
+      "answer": "72 characters"
+    },
+    {
+      "id": 12,
+      "question": "When using 'git log --oneline', which part of the commit message is shown?",
+      "options": [
+        "The entire commit message",
+        "Only the first line of the commit message",
+        "Only the last line of the commit message",
+        "Only the commit hash"
+      ],
+      "answer": "Only the first line of the commit message"
+    },
+    {
+      "id": 13,
+      "question": "What does 'git commit --amend -m \"new message\"' do?",
+      "options": [
+        "Creates a brand new commit with the new message",
+        "Replaces the message of the most recent commit",
+        "Appends the new message to the most recent commit message",
+        "Changes the message of every commit in the log"
+      ],
+      "answer": "Replaces the message of the most recent commit"
+    },
+    {
+      "id": 14,
+      "question": "What happens to the commit hash when you amend a commit?",
+      "options": [
+        "The commit hash stays the same",
+        "The commit hash changes",
+        "The commit hash is deleted",
+        "Two commit hashes are created"
+      ],
+      "answer": "The commit hash changes"
+    },
+    {
+      "id": 15,
+      "question": "What does the '--no-edit' flag do when used with 'git commit --amend'?",
+      "options": [
+        "Prevents any files from being added to the commit",
+        "Keeps the same commit message without opening an editor",
+        "Prevents the commit from being created",
+        "Removes the commit message entirely"
+      ],
+      "answer": "Keeps the same commit message without opening an editor"
+    },
+    {
+      "id": 16,
+      "question": "Why should you avoid amending commits that have already been pushed to a shared remote?",
+      "options": [
+        "It will delete the remote repository",
+        "Amending rewrites history, which causes problems for collaborators",
+        "The remote server will reject all future pushes",
+        "It converts the repository to read-only mode"
+      ],
+      "answer": "Amending rewrites history, which causes problems for collaborators"
+    },
+    {
+      "id": 17,
+      "question": "You have staged both temp1.txt and temp2.txt. You want to commit only temp1.txt. What should you do first?",
+      "options": [
+        "Delete temp2.txt from the working directory",
+        "Run 'git restore --staged temp2.txt' then commit",
+        "Run 'git commit temp1.txt' to skip temp2.txt",
+        "Run 'git rm temp2.txt' to remove it"
+      ],
+      "answer": "Run 'git restore --staged temp2.txt' then commit"
+    },
+    {
+      "id": 18,
+      "question": "You created files in both src/ and docs/ directories. You want to commit them separately. What is the correct approach?",
+      "options": [
+        "Run 'git add .' and commit everything at once",
+        "Stage src/ first, commit, then stage docs/ and commit",
+        "Delete the docs/ files, commit src/, then recreate docs/",
+        "Use 'git commit --split' to separate the directories"
+      ],
+      "answer": "Stage src/ first, commit, then stage docs/ and commit"
+    },
+    {
+      "id": 19,
+      "question": "What is the older command for unstaging a file, equivalent to 'git restore --staged <file>'?",
+      "options": [
+        "git undo <file>",
+        "git reset HEAD <file>",
+        "git revert <file>",
+        "git checkout --unstage <file>"
+      ],
+      "answer": "git reset HEAD <file>"
+    },
+    {
+      "id": 20,
+      "question": "After running 'git restore --staged .' to unstage everything, what is the state of the files?",
+      "options": [
+        "All files are deleted from disk",
+        "All files are committed",
+        "All files still exist on disk but are no longer staged",
+        "All files are reverted to their last committed version"
+      ],
+      "answer": "All files still exist on disk but are no longer staged"
+    },
+    {
+      "id": 21,
+      "question": "Which of the following is a GOOD commit message?",
+      "options": [
+        "fix bug",
+        "asdf",
+        "Add input validation to user registration form",
+        "update files"
+      ],
+      "answer": "Add input validation to user registration form"
+    },
+    {
+      "id": 22,
+      "question": "You just committed a file but forgot to include critical2.txt in that commit. What commands add it to the last commit without changing the message?",
+      "options": [
+        "git add critical2.txt && git commit --amend --no-edit",
+        "git add critical2.txt && git commit -m \"add forgotten file\"",
+        "git push critical2.txt",
+        "git insert critical2.txt --into-last-commit"
+      ],
+      "answer": "git add critical2.txt && git commit --amend --no-edit"
+    },
+    {
+      "id": 23,
+      "question": "You want to stage only files matching 'test_results_*.txt' but not 'meeting_notes.txt'. Which command achieves this?",
+      "options": [
+        "git add .",
+        "git add *.txt",
+        "git add test_results_*.txt",
+        "git add --exclude=meeting_notes.txt"
+      ],
+      "answer": "git add test_results_*.txt"
+    },
+    {
+      "id": 24,
+      "question": "What does 'git log -1' display?",
+      "options": [
+        "The first commit ever made in the repository",
+        "The most recent single commit with full details",
+        "A list of all commits on one line each",
+        "Only the commit hash of the latest commit"
+      ],
+      "answer": "The most recent single commit with full details"
+    },
+    {
+      "id": 25,
+      "question": "In the multi-line commit message format, what separates the short summary from the longer description?",
+      "options": [
+        "A semicolon",
+        "A blank line",
+        "A dash (---)",
+        "A tab character"
+      ],
+      "answer": "A blank line"
+    }
+  ]
+}

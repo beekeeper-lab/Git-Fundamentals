@@ -1,0 +1,29 @@
+# API keys and secrets
+.env
+.env.*
+
+# Generated HTML (rebuild with: uv run --with markdown --with pygments python scripts/build_course.py)
+html/
+index.html
+
+# Distribution packages (rebuild with: uv run --with markdown --with pygments python scripts/deploy.py)
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Image generation metadata
+images/*/*.json

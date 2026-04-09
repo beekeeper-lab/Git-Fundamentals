@@ -1,0 +1,157 @@
+{
+  "quiz_title": "Day 5: Viewing History",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which command displays the full commit history of a repository?",
+      "options": ["git history", "git log", "git commits", "git show --all"],
+      "answer": "git log"
+    },
+    {
+      "id": 2,
+      "question": "What does the --oneline flag do when used with git log?",
+      "options": ["Shows only the first commit", "Displays each commit on a single compact line", "Removes the author information from output", "Filters commits to one specific branch"],
+      "answer": "Displays each commit on a single compact line"
+    },
+    {
+      "id": 3,
+      "question": "Which flag shows the branch and merge structure visually in the log?",
+      "options": ["--tree", "--visual", "--graph", "--branches"],
+      "answer": "--graph"
+    },
+    {
+      "id": 4,
+      "question": "How do you limit git log output to the last 5 commits?",
+      "options": ["git log --limit 5", "git log -n 5", "git log --max 5", "git log --top 5"],
+      "answer": "git log -n 5"
+    },
+    {
+      "id": 5,
+      "question": "What information does the --stat flag add to git log output?",
+      "options": ["Statistics about repository size", "Which files changed and how many lines changed per commit", "The total number of commits in the repository", "CPU and memory usage of each commit operation"],
+      "answer": "Which files changed and how many lines changed per commit"
+    },
+    {
+      "id": 6,
+      "question": "What does the command git show <hash> display?",
+      "options": ["Only the commit message", "Only the files that were changed", "The commit metadata and the full diff of what changed", "A list of all branches containing that commit"],
+      "answer": "The commit metadata and the full diff of what changed"
+    },
+    {
+      "id": 7,
+      "question": "What does HEAD refer to in Git?",
+      "options": ["The first commit ever made in the repository", "The most recent commit on the current branch", "The main branch of the repository", "The remote server's latest commit"],
+      "answer": "The most recent commit on the current branch"
+    },
+    {
+      "id": 8,
+      "question": "How many characters long is a full Git commit hash?",
+      "options": ["7 characters", "20 characters", "32 characters", "40 characters"],
+      "answer": "40 characters"
+    },
+    {
+      "id": 9,
+      "question": "How many characters of a commit hash are typically enough to uniquely identify a commit?",
+      "options": ["3", "5", "7", "10"],
+      "answer": "7"
+    },
+    {
+      "id": 10,
+      "question": "What does the command git diff <hash1> <hash2> do?",
+      "options": ["Deletes everything between two commits", "Shows every change that happened between two commits", "Merges two commits together", "Lists all files that exist in both commits"],
+      "answer": "Shows every change that happened between two commits"
+    },
+    {
+      "id": 11,
+      "question": "What does HEAD~3 refer to?",
+      "options": ["The third branch from HEAD", "3 commits before HEAD", "The third file changed in HEAD", "3 lines before HEAD in the diff"],
+      "answer": "3 commits before HEAD"
+    },
+    {
+      "id": 12,
+      "question": "What does git blame <file> show for each line?",
+      "options": ["Which line has the most errors", "The commit hash, author, date, and line content for who last modified that line", "A list of all files the author has changed", "The total number of times each line was modified"],
+      "answer": "The commit hash, author, date, and line content for who last modified that line"
+    },
+    {
+      "id": 13,
+      "question": "Which command would you use to search commit messages for the word 'Fix'?",
+      "options": ["git log --search=\"Fix\"", "git log --grep=\"Fix\"", "git log --find=\"Fix\"", "git log --message=\"Fix\""],
+      "answer": "git log --grep=\"Fix\""
+    },
+    {
+      "id": 14,
+      "question": "How do you view the log of commits that changed a specific file called src/Main.java?",
+      "options": ["git log --file src/Main.java", "git log src/Main.java --only", "git log -- src/Main.java", "git log --path src/Main.java"],
+      "answer": "git log -- src/Main.java"
+    },
+    {
+      "id": 15,
+      "question": "What does the %h placeholder represent in a custom git log format?",
+      "options": ["The full commit hash", "The abbreviated commit hash", "The author's home directory", "The commit hour"],
+      "answer": "The abbreviated commit hash"
+    },
+    {
+      "id": 16,
+      "question": "What does the %an placeholder represent in a custom git log format?",
+      "options": ["The annotated tag name", "The author name", "The number of additions", "The ancestor commit"],
+      "answer": "The author name"
+    },
+    {
+      "id": 17,
+      "question": "What does the %ar placeholder display in a custom git log format?",
+      "options": ["The author's repository name", "The absolute date of the commit", "The relative date such as '2 hours ago'", "The number of files added or removed"],
+      "answer": "The relative date such as '2 hours ago'"
+    },
+    {
+      "id": 18,
+      "question": "What does the %s placeholder represent in a custom git log format?",
+      "options": ["The repository size", "The staging area status", "The subject or first line of the commit message", "The number of files in the snapshot"],
+      "answer": "The subject or first line of the commit message"
+    },
+    {
+      "id": 19,
+      "question": "Which combination of flags shows a decorated, graphical, one-line view of all branches?",
+      "options": ["git log --short --tree --labels --all", "git log --oneline --graph --decorate --all", "git log --compact --visual --tags --branches", "git log --brief --chart --refs --everything"],
+      "answer": "git log --oneline --graph --decorate --all"
+    },
+    {
+      "id": 20,
+      "question": "What is git blame most useful for determining?",
+      "options": ["Which commits have merge conflicts", "Who changed what and when in a specific file", "Which files are the largest in the repository", "How many branches contain a given file"],
+      "answer": "Who changed what and when in a specific file"
+    },
+    {
+      "id": 21,
+      "question": "Which command shows the details of the most recent commit without knowing its hash?",
+      "options": ["git show LATEST", "git show HEAD", "git show --last", "git show CURRENT"],
+      "answer": "git show HEAD"
+    },
+    {
+      "id": 22,
+      "question": "What type of string is a Git commit hash?",
+      "options": ["A base64-encoded string", "A 40-character hexadecimal string", "A UUID formatted string", "A decimal numeric string"],
+      "answer": "A 40-character hexadecimal string"
+    },
+    {
+      "id": 23,
+      "question": "What does the %ae placeholder represent in a custom git log format?",
+      "options": ["The author's age", "The author email", "The ancestor's encoding", "The approximate edit count"],
+      "answer": "The author email"
+    },
+    {
+      "id": 24,
+      "question": "Which shorthand also works to limit git log to the last 3 commits?",
+      "options": ["git log --last=3", "git log -3", "git log --count 3", "git log --head 3"],
+      "answer": "git log -3"
+    },
+    {
+      "id": 25,
+      "question": "What four pieces of information does each entry in a standard git log show?",
+      "options": ["Branch, tag, remote, and merge status", "Hash, author, date, and message", "File name, line count, additions, and deletions", "Repository, directory, file, and function name"],
+      "answer": "Hash, author, date, and message"
+    }
+  ]
+}

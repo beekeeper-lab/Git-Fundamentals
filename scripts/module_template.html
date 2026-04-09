@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{MODULE_TITLE}} — Git Fundamentals</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text: #1a1a2e;
+            --text-secondary: #555;
+            --accent: #2563eb;
+            --accent-light: #dbeafe;
+            --border: #e2e8f0;
+            --sidebar-bg: #f1f5f9;
+            --sidebar-width: 280px;
+            --code-bg: #f1f5f9;
+            --narration-bg: #eff6ff;
+            --narration-border: #3b82f6;
+            --callout-bg: #fefce8;
+            --callout-border: #eab308;
+            --teach-bg: #f0fdf4;
+            --teach-border: #22c55e;
+            --cycle-bg: #faf5ff;
+            --cycle-border: #a855f7;
+            --tier-start: #22c55e;
+            --tier-useful: #3b82f6;
+            --tier-ready: #f59e0b;
+            --tier-advanced: #ef4444;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f172a;
+            --bg-secondary: #1e293b;
+            --text: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --accent: #60a5fa;
+            --accent-light: #1e3a5f;
+            --border: #334155;
+            --sidebar-bg: #1e293b;
+            --code-bg: #1e293b;
+            --narration-bg: #172554;
+            --narration-border: #3b82f6;
+            --callout-bg: #422006;
+            --callout-border: #eab308;
+            --teach-bg: #052e16;
+            --teach-border: #22c55e;
+            --cycle-bg: #2e1065;
+            --cycle-border: #a855f7;
+            --shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: var(--sidebar-bg);
+            border-right: 1px solid var(--border);
+            padding: 1.5rem 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            overflow-y: auto;
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar-header {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 0.4rem 0.75rem;
+            margin: 0.15rem 0;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            transition: background 0.15s;
+        }
+
+        .sidebar a:hover { background: var(--accent-light); }
+        .sidebar a.active { background: var(--accent); color: white; font-weight: 500; }
+        .sidebar a.toc-h3 { padding-left: 1.5rem; font-size: 0.82rem; color: var(--text-secondary); }
+
+        .sidebar-controls {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .sidebar-controls button {
+            padding: 0.35rem 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: var(--bg);
+            color: var(--text);
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: background 0.15s;
+        }
+
+        .sidebar-controls button:hover { background: var(--accent-light); }
+
+        /* Main content */
+        .main {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            max-width: 900px;
+            padding: 2rem 3rem;
+        }
+
+        .page { display: none; }
+        .page.active { display: block; }
+
+        h1 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--accent); }
+        h2 { font-size: 1.6rem; margin: 2rem 0 1rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--accent); }
+        h3 { font-size: 1.2rem; margin: 1.5rem 0 0.75rem; }
+        p { margin: 0.75rem 0; }
+
+        a { color: var(--accent); }
+
+        /* Code */
+        pre {
+            background: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        code {
+            font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace;
+            font-size: 0.88em;
+        }
+
+        p code, li code, td code {
+            background: var(--code-bg);
+            padding: 0.15em 0.4em;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            padding: 0.6rem 1rem;
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+
+        th { background: var(--bg-secondary); font-weight: 600; }
+
+        /* Special blocks */
+        .narration-block {
+            background: var(--narration-bg);
+            border-left: 4px solid var(--narration-border);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .narration-block .narration-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.1rem; }
+        .narration-block .narration-text { flex: 1; font-size: 0.95rem; }
+
+        .narration-block audio {
+            display: block;
+            width: 100%;
+            margin-top: 0.75rem;
+            border-radius: 8px;
+        }
+
+        .teach-block {
+            background: var(--teach-bg);
+            border-left: 4px solid var(--teach-border);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+
+        .teach-block strong { color: var(--teach-border); }
+
+        .callout-block {
+            background: var(--callout-bg);
+            border-left: 4px solid var(--callout-border);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+
+        .callout-block .callout-icon { font-size: 1.2rem; }
+
+        .cycle-block {
+            background: var(--cycle-bg);
+            border-left: 4px solid var(--cycle-border);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+
+        .tier-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+            margin: 0.5rem 0;
+        }
+
+        .tier-start-here { background: var(--tier-start); }
+        .tier-useful-soon { background: var(--tier-useful); }
+        .tier-when-youre-ready { background: var(--tier-ready); }
+        .tier-advanced { background: var(--tier-advanced); }
+
+        /* Navigation */
+        .page-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .page-nav button {
+            padding: 0.6rem 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg);
+            color: var(--text);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.15s;
+        }
+
+        .page-nav button:hover { background: var(--accent); color: white; border-color: var(--accent); }
+        .page-nav button:disabled { opacity: 0.3; cursor: default; }
+        .page-nav button:disabled:hover { background: var(--bg); color: var(--text); border-color: var(--border); }
+
+        .page-counter { font-size: 0.85rem; color: var(--text-secondary); }
+
+        /* Module nav */
+        .module-nav {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0 1rem;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .module-nav a {
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: var(--accent);
+        }
+
+        .module-nav a:hover { text-decoration: underline; }
+
+        /* Mobile sidebar toggle */
+        .sidebar-toggle {
+            display: none;
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 200;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Images */
+        .main img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .main img + em {
+            display: block;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: -0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Lists */
+        ul, ol { margin: 0.75rem 0; padding-left: 1.5rem; }
+        li { margin: 0.3rem 0; }
+
+        /* Blockquote (default) */
+        blockquote {
+            border-left: 3px solid var(--border);
+            padding: 0.5rem 1rem;
+            margin: 0.75rem 0;
+            color: var(--text-secondary);
+            background: var(--bg-secondary);
+            border-radius: 0 6px 6px 0;
+        }
+
+        /* Horizontal rules */
+        hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+        /* Bold/strong */
+        strong { color: var(--text); }
+
+        @media (max-width: 900px) {
+            .sidebar { transform: translateX(-100%); }
+            .sidebar.open { transform: translateX(0); }
+            .sidebar-toggle { display: block; }
+            .main { margin-left: 0; padding: 1.5rem; }
+        }
+
+        @media print {
+            .sidebar, .sidebar-toggle, .page-nav, .module-nav, .sidebar-controls { display: none !important; }
+            .main { margin-left: 0; max-width: 100%; }
+            .page { display: block !important; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">Git Fundamentals</div>
+        <div class="sidebar-controls">
+            <button onclick="toggleTheme()" id="themeBtn">🌙 Dark</button>
+            <button onclick="toggleMute()" id="muteBtn">🔊 Sound</button>
+        </div>
+        <div id="toc">{{TOC}}</div>
+    </nav>
+
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+    <main class="main" id="content">
+        {{CONTENT}}
+        <div class="page-nav">
+            <button onclick="prevPage()" id="prevBtn">← Previous</button>
+            <span class="page-counter" id="pageCounter"></span>
+            <button onclick="nextPage()" id="nextBtn">Next →</button>
+        </div>
+        <div class="module-nav">
+            {{PREV_MODULE}}
+            {{NEXT_MODULE}}
+        </div>
+    </main>
+
+    <script>
+        // Page management
+        const pages = document.querySelectorAll('.page');
+        let currentPage = 0;
+        const totalPages = pages.length;
+
+        function showPage(n) {
+            if (n < 0 || n >= totalPages) return;
+            pages[currentPage].classList.remove('active');
+            currentPage = n;
+            pages[currentPage].classList.add('active');
+            updateNav();
+            updateTocHighlight();
+            window.scrollTo(0, 0);
+
+            // Auto-play first narration on page if not muted
+            if (!isMuted) {
+                const firstAudio = pages[currentPage].querySelector('audio');
+                if (firstAudio) setTimeout(() => firstAudio.play().catch(() => {}), 300);
+            }
+        }
+
+        function nextPage() { showPage(currentPage + 1); }
+        function prevPage() { showPage(currentPage - 1); }
+
+        function updateNav() {
+            document.getElementById('prevBtn').disabled = currentPage === 0;
+            document.getElementById('nextBtn').disabled = currentPage === totalPages - 1;
+            document.getElementById('pageCounter').textContent = `${currentPage + 1} / ${totalPages}`;
+        }
+
+        // TOC highlighting
+        function updateTocHighlight() {
+            document.querySelectorAll('#toc a').forEach(a => a.classList.remove('active'));
+            const tocLinks = document.querySelectorAll('#toc a');
+            if (tocLinks[currentPage]) tocLinks[currentPage].classList.add('active');
+        }
+
+        // TOC click handler
+        document.getElementById('toc').addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                e.preventDefault();
+                const pageIndex = parseInt(e.target.dataset.page);
+                if (!isNaN(pageIndex)) showPage(pageIndex);
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextPage(); }
+            if (e.key === 'ArrowLeft') { e.preventDefault(); prevPage(); }
+        });
+
+        // Theme toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            document.getElementById('themeBtn').textContent = isDark ? '🌙 Dark' : '☀️ Light';
+            localStorage.setItem('git-fundamentals-theme', isDark ? 'light' : 'dark');
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('git-fundamentals-theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.getElementById('themeBtn').textContent = savedTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+        }
+
+        // Mute toggle
+        let isMuted = localStorage.getItem('git-fundamentals-muted') === 'true';
+
+        function toggleMute() {
+            isMuted = !isMuted;
+            document.getElementById('muteBtn').textContent = isMuted ? '🔇 Muted' : '🔊 Sound';
+            localStorage.setItem('git-fundamentals-muted', isMuted);
+        }
+
+        if (isMuted) document.getElementById('muteBtn').textContent = '🔇 Muted';
+
+        // Sidebar toggle (mobile)
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+
+        // Audio chaining - when one narration ends, play the next on the same page
+        document.querySelectorAll('audio').forEach((audio, i, all) => {
+            audio.addEventListener('ended', () => {
+                if (isMuted) return;
+                // Find next audio on the same page
+                const page = audio.closest('.page');
+                const audios = page.querySelectorAll('audio');
+                const idx = Array.from(audios).indexOf(audio);
+                if (idx < audios.length - 1) {
+                    audios[idx + 1].play().catch(() => {});
+                }
+            });
+        });
+
+        // Initialize
+        showPage(0);
+
+        // Track visit
+        const visited = JSON.parse(localStorage.getItem('git-fundamentals-visited') || '{}');
+        visited['{{MODULE_ID}}'] = new Date().toISOString();
+        localStorage.setItem('git-fundamentals-visited', JSON.stringify(visited));
+    </script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+{
+  "quiz_title": "Day 7: Merging",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does Git do during a fast-forward merge?",
+      "options": [
+        "Creates a new merge commit that combines both branches",
+        "Moves the target branch pointer forward to the tip of the source branch",
+        "Rebases all commits from the source branch onto the target branch",
+        "Copies the files from the source branch into the target branch working directory only"
+      ],
+      "answer": "Moves the target branch pointer forward to the tip of the source branch"
+    },
+    {
+      "id": 2,
+      "question": "When does a fast-forward merge occur?",
+      "options": [
+        "When both branches have new commits since they diverged",
+        "When the target branch has not received any new commits since the source branch was created",
+        "When there are merge conflicts between the two branches",
+        "When the source branch has been rebased onto the target branch"
+      ],
+      "answer": "When the target branch has not received any new commits since the source branch was created"
+    },
+    {
+      "id": 3,
+      "question": "Is a merge commit created during a fast-forward merge?",
+      "options": [
+        "Yes, a merge commit is always created during any merge",
+        "Yes, but only if you use the --commit flag",
+        "No, the branch pointer simply moves forward and the history stays linear",
+        "No, but the commit history is rewritten to include a merge marker"
+      ],
+      "answer": "No, the branch pointer simply moves forward and the history stays linear"
+    },
+    {
+      "id": 4,
+      "question": "What kind of history does a fast-forward merge produce?",
+      "options": [
+        "A branching history with a merge node",
+        "A linear (straight-line) history",
+        "A circular history that loops back to the branch point",
+        "A history with orphaned commits"
+      ],
+      "answer": "A linear (straight-line) history"
+    },
+    {
+      "id": 5,
+      "question": "When performing a merge, which branch should you be on (checked out)?",
+      "options": [
+        "The feature branch you want to merge from",
+        "The branch you want to merge into (e.g., main)",
+        "Either branch; Git will figure it out automatically",
+        "A temporary merge branch created for the operation"
+      ],
+      "answer": "The branch you want to merge into (e.g., main)"
+    },
+    {
+      "id": 6,
+      "question": "What command merges a branch called 'add-homepage' into the current branch?",
+      "options": [
+        "git merge --into add-homepage",
+        "git merge add-homepage",
+        "git branch merge add-homepage",
+        "git switch --merge add-homepage"
+      ],
+      "answer": "git merge add-homepage"
+    },
+    {
+      "id": 7,
+      "question": "After a fast-forward merge, what is the relationship between main and the feature branch pointer?",
+      "options": [
+        "main is one commit behind the feature branch",
+        "main and the feature branch point to the same commit",
+        "main is one commit ahead of the feature branch",
+        "They point to different commits on separate lines of history"
+      ],
+      "answer": "main and the feature branch point to the same commit"
+    },
+    {
+      "id": 8,
+      "question": "What does 'git branch -d add-homepage' do?",
+      "options": [
+        "Force-deletes the branch even if it has unmerged commits",
+        "Deletes the branch only if all its commits have been merged into the current branch",
+        "Deletes the branch and all of its commits from history",
+        "Deletes the branch and reverts all changes it introduced"
+      ],
+      "answer": "Deletes the branch only if all its commits have been merged into the current branch"
+    },
+    {
+      "id": 9,
+      "question": "Why is it safe to delete a feature branch after merging it?",
+      "options": [
+        "Git automatically backs up deleted branches in the reflog forever",
+        "The commits from the branch are now part of the target branch, so nothing is lost",
+        "Deleting a branch never removes commits regardless of merge status",
+        "Git prevents deletion of any branch that has ever had commits"
+      ],
+      "answer": "The commits from the branch are now part of the target branch, so nothing is lost"
+    },
+    {
+      "id": 10,
+      "question": "What is a three-way merge?",
+      "options": [
+        "A merge that involves exactly three commits from the source branch",
+        "A merge that uses three branches simultaneously",
+        "A merge where both branches have diverged with new commits, and Git creates a merge commit to combine them",
+        "A merge that requires three manual conflict resolutions"
+      ],
+      "answer": "A merge where both branches have diverged with new commits, and Git creates a merge commit to combine them"
+    },
+    {
+      "id": 11,
+      "question": "What causes Git to perform a three-way merge instead of a fast-forward merge?",
+      "options": [
+        "The source branch has more than two commits",
+        "Both branches have new commits that the other branch does not have",
+        "The branches modify the same file",
+        "The user passes the --three-way flag to git merge"
+      ],
+      "answer": "Both branches have new commits that the other branch does not have"
+    },
+    {
+      "id": 12,
+      "question": "What is a merge commit?",
+      "options": [
+        "The first commit on a new branch",
+        "A special commit created by Git that has two parent commits and combines both branches",
+        "A commit that deletes the source branch after merging",
+        "A commit that only contains metadata about the merge, not actual file changes"
+      ],
+      "answer": "A special commit created by Git that has two parent commits and combines both branches"
+    },
+    {
+      "id": 13,
+      "question": "During a three-way merge, what happens when Git opens your editor?",
+      "options": [
+        "Git is asking you to resolve a conflict manually",
+        "Git is prompting you to write or accept the merge commit message",
+        "Git is showing you a diff of the changes being merged",
+        "Git is asking you to confirm which files to include in the merge"
+      ],
+      "answer": "Git is prompting you to write or accept the merge commit message"
+    },
+    {
+      "id": 14,
+      "question": "What command visualizes the branch history as a graph in the terminal?",
+      "options": [
+        "git log --oneline --all --graph",
+        "git status --graph --all",
+        "git branch --show-graph",
+        "git diff --graph --all"
+      ],
+      "answer": "git log --oneline --all --graph"
+    },
+    {
+      "id": 15,
+      "question": "In the three-way merge example, what are the 'three ways' that Git uses?",
+      "options": [
+        "The three most recent commits on the target branch",
+        "The common ancestor commit, the tip of the source branch, and the tip of the target branch",
+        "The working directory, the staging area, and the repository",
+        "The local branch, the remote branch, and the merge branch"
+      ],
+      "answer": "The common ancestor commit, the tip of the source branch, and the tip of the target branch"
+    },
+    {
+      "id": 16,
+      "question": "What command switches to the main branch before performing a merge?",
+      "options": [
+        "git checkout merge main",
+        "git switch main",
+        "git branch main --activate",
+        "git move main"
+      ],
+      "answer": "git switch main"
+    },
+    {
+      "id": 17,
+      "question": "After a three-way merge, what does the branch graph look like?",
+      "options": [
+        "A straight line with no branching",
+        "Two parallel lines that never connect",
+        "A diamond or fork shape where branches diverge and then rejoin at the merge commit",
+        "A single branch with duplicated commits"
+      ],
+      "answer": "A diamond or fork shape where branches diverge and then rejoin at the merge commit"
+    },
+    {
+      "id": 18,
+      "question": "What does 'git switch -c add-about' do?",
+      "options": [
+        "Switches to an existing branch named add-about",
+        "Creates a new branch named add-about and switches to it",
+        "Commits changes with the message 'add-about'",
+        "Creates a new branch but stays on the current branch"
+      ],
+      "answer": "Creates a new branch named add-about and switches to it"
+    },
+    {
+      "id": 19,
+      "question": "When merging two feature branches sequentially into main, what type of merge is the first one likely to be?",
+      "options": [
+        "Always a three-way merge",
+        "A fast-forward merge, since main has not diverged from the first feature branch",
+        "A recursive merge",
+        "A squash merge"
+      ],
+      "answer": "A fast-forward merge, since main has not diverged from the first feature branch"
+    },
+    {
+      "id": 20,
+      "question": "When merging the second feature branch after the first has already been merged, what type of merge occurs?",
+      "options": [
+        "A fast-forward merge, since both branches start from the same point",
+        "A three-way merge, because main now has commits the second branch does not",
+        "A rebase, since the second branch needs to be updated",
+        "No merge is needed because the second branch is already up to date"
+      ],
+      "answer": "A three-way merge, because main now has commits the second branch does not"
+    },
+    {
+      "id": 21,
+      "question": "After merging both feature-nav and feature-contact into main, what does 'ls' show?",
+      "options": [
+        "Only the files from the last merged branch",
+        "Only the files that were on main before any merges",
+        "All files from main and both feature branches combined",
+        "A MERGE_RESULT file listing all merged content"
+      ],
+      "answer": "All files from main and both feature branches combined"
+    },
+    {
+      "id": 22,
+      "question": "What does 'git branch' (with no arguments) display after all feature branches are deleted?",
+      "options": [
+        "A list of all branches that ever existed, including deleted ones",
+        "Only the remaining branches, such as main",
+        "An error because there are no feature branches",
+        "The full commit history of the repository"
+      ],
+      "answer": "Only the remaining branches, such as main"
+    },
+    {
+      "id": 23,
+      "question": "In the fast-forward merge diagram, commit D is the tip of the feature branch. After merging, where does main point?",
+      "options": [
+        "Commit B, where it was before the merge",
+        "Commit C, the first commit on the feature branch",
+        "Commit D, the tip of the feature branch",
+        "A new merge commit M created after D"
+      ],
+      "answer": "Commit D, the tip of the feature branch"
+    },
+    {
+      "id": 24,
+      "question": "What is the purpose of running 'git log --oneline --all --graph' after each merge?",
+      "options": [
+        "To verify that the merge introduced no bugs",
+        "To see the branch structure and confirm the merge was performed correctly",
+        "To automatically delete branches that have been merged",
+        "To push the merged changes to a remote repository"
+      ],
+      "answer": "To see the branch structure and confirm the merge was performed correctly"
+    },
+    {
+      "id": 25,
+      "question": "In the three-way merge diagram, what does the commit labeled 'M' represent?",
+      "options": [
+        "The first commit on the main branch",
+        "A commit that reverts the feature branch changes",
+        "The merge commit that joins both branches back together",
+        "A marker commit that Git uses internally but is not visible in the log"
+      ],
+      "answer": "The merge commit that joins both branches back together"
+    }
+  ]
+}

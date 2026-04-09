@@ -1,0 +1,282 @@
+{
+  "quiz_title": "Day 14: Tagging and Releases",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What are Git tags primarily used for?",
+      "options": [
+        "Creating new branches for feature development",
+        "Marking specific commits as release points",
+        "Storing temporary work in progress",
+        "Tracking which files have been modified"
+      ],
+      "answer": "Marking specific commits as release points"
+    },
+    {
+      "id": 2,
+      "question": "Which command creates an annotated tag?",
+      "options": [
+        "git tag v1.0",
+        "git tag -a v1.0 -m \"message\"",
+        "git tag --annotate v1.0",
+        "git tag -create v1.0 -m \"message\""
+      ],
+      "answer": "git tag -a v1.0 -m \"message\""
+    },
+    {
+      "id": 3,
+      "question": "What is the key difference between an annotated tag and a lightweight tag?",
+      "options": [
+        "Lightweight tags can be pushed to remotes but annotated tags cannot",
+        "Annotated tags contain metadata (tagger, date, message) while lightweight tags are just a name pointing to a commit",
+        "Lightweight tags support semantic versioning but annotated tags do not",
+        "Annotated tags can only be created on the HEAD commit"
+      ],
+      "answer": "Annotated tags contain metadata (tagger, date, message) while lightweight tags are just a name pointing to a commit"
+    },
+    {
+      "id": 4,
+      "question": "Which type of tag is recommended for marking releases?",
+      "options": [
+        "Lightweight tags",
+        "Branch tags",
+        "Annotated tags",
+        "Remote tags"
+      ],
+      "answer": "Annotated tags"
+    },
+    {
+      "id": 5,
+      "question": "In Semantic Versioning (SemVer), what does the version format MAJOR.MINOR.PATCH represent?",
+      "options": [
+        "Year.Month.Day of the release",
+        "Breaking changes.New features.Bug fixes",
+        "Team size.Sprint number.Commit count",
+        "Release number.Branch number.Hotfix number"
+      ],
+      "answer": "Breaking changes.New features.Bug fixes"
+    },
+    {
+      "id": 6,
+      "question": "According to SemVer, when should the PATCH version be incremented?",
+      "options": [
+        "When breaking changes are introduced",
+        "When new features are added",
+        "When bug fixes are made with no new features",
+        "When the repository is restructured"
+      ],
+      "answer": "When bug fixes are made with no new features"
+    },
+    {
+      "id": 7,
+      "question": "According to SemVer, when should the MAJOR version be incremented?",
+      "options": [
+        "When minor bug fixes are applied",
+        "When new backwards-compatible features are added",
+        "When breaking changes are introduced",
+        "When the project reaches a milestone"
+      ],
+      "answer": "When breaking changes are introduced"
+    },
+    {
+      "id": 8,
+      "question": "Which command creates a lightweight tag named 'beta-test'?",
+      "options": [
+        "git tag -l beta-test",
+        "git tag -a beta-test",
+        "git tag beta-test",
+        "git tag --light beta-test"
+      ],
+      "answer": "git tag beta-test"
+    },
+    {
+      "id": 9,
+      "question": "What command lists all existing tags in a repository?",
+      "options": [
+        "git tags --list",
+        "git show --tags",
+        "git tag",
+        "git log --tags"
+      ],
+      "answer": "git tag"
+    },
+    {
+      "id": 10,
+      "question": "Which command filters tags to show only those matching a pattern like 'v1.*'?",
+      "options": [
+        "git tag -l \"v1.*\"",
+        "git tag --filter \"v1.*\"",
+        "git tag --search \"v1.*\"",
+        "git tag -f \"v1.*\""
+      ],
+      "answer": "git tag -l \"v1.*\""
+    },
+    {
+      "id": 11,
+      "question": "What does 'git show v1.0.0' display for an annotated tag?",
+      "options": [
+        "Only the commit hash",
+        "The tag metadata AND the commit it points to",
+        "A list of all files changed since the tag was created",
+        "The branch the tag was created on"
+      ],
+      "answer": "The tag metadata AND the commit it points to"
+    },
+    {
+      "id": 12,
+      "question": "What does 'git show' display when used on a lightweight tag?",
+      "options": [
+        "The tagger name, date, and tag message",
+        "An error because lightweight tags cannot be shown",
+        "Just the commit information with no tag metadata",
+        "The full history of all commits since the tag"
+      ],
+      "answer": "Just the commit information with no tag metadata"
+    },
+    {
+      "id": 13,
+      "question": "What happens when you check out a tag with 'git checkout v1.0.0'?",
+      "options": [
+        "A new branch named v1.0.0 is created automatically",
+        "Git enters detached HEAD state",
+        "The tag is deleted and replaced with a branch",
+        "Git refuses because tags cannot be checked out"
+      ],
+      "answer": "Git enters detached HEAD state"
+    },
+    {
+      "id": 14,
+      "question": "After checking out a tag and entering detached HEAD state, how do you return to your branch?",
+      "options": [
+        "git tag --return",
+        "git head --attach",
+        "git switch main",
+        "git reset --hard"
+      ],
+      "answer": "git switch main"
+    },
+    {
+      "id": 15,
+      "question": "Are tags pushed to a remote automatically when you run 'git push'?",
+      "options": [
+        "Yes, all tags are always pushed with every push",
+        "No, tags must be pushed explicitly",
+        "Only annotated tags are pushed automatically",
+        "Only lightweight tags are pushed automatically"
+      ],
+      "answer": "No, tags must be pushed explicitly"
+    },
+    {
+      "id": 16,
+      "question": "Which command pushes a single tag named v1.0.0 to the remote?",
+      "options": [
+        "git push v1.0.0",
+        "git push origin v1.0.0",
+        "git push --tag v1.0.0",
+        "git push remote v1.0.0"
+      ],
+      "answer": "git push origin v1.0.0"
+    },
+    {
+      "id": 17,
+      "question": "Which command pushes all local tags to the remote at once?",
+      "options": [
+        "git push origin --all-tags",
+        "git push origin --tags",
+        "git push --tags-all origin",
+        "git push origin tags/*"
+      ],
+      "answer": "git push origin --tags"
+    },
+    {
+      "id": 18,
+      "question": "Which command deletes a tag locally?",
+      "options": [
+        "git tag --remove beta-test",
+        "git tag -d beta-test",
+        "git delete tag beta-test",
+        "git tag -r beta-test"
+      ],
+      "answer": "git tag -d beta-test"
+    },
+    {
+      "id": 19,
+      "question": "Which command deletes a tag from a remote repository?",
+      "options": [
+        "git push origin --delete beta-test",
+        "git remote tag -d beta-test",
+        "git tag -d origin/beta-test",
+        "git push --remove-tag beta-test"
+      ],
+      "answer": "git push origin --delete beta-test"
+    },
+    {
+      "id": 20,
+      "question": "How do you tag a past commit rather than the current HEAD?",
+      "options": [
+        "git tag -a v1.0.0 -m \"message\" --past",
+        "git tag -a v1.0.0 -m \"message\" <commit-reference>",
+        "git tag -a v1.0.0 -m \"message\" --history",
+        "You cannot tag past commits; tags only apply to HEAD"
+      ],
+      "answer": "git tag -a v1.0.0 -m \"message\" <commit-reference>"
+    },
+    {
+      "id": 21,
+      "question": "What is a GitHub Release?",
+      "options": [
+        "A branch that is marked as production-ready",
+        "A way to package a tagged version with release notes, changelogs, and downloadable archives",
+        "A special commit that cannot be reverted",
+        "A pull request that has been merged into main"
+      ],
+      "answer": "A way to package a tagged version with release notes, changelogs, and downloadable archives"
+    },
+    {
+      "id": 22,
+      "question": "What is the first step to create a GitHub Release?",
+      "options": [
+        "Run 'git release create' from the command line",
+        "Push a branch named 'release' to GitHub",
+        "Go to your repository on GitHub and click 'Releases'",
+        "Create a pull request labeled 'release'"
+      ],
+      "answer": "Go to your repository on GitHub and click 'Releases'"
+    },
+    {
+      "id": 23,
+      "question": "Which command shows the commit log with tag names displayed next to their commits?",
+      "options": [
+        "git log --oneline --decorate",
+        "git log --tags --verbose",
+        "git log --show-tags",
+        "git log --oneline --with-tags"
+      ],
+      "answer": "git log --oneline --decorate"
+    },
+    {
+      "id": 24,
+      "question": "If a project goes from v1.0.0 to v1.1.0, what kind of change occurred according to SemVer?",
+      "options": [
+        "A breaking change was introduced",
+        "A bug fix was applied",
+        "A new backwards-compatible feature was added",
+        "The project was completely rewritten"
+      ],
+      "answer": "A new backwards-compatible feature was added"
+    },
+    {
+      "id": 25,
+      "question": "When creating a GitHub Release, what must you select to associate it with a specific point in your project history?",
+      "options": [
+        "A branch name",
+        "A commit hash",
+        "A tag",
+        "A pull request number"
+      ],
+      "answer": "A tag"
+    }
+  ]
+}

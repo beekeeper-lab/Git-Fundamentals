@@ -1,0 +1,86 @@
+[
+  {
+    "index": 1,
+    "module": "module-06-branching-basics",
+    "audio_file": "01_module-06-branching-basics.mp3",
+    "text": "Branches are where Git goes from useful to powerful. A branch lets you work on something new without affecting the stable version of your code. You can have multiple branches going at once, switch between them instantly, and your files literally change on disk when you do. Today you'll create branches, switch between them, and see this magic in action.",
+    "size_bytes": 364504
+  },
+  {
+    "index": 2,
+    "module": "module-06-branching-basics",
+    "audio_file": "02_module-06-branching-basics.mp3",
+    "text": "Before creating any new branches, let's see where you are right now. The git branch command with no arguments lists all your local branches. The one with the asterisk next to it is the branch you're currently on.",
+    "size_bytes": 181020
+  },
+  {
+    "index": 3,
+    "module": "module-06-branching-basics",
+    "audio_file": "03_module-06-branching-basics.mp3",
+    "text": "Creating a branch in Git is nearly instant -- it's just writing a 40-character hash to a file. The important thing to notice is that creating a branch does NOT switch you to it. You'll still be on main after this command runs.",
+    "size_bytes": 235773
+  },
+  {
+    "index": 4,
+    "module": "module-06-branching-basics",
+    "audio_file": "04_module-06-branching-basics.mp3",
+    "text": "Now let's actually move to the new branch. When you switch branches, Git updates your working directory to match that branch's state. Right now both branches point to the same commit so nothing will change on disk, but that's about to change once you start making commits.",
+    "size_bytes": 244968
+  },
+  {
+    "index": 5,
+    "module": "module-06-branching-basics",
+    "audio_file": "05_module-06-branching-basics.mp3",
+    "text": "Here's where it gets interesting. Any commits you make now will only exist on feature-greeting. Main won't know about them at all. Let's create a couple of files and commit them so the two branches diverge.",
+    "size_bytes": 196484
+  },
+  {
+    "index": 6,
+    "module": "module-06-branching-basics",
+    "audio_file": "06_module-06-branching-basics.mp3",
+    "text": "This is the moment that makes branches click for most people. When you switch back to main, those files you just created are going to disappear from your working directory. They aren't deleted -- they're safely stored in the feature-greeting branch. Git is just showing you what main looks like.",
+    "size_bytes": 271717
+  },
+  {
+    "index": 7,
+    "module": "module-06-branching-basics",
+    "audio_file": "07_module-06-branching-basics.mp3",
+    "text": "In real projects, you'll often have several branches going at once -- maybe one for a new feature, one for a bug fix, and main as the stable base. Let's create a second branch so you can see how Git keeps multiple lines of work organized independently.",
+    "size_bytes": 252073
+  },
+  {
+    "index": 8,
+    "module": "module-06-branching-basics",
+    "audio_file": "08_module-06-branching-basics.mp3",
+    "text": "Now you have three branches -- main, feature-greeting, and feature-about -- each with different content. The graph view of git log shows you how they all relate. You should see lines diverging from a common point, which is exactly how parallel development works.",
+    "size_bytes": 277568
+  },
+  {
+    "index": 9,
+    "module": "module-06-branching-basics",
+    "audio_file": "09_module-06-branching-basics.mp3",
+    "text": "The dash-v flag on git branch adds useful context to the branch listing -- it shows the latest commit hash and message for each branch. This is a quick way to see what's happening on each branch without switching to it.",
+    "size_bytes": 219472
+  },
+  {
+    "index": 10,
+    "module": "module-06-branching-basics",
+    "audio_file": "10_module-06-branching-basics.mp3",
+    "text": "Branches are meant to be temporary, and sometimes you realize the name you picked isn't quite right. The dash-m flag lets you rename a branch without affecting any of its history or commits.",
+    "size_bytes": 180184
+  },
+  {
+    "index": 11,
+    "module": "module-06-branching-basics",
+    "audio_file": "11_module-06-branching-basics.mp3",
+    "text": "When you're done with a branch, you clean it up by deleting it. Git has two levels of deletion: the safe version with lowercase d refuses to delete a branch that has unmerged work, and the force version with uppercase D deletes it regardless. Let's see both.",
+    "size_bytes": 273807
+  },
+  {
+    "index": 12,
+    "module": "module-06-branching-basics",
+    "audio_file": "12_module-06-branching-basics.mp3",
+    "text": "Time to capture your work. Save all the terminal output from today's exercises into a single markdown file. Make sure each section is represented so the rubric items are clearly covered.",
+    "size_bytes": 196484
+  }
+]

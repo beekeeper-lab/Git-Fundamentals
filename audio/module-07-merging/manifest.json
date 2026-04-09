@@ -1,0 +1,93 @@
+[
+  {
+    "index": 1,
+    "module": "module-07-merging",
+    "audio_file": "01_module-07-merging.mp3",
+    "text": "Yesterday you learned to create branches and work on them independently. But branches aren't useful if you can't bring the work back together. That's what merging does -- it combines the changes from one branch into another. Today you'll learn the two types of merges Git performs and what determines which one happens.",
+    "size_bytes": 320618
+  },
+  {
+    "index": 2,
+    "module": "module-07-merging",
+    "audio_file": "02_module-07-merging.mp3",
+    "text": "Let's start with a clean repository so the merge examples are crystal clear. You won't have any leftover branches or commits to confuse things. Just a single initial commit on main as our starting point.",
+    "size_bytes": 223234
+  },
+  {
+    "index": 3,
+    "module": "module-07-merging",
+    "audio_file": "03_module-07-merging.mp3",
+    "text": "Now let's create a feature branch and add a couple of commits to it. Main won't move during this time, which sets us up for a fast-forward merge -- the simplest kind. Notice we're using switch with the dash-c flag to create and switch in one step.",
+    "size_bytes": 224070
+  },
+  {
+    "index": 4,
+    "module": "module-07-merging",
+    "audio_file": "04_module-07-merging.mp3",
+    "text": "A fast-forward merge is the simplest case. Main hasn't moved since the branch was created, so Git doesn't need to combine anything -- it just slides the main pointer forward to catch up with the feature branch. Watch for the words \"Fast-forward\" in the output.",
+    "size_bytes": 273807
+  },
+  {
+    "index": 5,
+    "module": "module-07-merging",
+    "audio_file": "05_module-07-merging.mp3",
+    "text": "After a successful merge, the feature branch has served its purpose. Since all its commits are now part of main, the safe delete with dash-d works without complaint. Always clean up your branches after merging -- it keeps things tidy.",
+    "size_bytes": 238698
+  },
+  {
+    "index": 6,
+    "module": "module-07-merging",
+    "audio_file": "06_module-07-merging.mp3",
+    "text": "Now let's set up the more interesting case -- a three-way merge. For this, we need both branches to have commits that the other doesn't. We'll create a feature branch, add a commit, then go back to main and add a different commit. That creates a divergence.",
+    "size_bytes": 275061
+  },
+  {
+    "index": 7,
+    "module": "module-07-merging",
+    "audio_file": "07_module-07-merging.mp3",
+    "text": "Before we merge, let's look at the graph. You should see two lines splitting apart from a common ancestor -- that's the divergence. Main has a commit that add-about doesn't, and add-about has a commit that main doesn't. Git will need to combine both.",
+    "size_bytes": 240370
+  },
+  {
+    "index": 8,
+    "module": "module-07-merging",
+    "audio_file": "08_module-07-merging.mp3",
+    "text": "When you run git merge now, Git looks at three things: the common ancestor, the tip of main, and the tip of add-about. It figures out what changed on each side and combines them into a new merge commit. Your editor will open for the merge commit message -- just accept the default and save.",
+    "size_bytes": 306408
+  },
+  {
+    "index": 9,
+    "module": "module-07-merging",
+    "audio_file": "09_module-07-merging.mp3",
+    "text": "Let's confirm that the merge actually combined both lines of work. The working directory should have everything from both branches -- the footer from main and the about page from the feature branch. This is the whole point of merging.",
+    "size_bytes": 250819
+  },
+  {
+    "index": 10,
+    "module": "module-07-merging",
+    "audio_file": "10_module-07-merging.mp3",
+    "text": "In real projects, you'll often merge several branches into main one after another. Let's create two feature branches to see how sequential merging works. Each branch will start from main but add different files.",
+    "size_bytes": 201082
+  },
+  {
+    "index": 11,
+    "module": "module-07-merging",
+    "audio_file": "11_module-07-merging.mp3",
+    "text": "Now we'll merge both branches into main one at a time. The first merge might fast-forward, the second will likely create a merge commit since main will have moved after the first merge. Watch the graph after each step to see how the history builds up.",
+    "size_bytes": 254581
+  },
+  {
+    "index": 12,
+    "module": "module-07-merging",
+    "audio_file": "12_module-07-merging.mp3",
+    "text": "Good housekeeping is part of a healthy Git workflow. Let's delete the feature branches and verify that everything landed in main. A quick ls confirms all the files from every branch are now together.",
+    "size_bytes": 184782
+  },
+  {
+    "index": 13,
+    "module": "module-07-merging",
+    "audio_file": "13_module-07-merging.mp3",
+    "text": "Time to capture your work. Save all the terminal output from today's exercises into a single markdown file. Make sure each section is represented so the rubric items are clearly covered.",
+    "size_bytes": 187707
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "index": 1,
+    "module": "module-04-staging-and-commits",
+    "audio_file": "01_module-04-staging-and-commits.mp3",
+    "text": "You know the basics of staging and committing. Today we level up \u2014 you'll learn precise staging techniques, how to unstage files, how to write professional commit messages, and how to fix mistakes with amend. By the end of today, you'll be in full control of what goes into each commit.",
+    "size_bytes": 319782
+  },
+  {
+    "index": 2,
+    "module": "module-04-staging-and-commits",
+    "audio_file": "02_module-04-staging-and-commits.mp3",
+    "text": "So far you've been staging files one at a time. That works, but when you have a project with dozens of files organized into directories, you need faster tools. Here's your toolkit \u2014 staging by file, by directory, by pattern, and even unstaging when you change your mind.",
+    "size_bytes": 314767
+  },
+  {
+    "index": 3,
+    "module": "module-04-staging-and-commits",
+    "audio_file": "03_module-04-staging-and-commits.mp3",
+    "text": "When you have a directory full of related files, you can stage the entire directory at once. This is great for when you've added several source files that belong together in one commit. Let's try it with the src/ and docs/ directories.",
+    "size_bytes": 270881
+  },
+  {
+    "index": 4,
+    "module": "module-04-staging-and-commits",
+    "audio_file": "04_module-04-staging-and-commits.mp3",
+    "text": "Wildcard patterns let you stage files that share a naming convention. For example, git add test_results_*.txt stages all files that start with \"test_results_\" and end with \".txt\". This is handy when you have a batch of related files with predictable names.",
+    "size_bytes": 313931
+  },
+  {
+    "index": 5,
+    "module": "module-04-staging-and-commits",
+    "audio_file": "05_module-04-staging-and-commits.mp3",
+    "text": "Sometimes you stage something by accident. No problem \u2014 you can unstage files without losing any work. The changes stay in your working directory; they're just no longer queued for the next commit. Think of it as taking something out of the box before you seal it.",
+    "size_bytes": 273807
+  },
+  {
+    "index": 6,
+    "module": "module-04-staging-and-commits",
+    "audio_file": "06_module-04-staging-and-commits.mp3",
+    "text": "What if you staged a bunch of files and want to start over? You can unstage everything at once with git restore --staged . \u2014 the dot means \"everything.\" Your files are still there, still modified, just no longer staged. Nothing is lost.",
+    "size_bytes": 252909
+  },
+  {
+    "index": 7,
+    "module": "module-04-staging-and-commits",
+    "audio_file": "07_module-04-staging-and-commits.mp3",
+    "text": "Let's talk about commit messages. A good commit message explains why a change was made, not just what was changed. The first line is like a subject line in an email \u2014 short and clear. Think of your commit messages as notes to your future self. Six months from now, \"fix bug\" tells you nothing, but \"Fix off-by-one error in loop boundary check\" tells you everything.",
+    "size_bytes": 414241
+  },
+  {
+    "index": 8,
+    "module": "module-04-staging-and-commits",
+    "audio_file": "08_module-04-staging-and-commits.mp3",
+    "text": "When a single line isn't enough, Git supports multi-line messages. The first line is the summary \u2014 keep it under 50 characters. Then leave a blank line and add as much detail as you need. This is common in professional projects where context matters.",
+    "size_bytes": 259596
+  },
+  {
+    "index": 9,
+    "module": "module-04-staging-and-commits",
+    "audio_file": "09_module-04-staging-and-commits.mp3",
+    "text": "Let's see how that multi-line message looks in the log. The regular git log shows the full message, while git log --oneline only shows the first line. That's why the first line matters most \u2014 it's what people see in the compact view.",
+    "size_bytes": 254581
+  },
+  {
+    "index": 10,
+    "module": "module-04-staging-and-commits",
+    "audio_file": "10_module-04-staging-and-commits.mp3",
+    "text": "Made a typo in your commit message? The --amend flag lets you fix the most recent commit's message. Watch \u2014 we'll intentionally misspell \"critical\" and then fix it. The old commit is replaced with a corrected one.",
+    "size_bytes": 286346
+  },
+  {
+    "index": 11,
+    "module": "module-04-staging-and-commits",
+    "audio_file": "11_module-04-staging-and-commits.mp3",
+    "text": "Amend isn't just for fixing messages. If you forgot to include a file in your last commit, you can stage it and then amend. Git combines the new staged changes with the previous commit, as if the file was always there. Very handy.",
+    "size_bytes": 228249
+  },
+  {
+    "index": 12,
+    "module": "module-04-staging-and-commits",
+    "audio_file": "12_module-04-staging-and-commits.mp3",
+    "text": "One important safety note about amend: only use it on commits that haven't been pushed to a shared remote. Amending rewrites history \u2014 it replaces the old commit with a new one that has a different hash. If others have already pulled the original commit, amending it will cause confusion. We'll cover this more when we get to remote repositories.",
+    "size_bytes": 354891
+  },
+  {
+    "index": 13,
+    "module": "module-04-staging-and-commits",
+    "audio_file": "13_module-04-staging-and-commits.mp3",
+    "text": "Excellent work today! You now have precise control over staging and professional-grade commit messages. Save your terminal output and check each item against the rubric below.",
+    "size_bytes": 180184
+  }
+]

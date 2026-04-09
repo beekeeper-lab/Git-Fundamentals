@@ -1,0 +1,65 @@
+[
+  {
+    "index": 1,
+    "module": "module-00-intro",
+    "audio_file": "01_module-00-intro.mp3",
+    "text": "Welcome to Git Fundamentals! This is a 15-day hands-on course that will take you from zero to confident with Git, the version control system used by virtually every software team in the world. By the end, you'll understand not just the commands, but the mental models behind them.",
+    "size_bytes": 331067
+  },
+  {
+    "index": 2,
+    "module": "module-00-intro",
+    "audio_file": "02_module-00-intro.mp3",
+    "text": "The first five days are all about building your foundation. You'll go from \"what even is Git?\" to comfortably creating repositories, staging files, making commits, and reading your project's history. These are the skills you'll use every single day as a developer.",
+    "size_bytes": 276733
+  },
+  {
+    "index": 3,
+    "module": "module-00-intro",
+    "audio_file": "03_module-00-intro.mp3",
+    "text": "Once you have the basics down, days six through ten introduce the features that make Git powerful for teams. You'll learn branching, merging, and how to work with remote repositories on GitHub. This is where Git starts to feel like a superpower.",
+    "size_bytes": 262522
+  },
+  {
+    "index": 4,
+    "module": "module-00-intro",
+    "audio_file": "04_module-00-intro.mp3",
+    "text": "The final stretch covers the advanced techniques and professional workflows that separate beginners from confident Git users. Merge conflicts, rebasing, stashing, tagging \u2014 these are the tools that will make you valuable on any development team.",
+    "size_bytes": 266284
+  },
+  {
+    "index": 5,
+    "module": "module-00-intro",
+    "audio_file": "05_module-00-intro.mp3",
+    "text": "Every day follows the same three-part structure. First you read some background to build your mental model, then you do hands-on exercises in the terminal, and finally you save your output as proof of completion. The consistency is intentional \u2014 it lets you focus on the content, not the format.",
+    "size_bytes": 331903
+  },
+  {
+    "index": 6,
+    "module": "module-00-intro",
+    "audio_file": "06_module-00-intro.mp3",
+    "text": "The single most important thing you can do is actually type every command yourself. Don't copy-paste blindly \u2014 read what each command does, predict what will happen, then run it and see if you were right. That prediction-and-verification loop is how the mental model clicks into place.",
+    "size_bytes": 320618
+  },
+  {
+    "index": 7,
+    "module": "module-00-intro",
+    "audio_file": "07_module-00-intro.mp3",
+    "text": "This course is designed to be worked through in order. Each module builds on the ones before it, so resist the temptation to skip ahead. By Day 15, all the pieces will come together into a professional Git workflow \u2014 but only if you've built the foundation first.",
+    "size_bytes": 276733
+  },
+  {
+    "index": 8,
+    "module": "module-00-intro",
+    "audio_file": "08_module-00-intro.mp3",
+    "text": "Each day has a grading rubric at the end that tells you exactly what you need to demonstrate. Save your terminal output for each task, and you'll have everything you need. The total across all 15 days is 1,500 points \u2014 but the real goal is understanding, not points.",
+    "size_bytes": 311841
+  },
+  {
+    "index": 9,
+    "module": "module-00-intro",
+    "audio_file": "09_module-00-intro.mp3",
+    "text": "That's the overview. You know what's ahead, you know how it's structured, and you know the tips for success. Now head to Module 1 and make your first commit. You've got this.",
+    "size_bytes": 171825
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "index": 1,
+    "module": "module-10-push-pull-workflow",
+    "audio_file": "01_module-10-push-pull-workflow.mp3",
+    "text": "This is where everything comes together. Over the past nine days, you've learned repositories, commits, branches, merges, and remotes. Today you'll combine all of that into the feature branch workflow -- the standard way professional teams write software.",
+    "size_bytes": 320618
+  },
+  {
+    "index": 2,
+    "module": "module-10-push-pull-workflow",
+    "audio_file": "02_module-10-push-pull-workflow.mp3",
+    "text": "In real-world projects, you rarely push directly to main. Instead, every change follows a loop: create a branch, make commits, push, open a pull request, merge, and sync. This loop is called the feature branch workflow, and it's the heartbeat of modern software development.",
+    "size_bytes": 321454
+  },
+  {
+    "index": 3,
+    "module": "module-10-push-pull-workflow",
+    "audio_file": "03_module-10-push-pull-workflow.mp3",
+    "text": "The first step is to create a branch for your work and push it to GitHub. When you push a branch, it appears on the remote as a separate branch that others can see and review. You push the branch the same way you push main -- with git push and the dash-u flag the first time.",
+    "size_bytes": 268373
+  },
+  {
+    "index": 4,
+    "module": "module-10-push-pull-workflow",
+    "audio_file": "04_module-10-push-pull-workflow.mp3",
+    "text": "A feature branch usually has more than one commit. You keep working, committing, and pushing. After the first push with dash-u, every subsequent push is just git push -- no extra flags needed because the tracking relationship is already set up.",
+    "size_bytes": 254581
+  },
+  {
+    "index": 5,
+    "module": "module-10-push-pull-workflow",
+    "audio_file": "05_module-10-push-pull-workflow.mp3",
+    "text": "A pull request is how you propose merging your branch into main. It's not a Git feature -- it's a GitHub feature built on top of Git. A PR shows the diff of all your changes, lets reviewers leave comments, and provides a merge button. This is where code review happens on real teams.",
+    "size_bytes": 325634
+  },
+  {
+    "index": 6,
+    "module": "module-10-push-pull-workflow",
+    "audio_file": "06_module-10-push-pull-workflow.mp3",
+    "text": "Before merging, take a moment to review the PR yourself. The Files Changed tab shows a diff of every line you touched. On a real team, a colleague would review this and leave comments. Get in the habit of reviewing your own work here -- it catches mistakes before they hit main.",
+    "size_bytes": 321454
+  },
+  {
+    "index": 7,
+    "module": "module-10-push-pull-workflow",
+    "audio_file": "07_module-10-push-pull-workflow.mp3",
+    "text": "Once the review looks good, it's time to merge. GitHub gives you a big green button for this. After merging, GitHub will offer to delete the remote branch -- do it. The branch has served its purpose, and keeping it around just creates clutter.",
+    "size_bytes": 254999
+  },
+  {
+    "index": 8,
+    "module": "module-10-push-pull-workflow",
+    "audio_file": "08_module-10-push-pull-workflow.mp3",
+    "text": "After merging on GitHub, your remote main has moved forward but your local main is still behind. You need to switch back to main and pull the latest changes. This is how you keep your local copy in sync with the remote.",
+    "size_bytes": 229085
+  },
+  {
+    "index": 9,
+    "module": "module-10-push-pull-workflow",
+    "audio_file": "09_module-10-push-pull-workflow.mp3",
+    "text": "Your feature-login branch was merged on GitHub, so you don't need the local copy anymore either. Deleting it with dash-d is safe -- Git will only let you delete a branch whose commits are already part of another branch. It's good hygiene to clean up after every merge.",
+    "size_bytes": 254999
+  },
+  {
+    "index": 10,
+    "module": "module-10-push-pull-workflow",
+    "audio_file": "10_module-10-push-pull-workflow.mp3",
+    "text": "Even though the remote branch was deleted on GitHub, your local Git still remembers it as a remote-tracking branch. The fetch dash dash prune command cleans up these stale references. Without this step, you'll accumulate ghost branches that clutter your branch list.",
+    "size_bytes": 278822
+  },
+  {
+    "index": 11,
+    "module": "module-10-push-pull-workflow",
+    "audio_file": "11_module-10-push-pull-workflow.mp3",
+    "text": "That was the complete workflow: branch, commit, push, PR, merge, sync, clean up. The best way to make it second nature is to do it again. This time, try to do it faster -- you already know all the steps. Repetition is what turns knowledge into muscle memory.",
+    "size_bytes": 323544
+  },
+  {
+    "index": 12,
+    "module": "module-10-push-pull-workflow",
+    "audio_file": "12_module-10-push-pull-workflow.mp3",
+    "text": "Now bring everything back to your local machine just like before. Switch to main, pull, delete the branch, and prune. This is the same cleanup you did earlier -- by the second time through, it should already feel familiar.",
+    "size_bytes": 247057
+  },
+  {
+    "index": 13,
+    "module": "module-10-push-pull-workflow",
+    "audio_file": "13_module-10-push-pull-workflow.mp3",
+    "text": "Time to capture your work. Save your terminal output and GitHub screenshots into a single file. Make sure you have evidence of both full cycles -- the login feature and the footer feature.",
+    "size_bytes": 184782
+  }
+]

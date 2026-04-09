@@ -1,0 +1,100 @@
+[
+  {
+    "index": 1,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "01_module-09-clone-fetch-pull.mp3",
+    "text": "Yesterday you pushed your repository to GitHub. Today you'll learn the other side of remote work -- cloning, fetching, and pulling. You'll simulate what collaboration actually looks like by cloning your own repo to a second location and passing changes back and forth. This is the same workflow you'd use with a teammate, just both sides are you.",
+    "size_bytes": 366594
+  },
+  {
+    "index": 2,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "02_module-09-clone-fetch-pull.mp3",
+    "text": "Before we dive in, let's get the vocabulary straight. These four terms come up constantly in Git conversations and it's easy to mix them up. Clone and fork are about getting a copy of a repo. Fetch and pull are about updating a copy you already have. The key difference between fetch and pull is whether the changes get merged automatically.",
+    "size_bytes": 343606
+  },
+  {
+    "index": 3,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "03_module-09-clone-fetch-pull.mp3",
+    "text": "Cloning creates a complete local copy of a remote repository -- all the files, all the history, all the branches. The clone automatically sets up origin pointing back to where it was cloned from, so it's ready to push and pull right away. You're going to clone your own repo to a second folder to simulate having a second developer.",
+    "size_bytes": 354891
+  },
+  {
+    "index": 4,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "04_module-09-clone-fetch-pull.mp3",
+    "text": "Let's look at what git clone gave us. It should have the full commit history, a pre-configured origin remote, and remote-tracking branches. Everything is set up and ready to go -- no need to run git init or git remote add.",
+    "size_bytes": 258760
+  },
+  {
+    "index": 5,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "05_module-09-clone-fetch-pull.mp3",
+    "text": "Now you have two local copies of the same repo, both connected to the same GitHub remote. Think of merge-practice as Developer A's machine and git-practice-clone as Developer B's machine. Let's have Developer A make a change and push it, then see how Developer B gets that change.",
+    "size_bytes": 305572
+  },
+  {
+    "index": 6,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "06_module-09-clone-fetch-pull.mp3",
+    "text": "Now switch to Developer B's machine -- the clone. Running git fetch downloads the new commit from GitHub but doesn't change your working directory at all. You can see that origin/main has moved ahead of your local main, but your files haven't changed yet.",
+    "size_bytes": 257506
+  },
+  {
+    "index": 7,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "07_module-09-clone-fetch-pull.mp3",
+    "text": "This is the crucial point about fetch -- it downloads data but does NOT change your files. If you list the directory right now, the new file won't be there. It exists in the remote-tracking branch origin/main, but your local main hasn't been updated yet. This is by design -- fetch is safe precisely because it doesn't touch your working directory.",
+    "size_bytes": 373281
+  },
+  {
+    "index": 8,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "08_module-09-clone-fetch-pull.mp3",
+    "text": "Now let's apply those fetched changes by merging origin/main into your local main. After this merge, the file will appear in your working directory. This two-step fetch-then-merge workflow gives you full control -- you can inspect what's coming before you accept it.",
+    "size_bytes": 257506
+  },
+  {
+    "index": 9,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "09_module-09-clone-fetch-pull.mp3",
+    "text": "Let's do one more round, but this time we'll use git pull instead of the two-step process. Developer A will push another change, and Developer B will pull it in a single command.",
+    "size_bytes": 170571
+  },
+  {
+    "index": 10,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "10_module-09-clone-fetch-pull.mp3",
+    "text": "Git pull does fetch and merge in one step. It's what most developers use day-to-day when they just want to grab the latest changes and there's no risk of conflict. Watch how the file appears immediately after the pull -- no separate merge step needed.",
+    "size_bytes": 265030
+  },
+  {
+    "index": 11,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "11_module-09-clone-fetch-pull.mp3",
+    "text": "Collaboration goes both directions. Developer B can push changes too. Let's create a file in the clone, commit it, and push it to GitHub. Then Developer A will be able to pull it down.",
+    "size_bytes": 196484
+  },
+  {
+    "index": 12,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "12_module-09-clone-fetch-pull.mp3",
+    "text": "Now switch back to Developer A's machine and pull the change that Developer B just pushed. This completes the collaboration cycle -- changes flowing in both directions through a shared remote.",
+    "size_bytes": 190633
+  },
+  {
+    "index": 13,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "13_module-09-clone-fetch-pull.mp3",
+    "text": "From either directory, the git log now shows commits from both developers interleaved in a single history. This is the whole point of Git as a collaboration tool -- everyone contributes to a shared history through a common remote, and the graph shows exactly how all the pieces fit together.",
+    "size_bytes": 289271
+  },
+  {
+    "index": 14,
+    "module": "module-09-clone-fetch-pull",
+    "audio_file": "14_module-09-clone-fetch-pull.mp3",
+    "text": "Time to capture your work. Save all the terminal output from today's exercises into a single markdown file. Make sure each section is represented so the rubric items are clearly covered.",
+    "size_bytes": 189797
+  }
+]

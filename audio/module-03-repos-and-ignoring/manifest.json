@@ -1,0 +1,79 @@
+[
+  {
+    "index": 1,
+    "module": "module-03-repos-and-ignoring",
+    "audio_file": "01_module-03-repos-and-ignoring.mp3",
+    "text": "Today you'll learn two essential skills: creating repositories from scratch and from remotes, and using .gitignore to keep unwanted files out of your repo. Every real project needs a .gitignore \u2014 it keeps your repository clean and your secrets safe.",
+    "size_bytes": 289271
+  },
+  {
+    "index": 2,
+    "module": "module-03-repos-and-ignoring",
+    "audio_file": "02_module-03-repos-and-ignoring.mp3",
+    "text": "Let's build a properly structured project from scratch. This time we'll create directories for source code, build output, and documentation \u2014 just like a real project. Notice how we organize files into folders before making our first commit.",
+    "size_bytes": 284256
+  },
+  {
+    "index": 3,
+    "module": "module-03-repos-and-ignoring",
+    "audio_file": "03_module-03-repos-and-ignoring.mp3",
+    "text": "Here's something that trips up beginners \u2014 not everything in your project folder should be tracked by Git. Compiled code, dependency folders, IDE settings, and especially secrets like API keys should never be committed. That's what .gitignore is for. It's a simple text file that tells Git which files to pretend don't exist.",
+    "size_bytes": 357817
+  },
+  {
+    "index": 4,
+    "module": "module-03-repos-and-ignoring",
+    "audio_file": "04_module-03-repos-and-ignoring.mp3",
+    "text": "Let's create a .gitignore file for our project. Each line is a pattern \u2014 you can use directory names, file extensions, and wildcards. The comments (lines starting with #) help you and your teammates understand why each pattern is there.",
+    "size_bytes": 272135
+  },
+  {
+    "index": 5,
+    "module": "module-03-repos-and-ignoring",
+    "audio_file": "05_module-03-repos-and-ignoring.mp3",
+    "text": "Now let's prove it actually works. We'll create files that match the ignore patterns \u2014 a .env file, some compiled output, and IDE config \u2014 and then check git status. If the .gitignore is working, none of these files will appear.",
+    "size_bytes": 247893
+  },
+  {
+    "index": 6,
+    "module": "module-03-repos-and-ignoring",
+    "audio_file": "06_module-03-repos-and-ignoring.mp3",
+    "text": "An important detail \u2014 .gitignore only affects untracked files. Files you've already committed are still tracked normally. Let's prove that by adding a new source file. It shows up in git status because src/ isn't in our ignore list.",
+    "size_bytes": 267955
+  },
+  {
+    "index": 7,
+    "module": "module-03-repos-and-ignoring",
+    "audio_file": "07_module-03-repos-and-ignoring.mp3",
+    "text": "The other way to get a repository is cloning. When you clone, you get the entire history \u2014 every commit ever made. This is what \"distributed\" means: your clone is a complete, independent copy of the repository. You could disconnect from the internet and still have the full history.",
+    "size_bytes": 352383
+  },
+  {
+    "index": 8,
+    "module": "module-03-repos-and-ignoring",
+    "audio_file": "08_module-03-repos-and-ignoring.mp3",
+    "text": "Let's try it out. We'll clone a well-known public repository from GitHub. Watch the output \u2014 Git tells you what it's downloading and where it's putting it.",
+    "size_bytes": 149673
+  },
+  {
+    "index": 9,
+    "module": "module-03-repos-and-ignoring",
+    "audio_file": "09_module-03-repos-and-ignoring.mp3",
+    "text": "After cloning, Git automatically sets up a remote called origin that points back to where you cloned from. The git remote -v command shows you the URL for both fetching (downloading) and pushing (uploading). We'll use remotes extensively starting in Day 8.",
+    "size_bytes": 273807
+  },
+  {
+    "index": 10,
+    "module": "module-03-repos-and-ignoring",
+    "audio_file": "10_module-03-repos-and-ignoring.mp3",
+    "text": "One last thing \u2014 running git init on a folder that's already a repository is perfectly safe. It prints \"Reinitialized\" and changes nothing. This is good to know so you don't worry about accidentally running it twice.",
+    "size_bytes": 211531
+  },
+  {
+    "index": 11,
+    "module": "module-03-repos-and-ignoring",
+    "audio_file": "11_module-03-repos-and-ignoring.mp3",
+    "text": "Nice work today! You now know both ways to create a repository, and you know how to keep unwanted files out with .gitignore. Save your terminal output and check against the rubric below.",
+    "size_bytes": 198156
+  }
+]

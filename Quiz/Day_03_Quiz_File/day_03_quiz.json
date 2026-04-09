@@ -1,0 +1,282 @@
+{
+  "quiz_title": "Day 3: Creating Repositories",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What are the two ways to get a Git repository?",
+      "options": [
+        "git init and git clone",
+        "git start and git copy",
+        "git create and git download",
+        "git new and git fetch"
+      ],
+      "answer": "git init and git clone"
+    },
+    {
+      "id": 2,
+      "question": "What does the command 'git init' do?",
+      "options": [
+        "Downloads a repository from a remote server",
+        "Creates a new Git repository from scratch",
+        "Deletes the current repository",
+        "Pushes changes to a remote server"
+      ],
+      "answer": "Creates a new Git repository from scratch"
+    },
+    {
+      "id": 3,
+      "question": "What does the command 'git clone <url>' do?",
+      "options": [
+        "Creates an empty repository at the given URL",
+        "Copies only the latest version of files from a remote repo",
+        "Copies an existing repository from a remote server, including its full history",
+        "Links your local repo to a remote without downloading anything"
+      ],
+      "answer": "Copies an existing repository from a remote server, including its full history"
+    },
+    {
+      "id": 4,
+      "question": "What is the purpose of a .gitignore file?",
+      "options": [
+        "It lists files that should be deleted from the repository",
+        "It tells Git which files to never track",
+        "It prevents other users from cloning your repository",
+        "It hides files from the operating system's file explorer"
+      ],
+      "answer": "It tells Git which files to never track"
+    },
+    {
+      "id": 5,
+      "question": "In a .gitignore file, what do lines starting with '#' represent?",
+      "options": [
+        "High-priority ignore rules",
+        "Patterns that apply only to directories",
+        "Comments",
+        "File extensions to track"
+      ],
+      "answer": "Comments"
+    },
+    {
+      "id": 6,
+      "question": "In a .gitignore file, what does a trailing '/' on a pattern mean?",
+      "options": [
+        "The pattern applies to the root directory only",
+        "The pattern matches directory only",
+        "The pattern is negated",
+        "The pattern is case-insensitive"
+      ],
+      "answer": "The pattern matches directory only"
+    },
+    {
+      "id": 7,
+      "question": "Which of the following is a common type of file to include in .gitignore?",
+      "options": [
+        "Source code files",
+        "README.md",
+        "Build output and compiled files",
+        "Git configuration files"
+      ],
+      "answer": "Build output and compiled files"
+    },
+    {
+      "id": 8,
+      "question": "Which .gitignore pattern would ignore all files with the .class extension?",
+      "options": [
+        "class.*",
+        "*.class",
+        ".class/",
+        "#.class"
+      ],
+      "answer": "*.class"
+    },
+    {
+      "id": 9,
+      "question": "Why should you add .env files to .gitignore?",
+      "options": [
+        "They are too large for Git to handle",
+        "They contain environment-specific secrets that should never be committed",
+        "Git cannot track files that start with a dot",
+        "They cause merge conflicts every time"
+      ],
+      "answer": "They contain environment-specific secrets that should never be committed"
+    },
+    {
+      "id": 10,
+      "question": "Which .gitignore pattern would ignore the entire build/ directory?",
+      "options": [
+        "build.*",
+        "*build",
+        "build/",
+        "#build"
+      ],
+      "answer": "build/"
+    },
+    {
+      "id": 11,
+      "question": "After creating a .gitignore and adding files that match its patterns, what should 'git status' show for those ignored files?",
+      "options": [
+        "They appear as untracked files",
+        "They appear as modified files",
+        "They do not appear at all",
+        "They appear with a warning message"
+      ],
+      "answer": "They do not appear at all"
+    },
+    {
+      "id": 12,
+      "question": "Does .gitignore affect files that are already tracked by Git?",
+      "options": [
+        "Yes, it immediately untracks them",
+        "Yes, but only after the next commit",
+        "No, .gitignore only applies to untracked files",
+        "No, but Git will delete them automatically"
+      ],
+      "answer": "No, .gitignore only applies to untracked files"
+    },
+    {
+      "id": 13,
+      "question": "What is the default alias name for the remote server you cloned from?",
+      "options": [
+        "upstream",
+        "source",
+        "origin",
+        "remote"
+      ],
+      "answer": "origin"
+    },
+    {
+      "id": 14,
+      "question": "Which command shows the remote URLs associated with a cloned repository?",
+      "options": [
+        "git remote -v",
+        "git url --list",
+        "git origin --show",
+        "git config --remotes"
+      ],
+      "answer": "git remote -v"
+    },
+    {
+      "id": 15,
+      "question": "What happens when you run 'git init' on a directory that is already a Git repository?",
+      "options": [
+        "It deletes the existing repository and creates a new one",
+        "It prints an error and refuses to run",
+        "It reinitializes the existing repository without destroying anything",
+        "It creates a nested repository inside the existing one"
+      ],
+      "answer": "It reinitializes the existing repository without destroying anything"
+    },
+    {
+      "id": 16,
+      "question": "What message does Git display when you run 'git init' on an existing repository?",
+      "options": [
+        "Error: repository already exists",
+        "Reinitialized existing Git repository",
+        "Warning: overwriting existing repository",
+        "Repository unchanged"
+      ],
+      "answer": "Reinitialized existing Git repository"
+    },
+    {
+      "id": 17,
+      "question": "When you clone a repository, what do you receive?",
+      "options": [
+        "Only the files from the latest commit",
+        "A complete copy of the repository with its full commit history",
+        "A read-only snapshot of the repository",
+        "Only the files, without any Git tracking"
+      ],
+      "answer": "A complete copy of the repository with its full commit history"
+    },
+    {
+      "id": 18,
+      "question": "Which of the following is NOT a common category of files to put in .gitignore?",
+      "options": [
+        "Compiled output",
+        "IDE configuration files",
+        "Source code files",
+        "Operating system files like .DS_Store"
+      ],
+      "answer": "Source code files"
+    },
+    {
+      "id": 19,
+      "question": "Which .gitignore pattern would ignore all files ending in .key?",
+      "options": [
+        "key.*",
+        "*.key",
+        ".key/",
+        "key/"
+      ],
+      "answer": "*.key"
+    },
+    {
+      "id": 20,
+      "question": "What does the term 'distributed' mean in the context of Git cloning?",
+      "options": [
+        "Changes are automatically sent to all team members",
+        "Each clone is a complete copy of the repository with full history",
+        "The repository is split across multiple servers",
+        "Only certain branches are available locally"
+      ],
+      "answer": "Each clone is a complete copy of the repository with full history"
+    },
+    {
+      "id": 21,
+      "question": "Which .gitignore entry would ignore the .idea/ directory used by JetBrains IDEs?",
+      "options": [
+        "*.idea",
+        "idea/",
+        ".idea/",
+        "#idea"
+      ],
+      "answer": ".idea/"
+    },
+    {
+      "id": 22,
+      "question": "After setting up a .gitignore, you create a file src/App.java that does not match any ignore pattern. What does 'git status' show?",
+      "options": [
+        "The file is ignored because .gitignore blocks all new files",
+        "The file appears as an untracked file",
+        "The file is automatically staged",
+        "The file is automatically committed"
+      ],
+      "answer": "The file appears as an untracked file"
+    },
+    {
+      "id": 23,
+      "question": "What is the correct order of steps to create a new repository with an initial commit?",
+      "options": [
+        "git commit, git add, git init",
+        "git init, git add, git commit",
+        "git clone, git add, git commit",
+        "git add, git init, git commit"
+      ],
+      "answer": "git init, git add, git commit"
+    },
+    {
+      "id": 24,
+      "question": "Which of the following patterns in .gitignore would ignore the node_modules/ directory?",
+      "options": [
+        "node_modules/",
+        "*.node_modules",
+        "#node_modules",
+        "node.modules/"
+      ],
+      "answer": "node_modules/"
+    },
+    {
+      "id": 25,
+      "question": "Should the .gitignore file itself be committed to the repository?",
+      "options": [
+        "No, Git automatically reads it without committing",
+        "Yes, so that all contributors share the same ignore rules",
+        "No, each developer should maintain their own local copy",
+        "Only if the repository is public"
+      ],
+      "answer": "Yes, so that all contributors share the same ignore rules"
+    }
+  ]
+}

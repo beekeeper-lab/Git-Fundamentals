@@ -1,0 +1,93 @@
+[
+  {
+    "index": 1,
+    "module": "module-11-merge-conflicts",
+    "audio_file": "01_module-11-merge-conflicts.mp3",
+    "text": "Merge conflicts sound scary, but they're actually one of the most normal things in Git. A conflict just means two people -- or two branches -- changed the same line in the same file, and Git needs you to decide which version wins. Once you've resolved a few, it becomes second nature.",
+    "size_bytes": 331067
+  },
+  {
+    "index": 2,
+    "module": "module-11-merge-conflicts",
+    "audio_file": "02_module-11-merge-conflicts.mp3",
+    "text": "A merge conflict happens when two branches modify the same lines of the same file. Git can automatically merge changes to different files or different parts of the same file, but when changes overlap, it stops and asks you to decide. Think of it as Git saying, \"I don't want to guess -- you tell me what's right.\"",
+    "size_bytes": 298884
+  },
+  {
+    "index": 3,
+    "module": "module-11-merge-conflicts",
+    "audio_file": "03_module-11-merge-conflicts.mp3",
+    "text": "When Git hits a conflict, it marks the file with special lines that show you both versions side by side. Learning to read these markers is the key skill here. Once you can parse them at a glance, resolving conflicts becomes mechanical.",
+    "size_bytes": 234937
+  },
+  {
+    "index": 4,
+    "module": "module-11-merge-conflicts",
+    "audio_file": "04_module-11-merge-conflicts.mp3",
+    "text": "The best way to understand conflicts is to create one on purpose. Let's set up a fresh repo with a simple file that we can modify on two different branches. This gives us a clean playground where we control exactly what conflicts happen.",
+    "size_bytes": 240370
+  },
+  {
+    "index": 5,
+    "module": "module-11-merge-conflicts",
+    "audio_file": "05_module-11-merge-conflicts.mp3",
+    "text": "Now we'll create the conditions for a conflict. We'll change line 1 on a new branch, then go back to main and change the same line differently. When we try to merge, Git will see that both branches touched the same line and won't know which version to keep.",
+    "size_bytes": 255835
+  },
+  {
+    "index": 6,
+    "module": "module-11-merge-conflicts",
+    "audio_file": "06_module-11-merge-conflicts.mp3",
+    "text": "Here's the moment of truth. When you run git merge, Git will try to combine the changes automatically. But since both branches changed the same line, it can't. Git will report a conflict and pause the merge, waiting for you to step in and fix things.",
+    "size_bytes": 273807
+  },
+  {
+    "index": 7,
+    "module": "module-11-merge-conflicts",
+    "audio_file": "07_module-11-merge-conflicts.mp3",
+    "text": "Don't panic when you see that conflict message. Git has paused the merge and is waiting for you to tell it what to do. Let's look at the file and see exactly what Git is showing us. The status command will tell you which files are conflicted, and the file itself will have those markers we just learned about.",
+    "size_bytes": 278822
+  },
+  {
+    "index": 8,
+    "module": "module-11-merge-conflicts",
+    "audio_file": "08_module-11-merge-conflicts.mp3",
+    "text": "Resolving the conflict is just editing a text file. Remove the markers, decide what the final version should be, and save. You can keep one side, keep the other, or combine both -- it's entirely up to you. The only rule is that all the marker lines must be gone when you're done.",
+    "size_bytes": 308497
+  },
+  {
+    "index": 9,
+    "module": "module-11-merge-conflicts",
+    "audio_file": "09_module-11-merge-conflicts.mp3",
+    "text": "After editing the file, you need to tell Git you're done resolving. Stage the file with git add, then commit. This merge commit records that you combined both branches and made a decision about the conflict. Check the graph afterward to see both branches joining together.",
+    "size_bytes": 263358
+  },
+  {
+    "index": 10,
+    "module": "module-11-merge-conflicts",
+    "audio_file": "10_module-11-merge-conflicts.mp3",
+    "text": "In real projects, a merge can produce conflicts in more than one file at the same time. The process is exactly the same -- you just resolve each file individually before staging and committing. Let's create a scenario with two conflicting files.",
+    "size_bytes": 254999
+  },
+  {
+    "index": 11,
+    "module": "module-11-merge-conflicts",
+    "audio_file": "11_module-11-merge-conflicts.mp3",
+    "text": "When you merge now, both files will have conflicts. Git status will list every conflicted file. You resolve them one at a time -- open each file, remove the markers, save -- then stage them all and commit once. One merge commit covers all the resolved files.",
+    "size_bytes": 293033
+  },
+  {
+    "index": 12,
+    "module": "module-11-merge-conflicts",
+    "audio_file": "12_module-11-merge-conflicts.mp3",
+    "text": "Sometimes you start a merge, see the conflicts, and realize you're not ready to deal with them yet. Maybe you need to think about the right approach, or maybe you merged the wrong branch. No problem -- git merge dash dash abort takes you right back to where you started. Nothing is lost.",
+    "size_bytes": 334829
+  },
+  {
+    "index": 13,
+    "module": "module-11-merge-conflicts",
+    "audio_file": "13_module-11-merge-conflicts.mp3",
+    "text": "Time to save your work. Capture all the terminal output from today's exercises -- the conflict creation, the markers, the resolution, the multi-file conflicts, and the abort. This is one of those modules where the output really tells the story.",
+    "size_bytes": 287182
+  }
+]

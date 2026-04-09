@@ -1,0 +1,282 @@
+{
+  "quiz_title": "Day 13: Stashing",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary purpose of `git stash`?",
+      "options": [
+        "To permanently delete uncommitted changes",
+        "To save uncommitted changes to a temporary storage area and restore a clean working directory",
+        "To commit changes to a new branch automatically",
+        "To merge two branches together"
+      ],
+      "answer": "To save uncommitted changes to a temporary storage area and restore a clean working directory"
+    },
+    {
+      "id": 2,
+      "question": "What data structure does Git use to organize stashes?",
+      "options": [
+        "A queue (FIFO — first in, first out)",
+        "A binary tree",
+        "A stack (LIFO — last in, first out)",
+        "A hash map"
+      ],
+      "answer": "A stack (LIFO — last in, first out)"
+    },
+    {
+      "id": 3,
+      "question": "What is the reference name for the most recent stash?",
+      "options": [
+        "stash@{1}",
+        "stash@{latest}",
+        "stash@{0}",
+        "stash@{HEAD}"
+      ],
+      "answer": "stash@{0}"
+    },
+    {
+      "id": 4,
+      "question": "Which command saves uncommitted changes with a descriptive message?",
+      "options": [
+        "git stash save -m \"message\"",
+        "git stash push -m \"message\"",
+        "git stash commit -m \"message\"",
+        "git stash add -m \"message\""
+      ],
+      "answer": "git stash push -m \"message\""
+    },
+    {
+      "id": 5,
+      "question": "What is the difference between `git stash pop` and `git stash apply`?",
+      "options": [
+        "`pop` applies the stash and removes it from the list; `apply` applies it but keeps it in the list",
+        "`apply` applies the stash and removes it from the list; `pop` applies it but keeps it in the list",
+        "There is no difference; they are aliases for the same command",
+        "`pop` applies only tracked files; `apply` applies all files"
+      ],
+      "answer": "`pop` applies the stash and removes it from the list; `apply` applies it but keeps it in the list"
+    },
+    {
+      "id": 6,
+      "question": "Which flag is needed to include untracked files in a stash?",
+      "options": [
+        "--all",
+        "--include-untracked or -u",
+        "--force",
+        "--no-track"
+      ],
+      "answer": "--include-untracked or -u"
+    },
+    {
+      "id": 7,
+      "question": "What does `git stash list` do?",
+      "options": [
+        "Lists all commits in the repository",
+        "Lists all branches that have stashes",
+        "Shows all stashes with their messages",
+        "Lists all untracked files in the working directory"
+      ],
+      "answer": "Shows all stashes with their messages"
+    },
+    {
+      "id": 8,
+      "question": "What does `git stash show` display?",
+      "options": [
+        "The full diff of the most recent stash",
+        "A summary of the stash including files changed, insertions, and deletions",
+        "The commit message of the stash",
+        "The date and time the stash was created"
+      ],
+      "answer": "A summary of the stash including files changed, insertions, and deletions"
+    },
+    {
+      "id": 9,
+      "question": "What does the `-p` flag add to `git stash show`?",
+      "options": [
+        "It shows the stash in a paged format",
+        "It shows the full diff of the stash",
+        "It prints only the file names",
+        "It shows the stash in patch-compatible format without diffs"
+      ],
+      "answer": "It shows the full diff of the stash"
+    },
+    {
+      "id": 10,
+      "question": "What happens to the stash list after running `git stash pop` successfully?",
+      "options": [
+        "The applied stash remains in the list",
+        "All stashes are cleared from the list",
+        "The applied stash is removed from the list",
+        "The applied stash is moved to the bottom of the list"
+      ],
+      "answer": "The applied stash is removed from the list"
+    },
+    {
+      "id": 11,
+      "question": "Which command deletes the most recent stash without applying it?",
+      "options": [
+        "git stash clear",
+        "git stash remove",
+        "git stash drop",
+        "git stash delete"
+      ],
+      "answer": "git stash drop"
+    },
+    {
+      "id": 12,
+      "question": "Which command deletes ALL stashes at once?",
+      "options": [
+        "git stash drop --all",
+        "git stash clear",
+        "git stash reset",
+        "git stash remove --all"
+      ],
+      "answer": "git stash clear"
+    },
+    {
+      "id": 13,
+      "question": "If you have three stashes and want to apply the second oldest one, which reference do you use?",
+      "options": [
+        "stash@{0}",
+        "stash@{1}",
+        "stash@{2}",
+        "stash@{3}"
+      ],
+      "answer": "stash@{1}"
+    },
+    {
+      "id": 14,
+      "question": "What is the most common real-world reason to use `git stash`?",
+      "options": [
+        "To permanently archive completed features",
+        "To switch branches when you have uncommitted changes that aren't ready to commit",
+        "To undo the last commit",
+        "To share your work with other team members"
+      ],
+      "answer": "To switch branches when you have uncommitted changes that aren't ready to commit"
+    },
+    {
+      "id": 15,
+      "question": "Without the `--include-untracked` flag, what does `git stash` save?",
+      "options": [
+        "Only staged files",
+        "Only tracked modified files",
+        "All files including untracked ones",
+        "Only files in the current directory"
+      ],
+      "answer": "Only tracked modified files"
+    },
+    {
+      "id": 16,
+      "question": "After stashing your work, what should `git status` show?",
+      "options": [
+        "All your modified files as staged",
+        "A list of stashed files",
+        "A clean working directory",
+        "Your changes as untracked files"
+      ],
+      "answer": "A clean working directory"
+    },
+    {
+      "id": 17,
+      "question": "Why might you prefer `git stash apply` over `git stash pop`?",
+      "options": [
+        "`apply` is faster than `pop`",
+        "`apply` keeps the stash in the list so you can apply it to multiple branches",
+        "`apply` automatically stages the changes",
+        "`apply` creates a backup commit"
+      ],
+      "answer": "`apply` keeps the stash in the list so you can apply it to multiple branches"
+    },
+    {
+      "id": 18,
+      "question": "You create stashes in this order: Feature A, Feature B, Feature C. What is `stash@{0}`?",
+      "options": [
+        "Feature A changes",
+        "Feature B changes",
+        "Feature C changes",
+        "The oldest stash is always stash@{0}"
+      ],
+      "answer": "Feature C changes"
+    },
+    {
+      "id": 19,
+      "question": "What command applies a specific stash by its reference without removing it?",
+      "options": [
+        "git stash pop stash@{1}",
+        "git stash apply stash@{1}",
+        "git stash restore stash@{1}",
+        "git stash checkout stash@{1}"
+      ],
+      "answer": "git stash apply stash@{1}"
+    },
+    {
+      "id": 20,
+      "question": "In the branch-switching workflow, what is the correct sequence of steps?",
+      "options": [
+        "Switch branch, stash changes, fix bug, switch back, pop stash",
+        "Stash changes, switch branch, fix bug, switch back, pop stash",
+        "Commit changes, switch branch, fix bug, switch back, revert commit",
+        "Delete changes, switch branch, fix bug, switch back, rewrite changes"
+      ],
+      "answer": "Stash changes, switch branch, fix bug, switch back, pop stash"
+    },
+    {
+      "id": 21,
+      "question": "What happens if you try to switch branches with uncommitted changes that conflict with the target branch?",
+      "options": [
+        "Git automatically stashes your changes",
+        "Git merges the changes into the target branch",
+        "Git prevents you from switching branches",
+        "Git discards your uncommitted changes"
+      ],
+      "answer": "Git prevents you from switching branches"
+    },
+    {
+      "id": 22,
+      "question": "After running `git stash drop`, what happens to the remaining stashes?",
+      "options": [
+        "They keep their original reference numbers",
+        "They are all deleted",
+        "They are renumbered so the next oldest becomes stash@{0}",
+        "They are moved to a backup list"
+      ],
+      "answer": "They are renumbered so the next oldest becomes stash@{0}"
+    },
+    {
+      "id": 23,
+      "question": "Which command is equivalent to `git stash push --include-untracked`?",
+      "options": [
+        "git stash push -a",
+        "git stash push -u",
+        "git stash push -f",
+        "git stash push -t"
+      ],
+      "answer": "git stash push -u"
+    },
+    {
+      "id": 24,
+      "question": "What does `git stash` do to your working directory after saving changes?",
+      "options": [
+        "It leaves the working directory unchanged",
+        "It deletes all files in the directory",
+        "It restores the working directory to the state of the last commit",
+        "It switches to the main branch automatically"
+      ],
+      "answer": "It restores the working directory to the state of the last commit"
+    },
+    {
+      "id": 25,
+      "question": "If `git stash list` returns empty output after a `git stash pop`, what does that confirm?",
+      "options": [
+        "The stash was applied but the changes were lost",
+        "The stash was applied and successfully removed from the stash list",
+        "The pop command failed silently",
+        "There is an error in the stash storage"
+      ],
+      "answer": "The stash was applied and successfully removed from the stash list"
+    }
+  ]
+}

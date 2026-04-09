@@ -1,0 +1,282 @@
+{
+  "quiz_title": "Day 9: Cloning and Fetching",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does `git clone` do?",
+      "options": [
+        "Creates a local copy of a remote repository on your machine",
+        "Creates a copy of a repo under your own GitHub account",
+        "Downloads only the latest commit from the remote",
+        "Copies a local repository to a remote server"
+      ],
+      "answer": "Creates a local copy of a remote repository on your machine"
+    },
+    {
+      "id": 2,
+      "question": "What is the difference between `git clone` and a GitHub fork?",
+      "options": [
+        "Clone creates a local copy; fork creates a copy under your GitHub account",
+        "Fork creates a local copy; clone creates a copy under your GitHub account",
+        "They are the same operation with different names",
+        "Clone only works with public repos; fork works with private repos"
+      ],
+      "answer": "Clone creates a local copy; fork creates a copy under your GitHub account"
+    },
+    {
+      "id": 3,
+      "question": "What does `git fetch` do?",
+      "options": [
+        "Downloads new data from the remote but does NOT modify your working files",
+        "Downloads new data and merges it into your current branch",
+        "Uploads your local changes to the remote",
+        "Deletes remote-tracking branches that no longer exist"
+      ],
+      "answer": "Downloads new data from the remote but does NOT modify your working files"
+    },
+    {
+      "id": 4,
+      "question": "What is `git pull` equivalent to?",
+      "options": [
+        "`git fetch` followed by `git merge`",
+        "`git fetch` followed by `git rebase`",
+        "`git clone` followed by `git merge`",
+        "`git push` followed by `git fetch`"
+      ],
+      "answer": "`git fetch` followed by `git merge`"
+    },
+    {
+      "id": 5,
+      "question": "Why is `git fetch` considered safer than `git pull`?",
+      "options": [
+        "Because fetch does not modify your working files, letting you inspect changes first",
+        "Because fetch encrypts the data during transfer",
+        "Because fetch only downloads metadata, not actual file content",
+        "Because fetch automatically creates a backup branch"
+      ],
+      "answer": "Because fetch does not modify your working files, letting you inspect changes first"
+    },
+    {
+      "id": 6,
+      "question": "After cloning a repository, what is the default name of the remote?",
+      "options": [
+        "origin",
+        "upstream",
+        "remote",
+        "main"
+      ],
+      "answer": "origin"
+    },
+    {
+      "id": 7,
+      "question": "Which command shows the remote URLs configured for your repository?",
+      "options": [
+        "`git remote -v`",
+        "`git remote --list`",
+        "`git url --show`",
+        "`git config --remotes`"
+      ],
+      "answer": "`git remote -v`"
+    },
+    {
+      "id": 8,
+      "question": "After running `git clone`, which of the following is true about the cloned repository?",
+      "options": [
+        "It has the full commit history and origin is already configured",
+        "It only has the latest commit and no remote configured",
+        "It has the full history but no remote is configured",
+        "It only has the files without any Git history"
+      ],
+      "answer": "It has the full commit history and origin is already configured"
+    },
+    {
+      "id": 9,
+      "question": "What does `git branch -a` show?",
+      "options": [
+        "All branches, including remote-tracking branches",
+        "Only local branches",
+        "Only remote-tracking branches",
+        "Only the current branch"
+      ],
+      "answer": "All branches, including remote-tracking branches"
+    },
+    {
+      "id": 10,
+      "question": "After running `git fetch origin`, you notice `origin/main` is ahead of your local `main`. What has happened to your working directory?",
+      "options": [
+        "Nothing has changed in your working directory",
+        "The new files have been added to your working directory",
+        "Your working directory has been updated to match origin/main",
+        "Your local commits have been replaced by the remote commits"
+      ],
+      "answer": "Nothing has changed in your working directory"
+    },
+    {
+      "id": 11,
+      "question": "After fetching, which command applies the downloaded changes to your local branch?",
+      "options": [
+        "`git merge origin/main`",
+        "`git apply origin/main`",
+        "`git fetch --apply`",
+        "`git update origin/main`"
+      ],
+      "answer": "`git merge origin/main`"
+    },
+    {
+      "id": 12,
+      "question": "In the Day 9 simulation, what do the two local copies of the repository represent?",
+      "options": [
+        "Two developers working on the same remote repository",
+        "A production server and a staging server",
+        "Two different branches of the same project",
+        "A backup copy and a working copy"
+      ],
+      "answer": "Two developers working on the same remote repository"
+    },
+    {
+      "id": 13,
+      "question": "What is the correct syntax to clone a repository into a specific folder name?",
+      "options": [
+        "`git clone <url> <folder-name>`",
+        "`git clone --dir <folder-name> <url>`",
+        "`git clone <url> --output <folder-name>`",
+        "`git clone --name <folder-name> <url>`"
+      ],
+      "answer": "`git clone <url> <folder-name>`"
+    },
+    {
+      "id": 14,
+      "question": "After Developer A pushes a new file and Developer B runs `git fetch origin`, what can Developer B see?",
+      "options": [
+        "The new commit in `origin/main` via `git log --all`, but the file is not in the working directory",
+        "The new file in the working directory immediately",
+        "Nothing, because fetch does not download any data",
+        "A conflict warning message"
+      ],
+      "answer": "The new commit in `origin/main` via `git log --all`, but the file is not in the working directory"
+    },
+    {
+      "id": 15,
+      "question": "What is the basic collaboration cycle described in Day 9?",
+      "options": [
+        "Push from one side, pull from the other",
+        "Fork, clone, then submit a pull request",
+        "Create a branch, merge, then delete the branch",
+        "Fetch, rebase, then force push"
+      ],
+      "answer": "Push from one side, pull from the other"
+    },
+    {
+      "id": 16,
+      "question": "Which command shows the commit history as a graph with all branches?",
+      "options": [
+        "`git log --oneline --graph --all`",
+        "`git history --graph --all`",
+        "`git log --tree --branches`",
+        "`git show --graph --oneline`"
+      ],
+      "answer": "`git log --oneline --graph --all`"
+    },
+    {
+      "id": 17,
+      "question": "When you clone a repository, what are the branches listed under `remotes/origin/` called?",
+      "options": [
+        "Remote-tracking branches",
+        "Feature branches",
+        "Detached branches",
+        "Mirror branches"
+      ],
+      "answer": "Remote-tracking branches"
+    },
+    {
+      "id": 18,
+      "question": "Developer B makes a commit in the clone and runs `git push`. What must Developer A do to see that commit locally?",
+      "options": [
+        "Run `git pull` (or `git fetch` then `git merge`)",
+        "Run `git clone` again",
+        "Run `git push` to sync",
+        "Run `git commit --sync`"
+      ],
+      "answer": "Run `git pull` (or `git fetch` then `git merge`)"
+    },
+    {
+      "id": 19,
+      "question": "When is it appropriate to use `git pull` instead of the safer fetch-then-merge workflow?",
+      "options": [
+        "For simple cases when you are confident there will be no conflicts",
+        "When you want to discard your local changes",
+        "When working on a shared branch with many developers",
+        "Never; fetch-then-merge should always be used"
+      ],
+      "answer": "For simple cases when you are confident there will be no conflicts"
+    },
+    {
+      "id": 20,
+      "question": "What does `git log --oneline` display?",
+      "options": [
+        "Each commit on a single line showing the abbreviated hash and message",
+        "Only the most recent commit in full detail",
+        "The list of files changed in each commit",
+        "The full commit hash with author and date"
+      ],
+      "answer": "Each commit on a single line showing the abbreviated hash and message"
+    },
+    {
+      "id": 21,
+      "question": "If you run `git pull` and there are no new commits on the remote, what happens?",
+      "options": [
+        "Git reports that your branch is already up to date",
+        "Git creates an empty merge commit",
+        "Git throws an error because there is nothing to pull",
+        "Git resets your branch to the remote state"
+      ],
+      "answer": "Git reports that your branch is already up to date"
+    },
+    {
+      "id": 22,
+      "question": "In the Day 9 exercise, after running `git fetch origin` from the clone, which command confirms that the fetched file is NOT yet in your working directory?",
+      "options": [
+        "`ls`",
+        "`git status`",
+        "`git diff`",
+        "`git show`"
+      ],
+      "answer": "`ls`"
+    },
+    {
+      "id": 23,
+      "question": "What does `git push` do after you commit changes in the cloned repository?",
+      "options": [
+        "Uploads your local commits to the remote repository",
+        "Downloads changes from the remote repository",
+        "Creates a new branch on the remote",
+        "Merges the remote branch into your local branch"
+      ],
+      "answer": "Uploads your local commits to the remote repository"
+    },
+    {
+      "id": 24,
+      "question": "After both developers have pushed and pulled changes, what does `git log --oneline --graph --all` show?",
+      "options": [
+        "Both developers' commits interleaved in a unified history",
+        "Only the commits made by the current developer",
+        "Two separate histories that are not connected",
+        "Only the merge commits, not the individual commits"
+      ],
+      "answer": "Both developers' commits interleaved in a unified history"
+    },
+    {
+      "id": 25,
+      "question": "A fork is a feature of which platform, not a built-in Git command?",
+      "options": [
+        "GitHub",
+        "Git itself",
+        "The terminal shell",
+        "The operating system"
+      ],
+      "answer": "GitHub"
+    }
+  ]
+}

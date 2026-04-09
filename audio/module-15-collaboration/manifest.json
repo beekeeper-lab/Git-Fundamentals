@@ -1,0 +1,107 @@
+[
+  {
+    "index": 1,
+    "module": "module-15-collaboration",
+    "audio_file": "01_module-15-collaboration.mp3",
+    "text": "This is the final day -- and it's where everything comes together. You've learned commits, branches, merges, rebases, stashes, and tags. Now you'll see how real teams combine all of those tools into structured workflows.",
+    "size_bytes": 262522
+  },
+  {
+    "index": 2,
+    "module": "module-15-collaboration",
+    "audio_file": "02_module-15-collaboration.mp3",
+    "text": "Teams use different Git workflows depending on their size and needs. The three most common are the feature branch workflow (used by most teams), Gitflow (for larger projects with formal releases), and the forking workflow (used by open source). Let's look at each one before we start practicing.",
+    "size_bytes": 328142
+  },
+  {
+    "index": 3,
+    "module": "module-15-collaboration",
+    "audio_file": "03_module-15-collaboration.mp3",
+    "text": "The feature branch workflow is the one you'll use most. The diagram below shows how two features are developed in parallel and merged into main one at a time. Main stays stable because all work happens on branches, and code only enters main through pull requests.",
+    "size_bytes": 283420
+  },
+  {
+    "index": 4,
+    "module": "module-15-collaboration",
+    "audio_file": "04_module-15-collaboration.mp3",
+    "text": "Let's simulate this workflow hands-on. We'll create a project repo and then develop two features in parallel, just like two teammates would on a real project.",
+    "size_bytes": 158032
+  },
+  {
+    "index": 5,
+    "module": "module-15-collaboration",
+    "audio_file": "05_module-15-collaboration.mp3",
+    "text": "Now we'll create two feature branches from main, each with its own commits. This simulates two developers working on different features at the same time. Neither one knows about the other's work yet.",
+    "size_bytes": 182274
+  },
+  {
+    "index": 6,
+    "module": "module-15-collaboration",
+    "audio_file": "06_module-15-collaboration.mp3",
+    "text": "Back on main, we merge one feature at a time. This is how it works on a real team -- pull requests get merged in sequence. After merging, we delete the branches to keep things tidy. Check the graph to see how the history looks.",
+    "size_bytes": 240370
+  },
+  {
+    "index": 7,
+    "module": "module-15-collaboration",
+    "audio_file": "07_module-15-collaboration.mp3",
+    "text": "Branch names matter more than you'd think. On a team, a well-named branch tells everyone what it's for at a glance. Most teams use a prefix-slash-name convention -- feature slash, bugfix slash, hotfix slash. Here are the standard prefixes.",
+    "size_bytes": 275897
+  },
+  {
+    "index": 8,
+    "module": "module-15-collaboration",
+    "audio_file": "08_module-15-collaboration.mp3",
+    "text": "Let's practice creating branches with each of these naming conventions. We'll make a feature branch, a bugfix branch, and a hotfix branch, each with a descriptive name that tells the team exactly what it's for.",
+    "size_bytes": 194813
+  },
+  {
+    "index": 9,
+    "module": "module-15-collaboration",
+    "audio_file": "09_module-15-collaboration.mp3",
+    "text": "Now merge all three convention branches into main and delete them. This is the rhythm of daily teamwork -- branches come and go, but main keeps moving forward. List all branches before and after so you can see the cleanup in action.",
+    "size_bytes": 298884
+  },
+  {
+    "index": 10,
+    "module": "module-15-collaboration",
+    "audio_file": "10_module-15-collaboration.mp3",
+    "text": "Now let's look at the forking workflow -- how open source works. Instead of pushing branches to a shared repository, each contributor has their own complete copy called a fork. You work in your fork and submit pull requests back to the original. Let's walk through it.",
+    "size_bytes": 290107
+  },
+  {
+    "index": 11,
+    "module": "module-15-collaboration",
+    "audio_file": "11_module-15-collaboration.mp3",
+    "text": "After forking on GitHub, clone your fork to your local machine. This is your personal copy -- you have full push access to it. The original repository is still out there, and we'll connect to it next.",
+    "size_bytes": 199410
+  },
+  {
+    "index": 12,
+    "module": "module-15-collaboration",
+    "audio_file": "12_module-15-collaboration.mp3",
+    "text": "The key to the forking workflow is having two remotes: origin (your fork, which you can push to) and upstream (the original repository, which you pull from). Adding the upstream remote lets you fetch the latest changes from the original project and keep your fork up to date.",
+    "size_bytes": 293869
+  },
+  {
+    "index": 13,
+    "module": "module-15-collaboration",
+    "audio_file": "13_module-15-collaboration.mp3",
+    "text": "Let's put it all together with one final exercise -- the complete feature branch workflow done the professional way. Small, focused commits. Descriptive branch names. Review before merging. Clean up after yourself. This is the rhythm you'll use on every team you join.",
+    "size_bytes": 346532
+  },
+  {
+    "index": 14,
+    "module": "module-15-collaboration",
+    "audio_file": "14_module-15-collaboration.mp3",
+    "text": "Here are the professional habits that tie everything together. These aren't just Git tips -- they're team collaboration skills that will make you a better colleague on any project. Small commits, good names, clean merges, and no leftover branches.",
+    "size_bytes": 270881
+  },
+  {
+    "index": 15,
+    "module": "module-15-collaboration",
+    "audio_file": "15_module-15-collaboration.mp3",
+    "text": "Save all your terminal output from today's exercises. This is the capstone module, so make sure you captured the parallel features, the naming conventions, the fork workflow, and the best-practices exercise. You've earned this one -- congratulations on finishing the course.",
+    "size_bytes": 274643
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "index": 1,
+    "module": "module-02-workflow-basics",
+    "audio_file": "01_module-02-workflow-basics.mp3",
+    "text": "Yesterday you made your first commit. Today you'll learn the full edit-stage-commit workflow \u2014 the rhythm of Git that you'll use hundreds of times. By the end of today, you'll be tracking multiple files, staging selectively, and reading diffs like a pro.",
+    "size_bytes": 280494
+  },
+  {
+    "index": 2,
+    "module": "module-02-workflow-basics",
+    "audio_file": "02_module-02-workflow-basics.mp3",
+    "text": "Everything in Git flows through three stages: the working directory (where you edit files), the staging area (where you prepare a commit), and the repository (where commits are stored permanently). Understanding this flow is the key to understanding Git.",
+    "size_bytes": 295959
+  },
+  {
+    "index": 3,
+    "module": "module-02-workflow-basics",
+    "audio_file": "03_module-02-workflow-basics.mp3",
+    "text": "Real projects have many files. Let's create three files at once and see how Git handles them. Notice how they all show up as \"untracked\" \u2014 Git sees them, but it's not tracking them yet because you haven't told it to.",
+    "size_bytes": 229921
+  },
+  {
+    "index": 4,
+    "module": "module-02-workflow-basics",
+    "audio_file": "04_module-02-workflow-basics.mp3",
+    "text": "Here's where the staging area shines. Instead of committing all three files at once, we're going to stage just two of them. This gives you control over what goes into each commit \u2014 a habit that makes your project history clean and meaningful.",
+    "size_bytes": 265030
+  },
+  {
+    "index": 5,
+    "module": "module-02-workflow-basics",
+    "audio_file": "05_module-02-workflow-basics.mp3",
+    "text": "Now commit those two staged files, and then separately stage and commit the third. This is the pattern: be intentional about what goes into each commit. Each commit should represent one logical change.",
+    "size_bytes": 226159
+  },
+  {
+    "index": 6,
+    "module": "module-02-workflow-basics",
+    "audio_file": "06_module-02-workflow-basics.mp3",
+    "text": "Now let's see what happens when you modify a file that's already tracked. Git knows the file changed because it's comparing your working copy to the last commit. This is different from an untracked file \u2014 Git is actively watching this one.",
+    "size_bytes": 245386
+  },
+  {
+    "index": 7,
+    "module": "module-02-workflow-basics",
+    "audio_file": "07_module-02-workflow-basics.mp3",
+    "text": "The git diff command shows you exactly what changed, line by line. Lines starting with + are additions, lines starting with - are deletions. This is one of the most useful commands in Git \u2014 always review your changes before committing.",
+    "size_bytes": 263358
+  },
+  {
+    "index": 8,
+    "module": "module-02-workflow-basics",
+    "audio_file": "08_module-02-workflow-basics.mp3",
+    "text": "Here's a subtle but important detail. Once you stage a file, git diff shows nothing \u2014 because there are no more unstaged changes. To see what's staged and about to be committed, you need git diff --staged. Understanding this distinction is key.",
+    "size_bytes": 261268
+  },
+  {
+    "index": 9,
+    "module": "module-02-workflow-basics",
+    "audio_file": "09_module-02-workflow-basics.mp3",
+    "text": "Everything looks good in the staged diff, so let's commit it. Notice how the commit message describes what changed \u2014 not just \"update file\" but specifically what was updated and why. Good commit messages are a gift to your future self.",
+    "size_bytes": 256671
+  },
+  {
+    "index": 10,
+    "module": "module-02-workflow-basics",
+    "audio_file": "10_module-02-workflow-basics.mp3",
+    "text": "Here's where it gets powerful. You can modify several files but commit them separately, creating focused commits that each tell a clear story. This is a professional habit that makes your history much more useful when you need to understand what changed and when.",
+    "size_bytes": 273807
+  },
+  {
+    "index": 11,
+    "module": "module-02-workflow-basics",
+    "audio_file": "11_module-02-workflow-basics.mp3",
+    "text": "Let's step back and look at everything you've done today. The git log command shows your full commit history, and the --oneline flag gives you a compact view. You should see 5 commits \u2014 each one a clean, focused snapshot.",
+    "size_bytes": 229921
+  },
+  {
+    "index": 12,
+    "module": "module-02-workflow-basics",
+    "audio_file": "12_module-02-workflow-basics.mp3",
+    "text": "Great work today! You've mastered the core Git workflow \u2014 the rhythm you'll use every day from here on out. Save your terminal output and check each item against the rubric below.",
+    "size_bytes": 181438
+  }
+]

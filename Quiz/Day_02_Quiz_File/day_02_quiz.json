@@ -1,0 +1,282 @@
+{
+  "quiz_title": "Day 2: Installation and Setup",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What are the three stages of the core Git workflow, in order?",
+      "options": [
+        "Working Directory, Staging Area, Repository",
+        "Repository, Staging Area, Working Directory",
+        "Staging Area, Working Directory, Repository",
+        "Working Directory, Repository, Staging Area"
+      ],
+      "answer": "Working Directory, Staging Area, Repository"
+    },
+    {
+      "id": 2,
+      "question": "Which command moves changes from the working directory to the staging area?",
+      "options": [
+        "git commit",
+        "git push",
+        "git add",
+        "git stage"
+      ],
+      "answer": "git add"
+    },
+    {
+      "id": 3,
+      "question": "Which command saves staged changes permanently into the repository?",
+      "options": [
+        "git add -m \"message\"",
+        "git save -m \"message\"",
+        "git commit -m \"message\"",
+        "git store -m \"message\""
+      ],
+      "answer": "git commit -m \"message\""
+    },
+    {
+      "id": 4,
+      "question": "What does 'git status' do?",
+      "options": [
+        "Shows the commit history",
+        "Shows what has changed in the working directory and staging area",
+        "Shows the difference between two commits",
+        "Shows remote repository information"
+      ],
+      "answer": "Shows what has changed in the working directory and staging area"
+    },
+    {
+      "id": 5,
+      "question": "When you create a new file in a Git repository but have not run 'git add', what status does the file have?",
+      "options": [
+        "Modified",
+        "Staged",
+        "Untracked",
+        "Committed"
+      ],
+      "answer": "Untracked"
+    },
+    {
+      "id": 6,
+      "question": "In the output of 'git status', what color are untracked files typically shown in?",
+      "options": [
+        "Green",
+        "Blue",
+        "Yellow",
+        "Red"
+      ],
+      "answer": "Red"
+    },
+    {
+      "id": 7,
+      "question": "In the output of 'git status', what color are staged files typically shown in?",
+      "options": [
+        "Red",
+        "Green",
+        "Yellow",
+        "White"
+      ],
+      "answer": "Green"
+    },
+    {
+      "id": 8,
+      "question": "What is the staging area also known as?",
+      "options": [
+        "The cache",
+        "The index",
+        "The buffer",
+        "The queue"
+      ],
+      "answer": "The index"
+    },
+    {
+      "id": 9,
+      "question": "Which command stages ALL changes in the current directory and its subdirectories?",
+      "options": [
+        "git add --all-files",
+        "git add *",
+        "git add .",
+        "git commit -a"
+      ],
+      "answer": "git add ."
+    },
+    {
+      "id": 10,
+      "question": "What does 'git diff' (with no additional flags) show?",
+      "options": [
+        "Staged changes that will be committed",
+        "Unstaged changes in the working directory",
+        "The difference between two branches",
+        "All changes since the last push"
+      ],
+      "answer": "Unstaged changes in the working directory"
+    },
+    {
+      "id": 11,
+      "question": "What does 'git diff --staged' show?",
+      "options": [
+        "Unstaged changes in the working directory",
+        "Changes that have been staged and will be included in the next commit",
+        "Differences between the local and remote repository",
+        "Changes made since the repository was created"
+      ],
+      "answer": "Changes that have been staged and will be included in the next commit"
+    },
+    {
+      "id": 12,
+      "question": "If you modify a file, stage it with 'git add', and then run 'git diff', what will you see?",
+      "options": [
+        "The changes you just staged",
+        "Nothing, because there are no unstaged changes",
+        "The entire file contents",
+        "An error message"
+      ],
+      "answer": "Nothing, because there are no unstaged changes"
+    },
+    {
+      "id": 13,
+      "question": "Why is the staging area considered a powerful feature of Git?",
+      "options": [
+        "It automatically backs up your files",
+        "It lets you choose exactly which changes to include in a commit",
+        "It prevents merge conflicts",
+        "It compresses files to save disk space"
+      ],
+      "answer": "It lets you choose exactly which changes to include in a commit"
+    },
+    {
+      "id": 14,
+      "question": "In a diff output, what does a line starting with '+' indicate?",
+      "options": [
+        "A deleted line",
+        "An unchanged line",
+        "An added line",
+        "A moved line"
+      ],
+      "answer": "An added line"
+    },
+    {
+      "id": 15,
+      "question": "In a diff output, what does a line starting with '-' indicate?",
+      "options": [
+        "An added line",
+        "A deleted line",
+        "A comment",
+        "A binary change"
+      ],
+      "answer": "A deleted line"
+    },
+    {
+      "id": 16,
+      "question": "You have modified file2.txt and file3.txt. You want to commit them as separate commits. What is the correct approach?",
+      "options": [
+        "Run 'git add .' then 'git commit -m \"Update both files\"'",
+        "Run 'git add file2.txt', commit it, then 'git add file3.txt' and commit it",
+        "Run 'git commit -a -m \"Update both files\"'",
+        "You cannot create separate commits for files changed at the same time"
+      ],
+      "answer": "Run 'git add file2.txt', commit it, then 'git add file3.txt' and commit it"
+    },
+    {
+      "id": 17,
+      "question": "What does 'git log' display?",
+      "options": [
+        "A list of all files in the repository",
+        "The commit history with hashes, author names, and messages",
+        "A list of branches in the repository",
+        "The current status of the working directory"
+      ],
+      "answer": "The commit history with hashes, author names, and messages"
+    },
+    {
+      "id": 18,
+      "question": "What does 'git log --oneline' do differently from 'git log'?",
+      "options": [
+        "It shows only the most recent commit",
+        "It shows one line per commit with just the hash and message",
+        "It shows commits from all branches",
+        "It shows commits in reverse chronological order"
+      ],
+      "answer": "It shows one line per commit with just the hash and message"
+    },
+    {
+      "id": 19,
+      "question": "Where does Git store its repository data?",
+      "options": [
+        "In a folder called .gitdata",
+        "In a folder called .git",
+        "In a file called git.config",
+        "In the system registry"
+      ],
+      "answer": "In a folder called .git"
+    },
+    {
+      "id": 20,
+      "question": "After committing all changes and having no modifications, what does 'git status' report?",
+      "options": [
+        "No output at all",
+        "A list of all committed files",
+        "A clean working tree",
+        "The last commit message"
+      ],
+      "answer": "A clean working tree"
+    },
+    {
+      "id": 21,
+      "question": "You stage file1.txt and file2.txt but NOT file3.txt, then run 'git commit'. Which files are included in the commit?",
+      "options": [
+        "All three files",
+        "Only file1.txt and file2.txt",
+        "Only file3.txt",
+        "No files, because all files must be staged"
+      ],
+      "answer": "Only file1.txt and file2.txt"
+    },
+    {
+      "id": 22,
+      "question": "What happens to an untracked file after you run 'git commit' without staging it first?",
+      "options": [
+        "It is automatically included in the commit",
+        "It is deleted from the working directory",
+        "It remains untracked and is not included in the commit",
+        "Git displays an error and refuses to commit"
+      ],
+      "answer": "It remains untracked and is not included in the commit"
+    },
+    {
+      "id": 23,
+      "question": "How do you stage multiple specific files in a single command?",
+      "options": [
+        "git add file1.txt, file2.txt",
+        "git add file1.txt file2.txt",
+        "git add [file1.txt file2.txt]",
+        "git add file1.txt + file2.txt"
+      ],
+      "answer": "git add file1.txt file2.txt"
+    },
+    {
+      "id": 24,
+      "question": "A file that Git already tracks has been edited. What status does 'git status' show for it?",
+      "options": [
+        "Untracked",
+        "New file",
+        "Modified",
+        "Deleted"
+      ],
+      "answer": "Modified"
+    },
+    {
+      "id": 25,
+      "question": "Each commit in the Git log includes which unique identifier?",
+      "options": [
+        "A sequential number starting from 1",
+        "A unique hash",
+        "A timestamp ID",
+        "A file path reference"
+      ],
+      "answer": "A unique hash"
+    }
+  ]
+}

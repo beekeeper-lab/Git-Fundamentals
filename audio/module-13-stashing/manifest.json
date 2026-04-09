@@ -1,0 +1,93 @@
+[
+  {
+    "index": 1,
+    "module": "module-13-stashing",
+    "audio_file": "01_module-13-stashing.mp3",
+    "text": "You're halfway through building a feature and your boss messages you -- there's a bug in production that needs fixing now. You can't commit half-finished work, and you can't switch branches with a messy working directory. This is exactly what git stash is for.",
+    "size_bytes": 270045
+  },
+  {
+    "index": 2,
+    "module": "module-13-stashing",
+    "audio_file": "02_module-13-stashing.mp3",
+    "text": "Stash saves your work in progress to a temporary shelf, gives you a clean slate, and lets you come back to it later. Think of it like putting a bookmark in your work and setting it aside. Here are the key commands you'll be using today.",
+    "size_bytes": 232011
+  },
+  {
+    "index": 3,
+    "module": "module-13-stashing",
+    "audio_file": "03_module-13-stashing.mp3",
+    "text": "Let's create a fresh repo to practice in. We just need a single committed file to get started. Everything else we'll build as we go.",
+    "size_bytes": 117908
+  },
+  {
+    "index": 4,
+    "module": "module-13-stashing",
+    "audio_file": "04_module-13-stashing.mp3",
+    "text": "Now let's make some changes but not commit them. We'll create a new file and modify the readme. Then we'll stash everything away and watch the working directory go clean. The dash dash include-untracked flag is important -- without it, brand new files won't be stashed.",
+    "size_bytes": 294705
+  },
+  {
+    "index": 5,
+    "module": "module-13-stashing",
+    "audio_file": "05_module-13-stashing.mp3",
+    "text": "Your changes are stashed, but where did they go? The stash list shows all your saved stashes, show gives a summary, and show dash-p gives the full diff. Always check the stash before popping it -- make sure you're restoring what you think you're restoring.",
+    "size_bytes": 248311
+  },
+  {
+    "index": 6,
+    "module": "module-13-stashing",
+    "audio_file": "06_module-13-stashing.mp3",
+    "text": "The most common way to get your work back is git stash pop. It applies the most recent stash and removes it from the list in one step. After popping, your working directory should look exactly like it did before you stashed.",
+    "size_bytes": 224070
+  },
+  {
+    "index": 7,
+    "module": "module-13-stashing",
+    "audio_file": "07_module-13-stashing.mp3",
+    "text": "There's another way to restore a stash -- git stash apply. Unlike pop, apply keeps the stash in the list after restoring it. This is useful if you want to apply the same stash to multiple branches, or if you want a safety net in case something goes wrong.",
+    "size_bytes": 267119
+  },
+  {
+    "index": 8,
+    "module": "module-13-stashing",
+    "audio_file": "08_module-13-stashing.mp3",
+    "text": "You can stack up multiple stashes, and each one gets a number. The most recent is always stash at zero. Let's create three stashes so you can see how the numbering works. Commit the current work first so we start clean.",
+    "size_bytes": 236608
+  },
+  {
+    "index": 9,
+    "module": "module-13-stashing",
+    "audio_file": "09_module-13-stashing.mp3",
+    "text": "When you have multiple stashes, you can apply any specific one by its number. The numbering starts at zero for the most recent. This is handy when you've shelved several things and need to pick one out of the middle of the stack.",
+    "size_bytes": 217382
+  },
+  {
+    "index": 10,
+    "module": "module-13-stashing",
+    "audio_file": "10_module-13-stashing.mp3",
+    "text": "This is the scenario that makes stashing indispensable. You're in the middle of a feature, you get pulled away to fix a bug, and you need to switch branches cleanly. Let's walk through it step by step -- stash, switch, fix, switch back, pop.",
+    "size_bytes": 292197
+  },
+  {
+    "index": 11,
+    "module": "module-13-stashing",
+    "audio_file": "11_module-13-stashing.mp3",
+    "text": "Now you're on main with a clean working directory. Fix the bug, commit it, and you're done. The whole time, your feature work is safely tucked away in the stash, waiting for you to come back.",
+    "size_bytes": 188961
+  },
+  {
+    "index": 12,
+    "module": "module-13-stashing",
+    "audio_file": "12_module-13-stashing.mp3",
+    "text": "Bug is fixed. Now switch back to your feature branch and pop the stash. Your work in progress is exactly where you left it. Commit and finish up. This stash-switch-fix-switch-pop pattern is the professional way to handle interruptions.",
+    "size_bytes": 317693
+  },
+  {
+    "index": 13,
+    "module": "module-13-stashing",
+    "audio_file": "13_module-13-stashing.mp3",
+    "text": "Capture all your terminal output from today -- the basic stashing, the pop vs. apply comparison, the multiple stashes, and especially the real-world branch-switching scenario. That last one is the skill you'll use most often on the job.",
+    "size_bytes": 249983
+  }
+]

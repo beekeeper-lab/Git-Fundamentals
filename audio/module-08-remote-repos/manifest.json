@@ -1,0 +1,79 @@
+[
+  {
+    "index": 1,
+    "module": "module-08-remote-repos",
+    "audio_file": "01_module-08-remote-repos.mp3",
+    "text": "So far, everything you've done has been on your own machine. Today that changes. You'll connect your local repository to GitHub, push your commits to the cloud, and learn how remotes work. This is the bridge between working alone and working with a team -- and it also means your code is backed up somewhere that isn't just your laptop.",
+    "size_bytes": 351965
+  },
+  {
+    "index": 2,
+    "module": "module-08-remote-repos",
+    "audio_file": "02_module-08-remote-repos.mp3",
+    "text": "The first step is creating a repository on GitHub that your local repo can talk to. You'll create an empty repo -- no README, no license, nothing -- because you already have a local repo with commits in it. If you initialize with a README, GitHub creates a commit that your local repo doesn't have, and that causes headaches.",
+    "size_bytes": 333157
+  },
+  {
+    "index": 3,
+    "module": "module-08-remote-repos",
+    "audio_file": "03_module-08-remote-repos.mp3",
+    "text": "Now you'll link your local repository to the GitHub repo you just created. The git remote add command creates a named connection -- by convention the first remote is called origin. After adding it, verify with git remote dash-v to make sure the URLs are correct.",
+    "size_bytes": 270045
+  },
+  {
+    "index": 4,
+    "module": "module-08-remote-repos",
+    "audio_file": "04_module-08-remote-repos.mp3",
+    "text": "Pushing is how you upload your local commits to the remote. The first time you push a branch, you use the dash-u flag to set up tracking. That tells Git that your local main should be linked to origin/main. After this initial push, you can just type git push and Git knows where to send it.",
+    "size_bytes": 307244
+  },
+  {
+    "index": 5,
+    "module": "module-08-remote-repos",
+    "audio_file": "05_module-08-remote-repos.mp3",
+    "text": "Now that tracking is set up, pushing new commits is just a simple git push with no extra flags. Let's make a change, commit it, and push it to see the streamlined workflow in action.",
+    "size_bytes": 206933
+  },
+  {
+    "index": 6,
+    "module": "module-08-remote-repos",
+    "audio_file": "06_module-08-remote-repos.mp3",
+    "text": "The git remote show command gives you a detailed look at a remote -- its URLs, which branches it tracks, and how push and pull are configured. This is useful for debugging when things aren't behaving as expected.",
+    "size_bytes": 208187
+  },
+  {
+    "index": 7,
+    "module": "module-08-remote-repos",
+    "audio_file": "07_module-08-remote-repos.mp3",
+    "text": "Most of the time you'll just have one remote called origin, but Git supports multiple remotes. This is common in open source where you have your own fork and the original upstream repository. Let's add a second remote to see how it works.",
+    "size_bytes": 233683
+  },
+  {
+    "index": 8,
+    "module": "module-08-remote-repos",
+    "audio_file": "08_module-08-remote-repos.mp3",
+    "text": "Remotes can be renamed and removed just like branches. Let's clean up the backup remote we just added, and then practice renaming origin. Don't worry -- we'll rename it back so everything still works.",
+    "size_bytes": 233683
+  },
+  {
+    "index": 9,
+    "module": "module-08-remote-repos",
+    "audio_file": "09_module-08-remote-repos.mp3",
+    "text": "Here's an important distinction: your local Git doesn't automatically know what's happening on the remote. The remote-tracking branches like origin/main are just snapshots from the last time you fetched or pushed. Running git fetch updates those snapshots without changing your working files. This is the safe way to check what's new.",
+    "size_bytes": 336919
+  },
+  {
+    "index": 10,
+    "module": "module-08-remote-repos",
+    "audio_file": "10_module-08-remote-repos.mp3",
+    "text": "The dash-a flag on git branch shows you everything -- both your local branches and the remote-tracking branches. Remote-tracking branches are prefixed with remotes/origin/ and they represent the state of the remote the last time you fetched or pushed. Understanding these is key to working with remotes confidently.",
+    "size_bytes": 316021
+  },
+  {
+    "index": 11,
+    "module": "module-08-remote-repos",
+    "audio_file": "11_module-08-remote-repos.mp3",
+    "text": "Time to capture your work. Save all the terminal output from today's exercises into a single markdown file. You may redact your GitHub URL if you prefer.",
+    "size_bytes": 168899
+  }
+]

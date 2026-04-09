@@ -1,0 +1,282 @@
+{
+  "quiz_title": "Day 11: Merge Conflicts",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What causes a merge conflict in Git?",
+      "options": [
+        "Two branches modify different files",
+        "Two branches modify the same lines of the same file",
+        "A branch is deleted before merging",
+        "A commit message is missing"
+      ],
+      "answer": "Two branches modify the same lines of the same file"
+    },
+    {
+      "id": 2,
+      "question": "Which conflict marker indicates the start of YOUR current branch's version?",
+      "options": [
+        ">>>>>>> HEAD",
+        "======= HEAD",
+        "<<<<<<< HEAD",
+        "------- HEAD"
+      ],
+      "answer": "<<<<<<< HEAD"
+    },
+    {
+      "id": 3,
+      "question": "What separates your current branch's changes from the incoming branch's changes in a conflict marker?",
+      "options": [
+        "<<<<<<< divider",
+        "=======",
+        "******* ",
+        "------- "
+      ],
+      "answer": "======="
+    },
+    {
+      "id": 4,
+      "question": "In the conflict markers, what appears after the >>>>>>> line?",
+      "options": [
+        "The word HEAD",
+        "The name of the incoming branch being merged",
+        "The commit hash of the merge base",
+        "The filename with the conflict"
+      ],
+      "answer": "The name of the incoming branch being merged"
+    },
+    {
+      "id": 5,
+      "question": "When Git encounters a merge conflict, what happens to the merge process?",
+      "options": [
+        "Git automatically picks the newer version",
+        "Git deletes both conflicting changes",
+        "The merge is paused and needs your help to resolve",
+        "Git reverts both branches to their common ancestor"
+      ],
+      "answer": "The merge is paused and needs your help to resolve"
+    },
+    {
+      "id": 6,
+      "question": "Can Git automatically merge changes when two branches modify different files?",
+      "options": [
+        "No, all merges require manual resolution",
+        "Yes, Git can automatically merge changes to different files",
+        "Only if the files are in the same directory",
+        "Only if both branches were created at the same time"
+      ],
+      "answer": "Yes, Git can automatically merge changes to different files"
+    },
+    {
+      "id": 7,
+      "question": "Can Git automatically merge changes to different parts of the same file?",
+      "options": [
+        "No, any change to the same file causes a conflict",
+        "Yes, Git can merge changes to different parts of the same file",
+        "Only if the file is a text file",
+        "Only if both changes are additions, not deletions"
+      ],
+      "answer": "Yes, Git can merge changes to different parts of the same file"
+    },
+    {
+      "id": 8,
+      "question": "How does 'git status' describe a file with a merge conflict?",
+      "options": [
+        "conflicted",
+        "both modified",
+        "merge pending",
+        "unresolved"
+      ],
+      "answer": "both modified"
+    },
+    {
+      "id": 9,
+      "question": "After resolving a conflict in a file, what is the FIRST step to complete the merge?",
+      "options": [
+        "Run git merge --continue",
+        "Run git push",
+        "Stage the resolved file with git add",
+        "Run git reset"
+      ],
+      "answer": "Stage the resolved file with git add"
+    },
+    {
+      "id": 10,
+      "question": "After staging a resolved conflict file, what do you do next to finish the merge?",
+      "options": [
+        "Run git merge --finish",
+        "Run git commit with a merge message",
+        "Run git push",
+        "Run git branch --merge"
+      ],
+      "answer": "Run git commit with a merge message"
+    },
+    {
+      "id": 11,
+      "question": "What type of commit is created when you resolve a merge conflict and complete the merge?",
+      "options": [
+        "A revert commit",
+        "A squash commit",
+        "A merge commit",
+        "A cherry-pick commit"
+      ],
+      "answer": "A merge commit"
+    },
+    {
+      "id": 12,
+      "question": "When resolving a conflict, what must you remove from the file?",
+      "options": [
+        "Only the <<<<<<< markers",
+        "Only the ======= markers",
+        "All conflict markers: <<<<<<<, =======, and >>>>>>>",
+        "The entire file contents and start over"
+      ],
+      "answer": "All conflict markers: <<<<<<<, =======, and >>>>>>>"
+    },
+    {
+      "id": 13,
+      "question": "Which command creates and switches to a new branch in one step?",
+      "options": [
+        "git branch -s new-branch",
+        "git switch -c new-branch",
+        "git checkout --branch new-branch",
+        "git new-branch create"
+      ],
+      "answer": "git switch -c new-branch"
+    },
+    {
+      "id": 14,
+      "question": "When resolving a conflict, are you required to pick only one side's changes?",
+      "options": [
+        "Yes, you must pick either yours or theirs",
+        "No, you can combine both changes or write something entirely new",
+        "Yes, Git enforces choosing one side",
+        "No, but only if you use git merge --both"
+      ],
+      "answer": "No, you can combine both changes or write something entirely new"
+    },
+    {
+      "id": 15,
+      "question": "What command do you use to abort a merge that has conflicts?",
+      "options": [
+        "git merge --cancel",
+        "git merge --abort",
+        "git merge --undo",
+        "git revert --merge"
+      ],
+      "answer": "git merge --abort"
+    },
+    {
+      "id": 16,
+      "question": "What happens to your working directory after running 'git merge --abort'?",
+      "options": [
+        "All files are deleted",
+        "Everything returns to the state before the merge attempt",
+        "The incoming branch is deleted",
+        "The conflicting files are moved to a backup directory"
+      ],
+      "answer": "Everything returns to the state before the merge attempt"
+    },
+    {
+      "id": 17,
+      "question": "Which command shows a visual branch graph in the terminal?",
+      "options": [
+        "git log --oneline --graph --all",
+        "git branch --visual",
+        "git show --tree",
+        "git graph --branches"
+      ],
+      "answer": "git log --oneline --graph --all"
+    },
+    {
+      "id": 18,
+      "question": "In the Day 11 exercise, what file was used for the initial single-file conflict practice?",
+      "options": [
+        "conflict.txt",
+        "shared.txt",
+        "merge.txt",
+        "test.txt"
+      ],
+      "answer": "shared.txt"
+    },
+    {
+      "id": 19,
+      "question": "If two branches modify line 5 of a file but do NOT modify line 10, will line 10 cause a conflict?",
+      "options": [
+        "Yes, any file with a conflict has all lines conflicted",
+        "No, only the lines where changes overlap will cause a conflict",
+        "Yes, because the file is marked as both modified",
+        "It depends on the branch that was created first"
+      ],
+      "answer": "No, only the lines where changes overlap will cause a conflict"
+    },
+    {
+      "id": 20,
+      "question": "When merging branch-b into main and both branches created header.txt and content.txt with different contents, how many files have conflicts?",
+      "options": [
+        "None, Git auto-merges new files",
+        "One file",
+        "Two files",
+        "It depends on the file size"
+      ],
+      "answer": "Two files"
+    },
+    {
+      "id": 21,
+      "question": "When resolving multiple file conflicts in a single merge, how do you stage them?",
+      "options": [
+        "You can only stage one file at a time with separate commits",
+        "You stage all resolved files with git add and then make one merge commit",
+        "You must run git merge --continue after each file",
+        "Git stages them automatically once you remove the markers"
+      ],
+      "answer": "You stage all resolved files with git add and then make one merge commit"
+    },
+    {
+      "id": 22,
+      "question": "In the conflict markers block, the content between <<<<<<< HEAD and ======= represents what?",
+      "options": [
+        "The original version before either branch changed it",
+        "The version on your current branch",
+        "The version from the branch being merged in",
+        "A suggested resolution from Git"
+      ],
+      "answer": "The version on your current branch"
+    },
+    {
+      "id": 23,
+      "question": "In the conflict markers block, the content between ======= and >>>>>>> feature-branch represents what?",
+      "options": [
+        "The original version before either branch changed it",
+        "The version on your current branch",
+        "The version from the branch being merged in",
+        "A suggested resolution from Git"
+      ],
+      "answer": "The version from the branch being merged in"
+    },
+    {
+      "id": 24,
+      "question": "What does a merge commit record?",
+      "options": [
+        "That one branch was deleted",
+        "That both branches were combined and any conflicts were resolved",
+        "That a rebase was performed",
+        "That the repository was cloned from a remote"
+      ],
+      "answer": "That both branches were combined and any conflicts were resolved"
+    },
+    {
+      "id": 25,
+      "question": "After aborting a merge with 'git merge --abort', is any data lost?",
+      "options": [
+        "Yes, all commits on the incoming branch are deleted",
+        "Yes, the conflicting file is permanently corrupted",
+        "No, everything is back to the way it was before the merge attempt",
+        "No, but the incoming branch is locked from future merges"
+      ],
+      "answer": "No, everything is back to the way it was before the merge attempt"
+    }
+  ]
+}

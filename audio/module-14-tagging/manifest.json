@@ -1,0 +1,100 @@
+[
+  {
+    "index": 1,
+    "module": "module-14-tagging",
+    "audio_file": "01_module-14-tagging.mp3",
+    "text": "Commits have hashes like a3f7b2c -- useful for Git, but not great for humans. When you ship version 1.0 of your software, you want to mark that exact commit with a meaningful name you can find later. That's what tags are for.",
+    "size_bytes": 247057
+  },
+  {
+    "index": 2,
+    "module": "module-14-tagging",
+    "audio_file": "02_module-14-tagging.mp3",
+    "text": "Tags are permanent markers for specific commits. While branches move forward as you add commits, a tag stays put -- it always points to the same commit. There are two types: lightweight (just a name) and annotated (a name plus metadata like who tagged it and why). Annotated tags are what you'll use most.",
+    "size_bytes": 379968
+  },
+  {
+    "index": 3,
+    "module": "module-14-tagging",
+    "audio_file": "03_module-14-tagging.mp3",
+    "text": "Before we start creating tags, let's talk about how to name them. Most projects follow semantic versioning -- a three-number system that communicates exactly what kind of changes happened. Understanding this convention will make your tags meaningful to anyone who reads them.",
+    "size_bytes": 272971
+  },
+  {
+    "index": 4,
+    "module": "module-14-tagging",
+    "audio_file": "04_module-14-tagging.mp3",
+    "text": "Let's create a repo with a few commits that simulate a project's lifecycle -- an initial release, a bugfix, a new feature, and a breaking change. Each of these will get a tag so we can practice the full range of tagging operations.",
+    "size_bytes": 236608
+  },
+  {
+    "index": 5,
+    "module": "module-14-tagging",
+    "audio_file": "05_module-14-tagging.mp3",
+    "text": "Now let's tag these commits. We'll start with the current commit and work backward. Annotated tags use the dash-a flag and take a message with dash-m. You can tag any commit in the history by specifying its reference -- HEAD tilde 1 for one commit back, HEAD tilde 2 for two back, and so on.",
+    "size_bytes": 313095
+  },
+  {
+    "index": 6,
+    "module": "module-14-tagging",
+    "audio_file": "06_module-14-tagging.mp3",
+    "text": "For comparison, let's also create a lightweight tag. No dash-a, no dash-m -- just a name. Lightweight tags are quick and simple, but they don't store any metadata. You'll see the difference when we inspect them in a moment.",
+    "size_bytes": 227831
+  },
+  {
+    "index": 7,
+    "module": "module-14-tagging",
+    "audio_file": "07_module-14-tagging.mp3",
+    "text": "As a project grows, you might have dozens of tags. The git tag command lists them all, and the dash-l flag lets you filter by pattern. This is how you'd find all the v1 releases, for example, without scrolling through everything.",
+    "size_bytes": 218636
+  },
+  {
+    "index": 8,
+    "module": "module-14-tagging",
+    "audio_file": "08_module-14-tagging.mp3",
+    "text": "Here's where you can really see the difference between the two tag types. When you run git show on an annotated tag, you get the tagger's name, the date, and the message -- plus the commit details. A lightweight tag just shows the commit, nothing extra.",
+    "size_bytes": 269209
+  },
+  {
+    "index": 9,
+    "module": "module-14-tagging",
+    "audio_file": "09_module-14-tagging.mp3",
+    "text": "Tags also show up in your log output, right next to the commits they point to. The dash dash decorate flag makes them visible. This gives you a nice overview of which commits correspond to which releases.",
+    "size_bytes": 221562
+  },
+  {
+    "index": 10,
+    "module": "module-14-tagging",
+    "audio_file": "10_module-14-tagging.mp3",
+    "text": "You can check out a tag to look at the code as it existed at that point in time. But here's the catch -- it puts you in detached HEAD state. That means you're not on any branch, just viewing a snapshot. Look around all you want, but switch back to a branch when you're done.",
+    "size_bytes": 279658
+  },
+  {
+    "index": 11,
+    "module": "module-14-tagging",
+    "audio_file": "11_module-14-tagging.mp3",
+    "text": "Here's something that catches people off guard -- tags are not pushed automatically when you git push. You have to push them explicitly. Let's connect to a remote and push our tags so they show up on GitHub.",
+    "size_bytes": 206933
+  },
+  {
+    "index": 12,
+    "module": "module-14-tagging",
+    "audio_file": "12_module-14-tagging.mp3",
+    "text": "Sometimes you need to remove a tag -- maybe you tagged the wrong commit, or a beta tag has served its purpose. You can delete tags locally with dash-d, and from the remote with push dash dash delete. Let's clean up that beta-test tag.",
+    "size_bytes": 234937
+  },
+  {
+    "index": 13,
+    "module": "module-14-tagging",
+    "audio_file": "13_module-14-tagging.mp3",
+    "text": "Tags mark commits, but GitHub Releases take it a step further. A release bundles a tag with release notes, a changelog, and downloadable archives. It's how open source projects and teams communicate what's new in each version. Let's create one on GitHub.",
+    "size_bytes": 297631
+  },
+  {
+    "index": 14,
+    "module": "module-14-tagging",
+    "audio_file": "14_module-14-tagging.mp3",
+    "text": "Save your terminal output and a screenshot of your GitHub release page. Make sure you captured the git show output for both annotated and lightweight tags -- that comparison is a key learning moment.",
+    "size_bytes": 222398
+  }
+]

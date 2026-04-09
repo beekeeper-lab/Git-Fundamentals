@@ -1,0 +1,100 @@
+[
+  {
+    "index": 1,
+    "module": "module-01-what-is-git",
+    "audio_file": "01_module-01-what-is-git.mp3",
+    "text": "Today is day one \u2014 and by the end of it, you'll have Git installed, configured, and you'll have made your very first commit. That's a real milestone. Every Git expert started exactly where you are right now.",
+    "size_bytes": 258760
+  },
+  {
+    "index": 2,
+    "module": "module-01-what-is-git",
+    "audio_file": "02_module-01-what-is-git.mp3",
+    "text": "Imagine writing an essay and saving it as essay_v1.doc, essay_v2.doc, essay_final.doc, essay_final_FINAL.doc. That's version control the hard way. Git does the same thing \u2014 but automatically, efficiently, and without cluttering your folder with duplicate files.",
+    "size_bytes": 379968
+  },
+  {
+    "index": 3,
+    "module": "module-01-what-is-git",
+    "audio_file": "03_module-01-what-is-git.mp3",
+    "text": "Before you touch the terminal, let's build a mental model. There are five terms you'll see over and over again in Git. Don't worry about memorizing them now \u2014 you'll understand them deeply by the end of today just by using them.",
+    "size_bytes": 234519
+  },
+  {
+    "index": 4,
+    "module": "module-01-what-is-git",
+    "audio_file": "04_module-01-what-is-git.mp3",
+    "text": "Before we do anything else, let's make sure Git is installed and working. Open your terminal and run this command. If Git isn't installed, you'll need to install it before continuing.",
+    "size_bytes": 166809
+  },
+  {
+    "index": 5,
+    "module": "module-01-what-is-git",
+    "audio_file": "05_module-01-what-is-git.mp3",
+    "text": "Git has a built-in help system that's actually really useful. Get in the habit of using it \u2014 when you forget a command or want to know what options are available, git help is your friend.",
+    "size_bytes": 203172
+  },
+  {
+    "index": 6,
+    "module": "module-01-what-is-git",
+    "audio_file": "06_module-01-what-is-git.mp3",
+    "text": "Before you can make commits, Git needs to know who you are. These identity settings get attached to every commit you make, so your collaborators can see who changed what. This is a one-time global setup \u2014 do it once, and you're set for every project on this machine.",
+    "size_bytes": 287182
+  },
+  {
+    "index": 7,
+    "module": "module-01-what-is-git",
+    "audio_file": "07_module-01-what-is-git.mp3",
+    "text": "Two more quick settings. Git sometimes opens a text editor \u2014 for example, when you write a multi-line commit message. And the default branch name convention has changed from \"master\" to \"main\" in recent years. Let's set both of these now so you don't run into surprises later.",
+    "size_bytes": 286346
+  },
+  {
+    "index": 8,
+    "module": "module-01-what-is-git",
+    "audio_file": "08_module-01-what-is-git.mp3",
+    "text": "Now for the exciting part \u2014 creating your first Git repository. A repository is just a folder that Git is tracking. When you run git init, Git creates a hidden .git folder inside that stores all the history and metadata. This is the moment it becomes a Git project.",
+    "size_bytes": 336919
+  },
+  {
+    "index": 9,
+    "module": "module-01-what-is-git",
+    "audio_file": "09_module-01-what-is-git.mp3",
+    "text": "Let's peek behind the curtain. That .git folder is where Git stores everything \u2014 the entire history of your project, all the configuration, everything. You don't need to understand every file in there yet, but it's good to know it exists and what it looks like.",
+    "size_bytes": 293869
+  },
+  {
+    "index": 10,
+    "module": "module-01-what-is-git",
+    "audio_file": "10_module-01-what-is-git.mp3",
+    "text": "Here's the command you'll use more than any other in Git: git status. It tells you what branch you're on, what files are staged, what's modified, and what's untracked. Think of it as your compass \u2014 when in doubt, check status.",
+    "size_bytes": 270045
+  },
+  {
+    "index": 11,
+    "module": "module-01-what-is-git",
+    "audio_file": "11_module-01-what-is-git.mp3",
+    "text": "Time to create your first file. We'll make a simple README and then watch how git status reacts. Pay close attention \u2014 this is where you'll start to see the edit-stage-commit workflow in action.",
+    "size_bytes": 194395
+  },
+  {
+    "index": 12,
+    "module": "module-01-what-is-git",
+    "audio_file": "12_module-01-what-is-git.mp3",
+    "text": "This is the moment \u2014 your first commit. You're going to stage the file with git add, then commit it with git commit. Pay close attention to how git status changes at each step, because that's the edit-stage-commit workflow in action.",
+    "size_bytes": 265448
+  },
+  {
+    "index": 13,
+    "module": "module-01-what-is-git",
+    "audio_file": "13_module-01-what-is-git.mp3",
+    "text": "You just made history \u2014 literally. Let's look at the log to see your commit. You'll see the commit hash (a long string of letters and numbers), your name and email, the date, and the message you wrote. Every commit you ever make will have this same structure.",
+    "size_bytes": 278404
+  },
+  {
+    "index": 14,
+    "module": "module-01-what-is-git",
+    "audio_file": "14_module-01-what-is-git.mp3",
+    "text": "That's a wrap for Day 1! Save your terminal output to a file so you have proof of everything you did. The rubric below tells you exactly what's being graded \u2014 make sure you have output for each item.",
+    "size_bytes": 199410
+  }
+]

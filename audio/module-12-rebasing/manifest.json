@@ -1,0 +1,100 @@
+[
+  {
+    "index": 1,
+    "module": "module-12-rebasing",
+    "audio_file": "01_module-12-rebasing.mp3",
+    "text": "Yesterday you learned how to resolve merge conflicts. Today you'll learn a different way to integrate changes -- rebasing. Where merging preserves the full branching history, rebasing replays your commits on top of another branch, creating a clean, linear timeline. Both are valid tools, and knowing when to use each one is a key professional skill.",
+    "size_bytes": 363668
+  },
+  {
+    "index": 2,
+    "module": "module-12-rebasing",
+    "audio_file": "02_module-12-rebasing.mp3",
+    "text": "Before we touch the keyboard, let's understand what makes rebase different from merge. Both integrate changes from one branch into another, but they do it in fundamentally different ways. Merge preserves history as it happened; rebase rewrites history to be linear.",
+    "size_bytes": 295959
+  },
+  {
+    "index": 3,
+    "module": "module-12-rebasing",
+    "audio_file": "03_module-12-rebasing.mp3",
+    "text": "This is the most important rule in all of rebasing, and you need to internalize it before we go any further. Never rebase commits that have been pushed to a shared remote. If other people have those commits, rewriting them causes real problems. Rebase is for local cleanup only.",
+    "size_bytes": 296795
+  },
+  {
+    "index": 4,
+    "module": "module-12-rebasing",
+    "audio_file": "04_module-12-rebasing.mp3",
+    "text": "Let's start with the simplest case. We'll create a repo, make a feature branch with some commits, and then add a commit to main so the two branches diverge. This sets the stage for a rebase.",
+    "size_bytes": 201082
+  },
+  {
+    "index": 5,
+    "module": "module-12-rebasing",
+    "audio_file": "05_module-12-rebasing.mp3",
+    "text": "Before we rebase, let's look at the graph. You should see main and feature-x splitting from a common ancestor and heading in different directions. This is the forked history that rebase will straighten out.",
+    "size_bytes": 220308
+  },
+  {
+    "index": 6,
+    "module": "module-12-rebasing",
+    "audio_file": "06_module-12-rebasing.mp3",
+    "text": "Now for the main event. When you run git rebase main from the feature branch, Git takes your feature commits, temporarily sets them aside, moves the branch pointer to the tip of main, and replays your commits one by one on top. Watch the graph change from forked to perfectly linear.",
+    "size_bytes": 296795
+  },
+  {
+    "index": 7,
+    "module": "module-12-rebasing",
+    "audio_file": "07_module-12-rebasing.mp3",
+    "text": "Since feature-x is now directly ahead of main with no divergence, merging is a simple fast-forward. Git just moves the main pointer up to match feature-x. No merge commit needed. This is the cleanest possible integration.",
+    "size_bytes": 261268
+  },
+  {
+    "index": 8,
+    "module": "module-12-rebasing",
+    "audio_file": "08_module-12-rebasing.mp3",
+    "text": "Just like merging, rebasing can run into conflicts when both branches changed the same lines. The difference is how you resolve them -- instead of resolving once in a merge commit, you resolve during the rebase process itself. Let's create that situation.",
+    "size_bytes": 266284
+  },
+  {
+    "index": 9,
+    "module": "module-12-rebasing",
+    "audio_file": "09_module-12-rebasing.mp3",
+    "text": "When you rebase and Git hits a conflict, it pauses and lets you fix things -- just like a merge conflict. The difference is that after resolving, you run git rebase dash dash continue instead of git commit. Git then keeps replaying the remaining commits.",
+    "size_bytes": 308497
+  },
+  {
+    "index": 10,
+    "module": "module-12-rebasing",
+    "audio_file": "10_module-12-rebasing.mp3",
+    "text": "Just like you can abort a merge, you can abort a rebase that's gone sideways. If you're in the middle of resolving conflicts and decide you'd rather not continue, git rebase dash dash abort takes you right back to where you started. Nothing is lost.",
+    "size_bytes": 281330
+  },
+  {
+    "index": 11,
+    "module": "module-12-rebasing",
+    "audio_file": "11_module-12-rebasing.mp3",
+    "text": "Now let's see the two approaches side by side so you can really feel the difference. We'll create two identical scenarios and integrate one with merge, the other with rebase. Compare the graphs at the end -- that's the tradeoff you're choosing between.",
+    "size_bytes": 254581
+  },
+  {
+    "index": 12,
+    "module": "module-12-rebasing",
+    "audio_file": "12_module-12-rebasing.mp3",
+    "text": "First, the merge approach. We'll create a branch, add a commit, let main advance, and then merge. Notice the merge commit that appears in the graph -- it records that two lines of development were combined.",
+    "size_bytes": 232847
+  },
+  {
+    "index": 13,
+    "module": "module-12-rebasing",
+    "audio_file": "13_module-12-rebasing.mp3",
+    "text": "Now the same scenario, but with rebase. Create a branch, add a commit, let main advance, then rebase and fast-forward merge. Compare this graph to the merge one -- no merge commit, just a straight line. That's the tradeoff: merge preserves history as it happened, rebase rewrites it to be clean.",
+    "size_bytes": 328142
+  },
+  {
+    "index": 14,
+    "module": "module-12-rebasing",
+    "audio_file": "14_module-12-rebasing.mp3",
+    "text": "Save all your terminal output from today's exercises. Make sure you captured the graph at each step -- the divergence, the rebase result, the conflict resolution, the abort, and especially the side-by-side merge vs. rebase comparison.",
+    "size_bytes": 253745
+  }
+]

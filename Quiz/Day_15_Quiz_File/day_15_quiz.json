@@ -1,0 +1,282 @@
+{
+  "quiz_title": "Day 15: Git Collaboration Workflows",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "In the Feature Branch Workflow, what is the primary rule about the 'main' branch?",
+      "options": [
+        "It should contain experimental code",
+        "It is always deployable",
+        "It is only used for hotfixes",
+        "It should never be merged into"
+      ],
+      "answer": "It is always deployable"
+    },
+    {
+      "id": 2,
+      "question": "How does code get into 'main' in the Feature Branch Workflow?",
+      "options": [
+        "By committing directly to main",
+        "Via pull requests",
+        "By rebasing the main branch",
+        "By cherry-picking individual commits"
+      ],
+      "answer": "Via pull requests"
+    },
+    {
+      "id": 3,
+      "question": "What should happen to feature branches after they are merged into main?",
+      "options": [
+        "They should be renamed with a 'merged/' prefix",
+        "They should be kept for future reference",
+        "They should be deleted",
+        "They should be archived to a separate remote"
+      ],
+      "answer": "They should be deleted"
+    },
+    {
+      "id": 4,
+      "question": "Which command creates a new branch and switches to it in one step?",
+      "options": [
+        "git branch feature/new && git checkout feature/new",
+        "git switch -c feature/new",
+        "git new-branch feature/new",
+        "git checkout --new feature/new"
+      ],
+      "answer": "git switch -c feature/new"
+    },
+    {
+      "id": 5,
+      "question": "In Gitflow, which branch serves as the integration branch for features?",
+      "options": [
+        "main",
+        "release",
+        "develop",
+        "staging"
+      ],
+      "answer": "develop"
+    },
+    {
+      "id": 6,
+      "question": "In Gitflow, what is the purpose of a 'hotfix/*' branch?",
+      "options": [
+        "To prepare a new release",
+        "To integrate multiple features",
+        "To apply emergency production fixes",
+        "To refactor existing code"
+      ],
+      "answer": "To apply emergency production fixes"
+    },
+    {
+      "id": 7,
+      "question": "Which branch in Gitflow holds production releases only?",
+      "options": [
+        "develop",
+        "release",
+        "main",
+        "deploy"
+      ],
+      "answer": "main"
+    },
+    {
+      "id": 8,
+      "question": "In the Forking Workflow, what does 'upstream' refer to?",
+      "options": [
+        "Your local copy of the repository",
+        "The original repository you forked from",
+        "A branch used for deployments",
+        "Your fork on GitHub"
+      ],
+      "answer": "The original repository you forked from"
+    },
+    {
+      "id": 9,
+      "question": "What does 'origin' refer to in a forking workflow after you clone your fork?",
+      "options": [
+        "The original repository",
+        "Your fork",
+        "The main branch",
+        "The local repository"
+      ],
+      "answer": "Your fork"
+    },
+    {
+      "id": 10,
+      "question": "Which command adds the original repository as a remote named 'upstream'?",
+      "options": [
+        "git remote set-url upstream <URL>",
+        "git remote add upstream <URL>",
+        "git clone --upstream <URL>",
+        "git fetch upstream <URL>"
+      ],
+      "answer": "git remote add upstream <URL>"
+    },
+    {
+      "id": 11,
+      "question": "To sync your fork with the latest changes from the original repository, which two commands do you run in order?",
+      "options": [
+        "git pull origin main, then git push upstream main",
+        "git fetch upstream, then git merge upstream/main",
+        "git clone upstream, then git push origin main",
+        "git rebase main, then git fetch upstream"
+      ],
+      "answer": "git fetch upstream, then git merge upstream/main"
+    },
+    {
+      "id": 12,
+      "question": "Which branch naming prefix is used for new functionality?",
+      "options": [
+        "bugfix/",
+        "chore/",
+        "feature/",
+        "hotfix/"
+      ],
+      "answer": "feature/"
+    },
+    {
+      "id": 13,
+      "question": "Which branch naming prefix is used for maintenance tasks?",
+      "options": [
+        "feature/",
+        "release/",
+        "chore/",
+        "bugfix/"
+      ],
+      "answer": "chore/"
+    },
+    {
+      "id": 14,
+      "question": "Which command deletes a local branch that has already been merged?",
+      "options": [
+        "git branch -D feature/old",
+        "git branch -d feature/old",
+        "git remove branch feature/old",
+        "git branch --delete-force feature/old"
+      ],
+      "answer": "git branch -d feature/old"
+    },
+    {
+      "id": 15,
+      "question": "What does 'git log main..HEAD' show?",
+      "options": [
+        "All commits on main",
+        "Commits on your current branch that are not on main",
+        "The difference between the first and last commit",
+        "Only merge commits between main and HEAD"
+      ],
+      "answer": "Commits on your current branch that are not on main"
+    },
+    {
+      "id": 16,
+      "question": "What does 'git diff main...HEAD --stat' display?",
+      "options": [
+        "A full patch of every changed line",
+        "A summary of all changes compared to main",
+        "Only the names of deleted files",
+        "The commit messages between main and HEAD"
+      ],
+      "answer": "A summary of all changes compared to main"
+    },
+    {
+      "id": 17,
+      "question": "Which collaboration workflow is most commonly used by open source projects?",
+      "options": [
+        "Feature Branch Workflow",
+        "Gitflow Workflow",
+        "Forking Workflow",
+        "Trunk-Based Development"
+      ],
+      "answer": "Forking Workflow"
+    },
+    {
+      "id": 18,
+      "question": "In the Feature Branch Workflow, feature branches are intended to be:",
+      "options": [
+        "Long-lived and permanent",
+        "Short-lived",
+        "Created only for releases",
+        "Shared across multiple repositories"
+      ],
+      "answer": "Short-lived"
+    },
+    {
+      "id": 19,
+      "question": "Which command lists all local branches?",
+      "options": [
+        "git branches --list",
+        "git branch",
+        "git show-branches",
+        "git log --branches"
+      ],
+      "answer": "git branch"
+    },
+    {
+      "id": 20,
+      "question": "After pushing your synced fork to GitHub, which command do you use?",
+      "options": [
+        "git push upstream main",
+        "git push origin main",
+        "git sync origin main",
+        "git push --all"
+      ],
+      "answer": "git push origin main"
+    },
+    {
+      "id": 21,
+      "question": "Which command shows all configured remotes with their URLs?",
+      "options": [
+        "git remote -v",
+        "git remote --list",
+        "git show remotes",
+        "git config --remotes"
+      ],
+      "answer": "git remote -v"
+    },
+    {
+      "id": 22,
+      "question": "In Gitflow, what is the purpose of a 'release/*' branch?",
+      "options": [
+        "To develop new features",
+        "To prepare a release for production",
+        "To fix critical bugs in production",
+        "To store documentation updates"
+      ],
+      "answer": "To prepare a release for production"
+    },
+    {
+      "id": 23,
+      "question": "Which of the following is a best practice when making commits on a feature branch?",
+      "options": [
+        "Make one large commit with all changes",
+        "Make small, focused commits",
+        "Commit only when the feature is completely done",
+        "Avoid commit messages to save time"
+      ],
+      "answer": "Make small, focused commits"
+    },
+    {
+      "id": 24,
+      "question": "You can delete multiple branches in a single command using:",
+      "options": [
+        "git branch -d branch1 branch2 branch3",
+        "git delete branch1 branch2 branch3",
+        "git branch --remove branch1,branch2,branch3",
+        "git rm-branch branch1 branch2 branch3"
+      ],
+      "answer": "git branch -d branch1 branch2 branch3"
+    },
+    {
+      "id": 25,
+      "question": "What is the first step in the Forking Workflow before you can clone and work locally?",
+      "options": [
+        "Create a new branch on the original repository",
+        "Fork the repository on GitHub",
+        "Run git init in a local directory",
+        "Add the upstream remote"
+      ],
+      "answer": "Fork the repository on GitHub"
+    }
+  ]
+}

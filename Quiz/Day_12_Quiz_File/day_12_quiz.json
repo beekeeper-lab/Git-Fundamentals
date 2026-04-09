@@ -1,0 +1,282 @@
+{
+  "quiz_title": "Day 12: Rebasing",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does 'git rebase' do to your branch's commits?",
+      "options": [
+        "Deletes them permanently from the repository",
+        "Replays them on top of another branch, creating a linear history",
+        "Copies them into a stash for later use",
+        "Squashes all commits into a single merge commit"
+      ],
+      "answer": "Replays them on top of another branch, creating a linear history"
+    },
+    {
+      "id": 2,
+      "question": "After rebasing feature-x onto main, what happens to the original commit hashes on feature-x?",
+      "options": [
+        "They stay exactly the same",
+        "Only the first commit gets a new hash",
+        "They change because the commits now have different parent commits",
+        "They are removed and replaced with a single hash"
+      ],
+      "answer": "They change because the commits now have different parent commits"
+    },
+    {
+      "id": 3,
+      "question": "What is the Golden Rule of rebasing?",
+      "options": [
+        "Always rebase before every commit",
+        "Never rebase commits that have been pushed to a shared remote",
+        "Only rebase on the main branch",
+        "Never rebase more than three commits at a time"
+      ],
+      "answer": "Never rebase commits that have been pushed to a shared remote"
+    },
+    {
+      "id": 4,
+      "question": "In a merge workflow, what is created to join two diverging branches?",
+      "options": [
+        "A rebase commit",
+        "A squash commit",
+        "A merge commit",
+        "A cherry-pick commit"
+      ],
+      "answer": "A merge commit"
+    },
+    {
+      "id": 5,
+      "question": "After rebasing a feature branch onto main, what type of merge can be performed?",
+      "options": [
+        "A three-way merge",
+        "A recursive merge",
+        "A fast-forward merge",
+        "An octopus merge"
+      ],
+      "answer": "A fast-forward merge"
+    },
+    {
+      "id": 6,
+      "question": "Why is a fast-forward merge possible after rebasing?",
+      "options": [
+        "Because rebase deletes all previous commits",
+        "Because the feature branch is now directly ahead of main with no divergence",
+        "Because Git automatically resolves all conflicts during rebase",
+        "Because fast-forward merges work regardless of branch structure"
+      ],
+      "answer": "Because the feature branch is now directly ahead of main with no divergence"
+    },
+    {
+      "id": 7,
+      "question": "Which command do you run to rebase the current branch onto main?",
+      "options": [
+        "git merge main --rebase",
+        "git rebase main",
+        "git rebase --onto main",
+        "git pull --rebase main"
+      ],
+      "answer": "git rebase main"
+    },
+    {
+      "id": 8,
+      "question": "When a rebase encounters a conflict, what does Git do?",
+      "options": [
+        "Automatically resolves the conflict using the incoming changes",
+        "Deletes the conflicting file",
+        "Pauses the rebase and asks you to resolve the conflict",
+        "Aborts the rebase entirely and reverts all changes"
+      ],
+      "answer": "Pauses the rebase and asks you to resolve the conflict"
+    },
+    {
+      "id": 9,
+      "question": "After resolving a conflict during a rebase, what two commands should you run in order?",
+      "options": [
+        "git commit and git rebase --continue",
+        "git add <file> and git rebase --continue",
+        "git rebase --continue and git add <file>",
+        "git stash and git rebase --continue"
+      ],
+      "answer": "git add <file> and git rebase --continue"
+    },
+    {
+      "id": 10,
+      "question": "Which command aborts a rebase that is in progress?",
+      "options": [
+        "git rebase --cancel",
+        "git rebase --abort",
+        "git rebase --stop",
+        "git rebase --undo"
+      ],
+      "answer": "git rebase --abort"
+    },
+    {
+      "id": 11,
+      "question": "What happens to the branch when you run 'git rebase --abort'?",
+      "options": [
+        "All commits on the branch are deleted",
+        "The branch is merged into main automatically",
+        "The branch returns to its pre-rebase state with nothing lost",
+        "The branch is detached from HEAD"
+      ],
+      "answer": "The branch returns to its pre-rebase state with nothing lost"
+    },
+    {
+      "id": 12,
+      "question": "When is it safe to use rebase?",
+      "options": [
+        "Only on the main branch after a release",
+        "On local branches that haven't been pushed, or personal branches only you use",
+        "Anytime, regardless of whether others have the commits",
+        "Only when there are no conflicts expected"
+      ],
+      "answer": "On local branches that haven't been pushed, or personal branches only you use"
+    },
+    {
+      "id": 13,
+      "question": "In the rebase diagram, what do C' and D' represent compared to C and D?",
+      "options": [
+        "Exact copies with the same hashes",
+        "Commits with the same content but different hashes due to different parent commits",
+        "Commits that were squashed together",
+        "Commits that were cherry-picked from another repository"
+      ],
+      "answer": "Commits with the same content but different hashes due to different parent commits"
+    },
+    {
+      "id": 14,
+      "question": "Which command shows a visual graph of all branches in the log?",
+      "options": [
+        "git log --all --visual",
+        "git log --oneline --graph --all",
+        "git log --branches --tree",
+        "git log --show-graph --all-branches"
+      ],
+      "answer": "git log --oneline --graph --all"
+    },
+    {
+      "id": 15,
+      "question": "What is the main advantage of rebase over merge?",
+      "options": [
+        "It is always faster to execute",
+        "It creates a clean, linear history without merge commits",
+        "It never causes conflicts",
+        "It preserves the full branching history"
+      ],
+      "answer": "It creates a clean, linear history without merge commits"
+    },
+    {
+      "id": 16,
+      "question": "What is the main advantage of merge over rebase?",
+      "options": [
+        "It creates a linear history",
+        "It preserves the full branching history",
+        "It rewrites commit hashes",
+        "It is the only way to combine branches"
+      ],
+      "answer": "It preserves the full branching history"
+    },
+    {
+      "id": 17,
+      "question": "Why does rebasing rewrite history?",
+      "options": [
+        "Because it changes the commit messages",
+        "Because it changes the author of the commits",
+        "Because the replayed commits have new parent commits, resulting in new hashes",
+        "Because it removes the original branch entirely"
+      ],
+      "answer": "Because the replayed commits have new parent commits, resulting in new hashes"
+    },
+    {
+      "id": 18,
+      "question": "What problem does rebasing pushed commits cause for other developers?",
+      "options": [
+        "Their local repository becomes read-only",
+        "Their copies of the original commits conflict with the rewritten history",
+        "Git will automatically delete their local branches",
+        "They will lose access to the remote repository"
+      ],
+      "answer": "Their copies of the original commits conflict with the rewritten history"
+    },
+    {
+      "id": 19,
+      "question": "After rebasing and fast-forward merging, what command safely deletes the merged feature branch?",
+      "options": [
+        "git branch -D feature-x",
+        "git branch -d feature-x",
+        "git delete feature-x",
+        "git remove branch feature-x"
+      ],
+      "answer": "git branch -d feature-x"
+    },
+    {
+      "id": 20,
+      "question": "Which command creates and switches to a new branch in one step?",
+      "options": [
+        "git branch feature-x && git checkout feature-x",
+        "git switch -c feature-x",
+        "git new-branch feature-x",
+        "git create feature-x"
+      ],
+      "answer": "git switch -c feature-x"
+    },
+    {
+      "id": 21,
+      "question": "In the side-by-side comparison exercise, how do you view the last 6 commits with a graph?",
+      "options": [
+        "git log --oneline --graph -6",
+        "git log --last 6 --graph",
+        "git log --oneline --limit=6",
+        "git show --graph --count 6"
+      ],
+      "answer": "git log --oneline --graph -6"
+    },
+    {
+      "id": 22,
+      "question": "Which command checks the current state of files during a rebase conflict?",
+      "options": [
+        "git rebase --status",
+        "git status",
+        "git conflict --list",
+        "git check"
+      ],
+      "answer": "git status"
+    },
+    {
+      "id": 23,
+      "question": "What does the content of the commits look like after a rebase?",
+      "options": [
+        "The content is completely different from the originals",
+        "The content is the same but the history is rewritten",
+        "The content is merged with the base branch content",
+        "The content is compressed into a single diff"
+      ],
+      "answer": "The content is the same but the history is rewritten"
+    },
+    {
+      "id": 24,
+      "question": "When you rebase feature-y onto main and there is a conflict in conflict-file.txt, what must you do with the conflict markers?",
+      "options": [
+        "Leave them in the file so Git can track the conflict",
+        "Remove the markers and choose the correct content, then stage the file",
+        "Delete the entire file and recreate it",
+        "Run git resolve --auto to handle them"
+      ],
+      "answer": "Remove the markers and choose the correct content, then stage the file"
+    },
+    {
+      "id": 25,
+      "question": "In the merge vs. rebase comparison, what is the key visual difference in 'git log --graph' output?",
+      "options": [
+        "Merge shows tags while rebase does not",
+        "Rebase shows commit authors while merge does not",
+        "Merge shows a branching and merging pattern while rebase shows a straight line",
+        "There is no visual difference between the two"
+      ],
+      "answer": "Merge shows a branching and merging pattern while rebase shows a straight line"
+    }
+  ]
+}

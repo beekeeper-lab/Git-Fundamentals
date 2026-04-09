@@ -1,0 +1,282 @@
+{
+  "quiz_title": "Day 1: What Is Git?",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What type of version control system is Git?",
+      "options": [
+        "Centralized version control system",
+        "Distributed version control system",
+        "Local-only version control system",
+        "Cloud-based version control system"
+      ],
+      "answer": "Distributed version control system"
+    },
+    {
+      "id": 2,
+      "question": "What is a Git repository?",
+      "options": [
+        "A remote server that stores backups of your code",
+        "A project tracked by Git containing your files plus a hidden .git folder with the entire history",
+        "A folder that only contains source code files",
+        "A text file that lists all your project dependencies"
+      ],
+      "answer": "A project tracked by Git containing your files plus a hidden .git folder with the entire history"
+    },
+    {
+      "id": 3,
+      "question": "What is a commit in Git?",
+      "options": [
+        "A request to merge two branches together",
+        "A snapshot of your project at a point in time, with a message describing what changed",
+        "A copy of a file saved to the cloud",
+        "A command that uploads your code to a remote server"
+      ],
+      "answer": "A snapshot of your project at a point in time, with a message describing what changed"
+    },
+    {
+      "id": 4,
+      "question": "What is the staging area (index) in Git?",
+      "options": [
+        "The remote server where your code is stored",
+        "The folder where deleted files are kept",
+        "A holding area where you prepare changes before committing them",
+        "The main branch of your repository"
+      ],
+      "answer": "A holding area where you prepare changes before committing them"
+    },
+    {
+      "id": 5,
+      "question": "What is the correct order of the basic Git workflow?",
+      "options": [
+        "Commit snapshot → Edit files → Stage changes",
+        "Stage changes → Edit files → Commit snapshot",
+        "Edit files → Commit snapshot → Stage changes",
+        "Edit files → Stage changes → Commit snapshot"
+      ],
+      "answer": "Edit files → Stage changes → Commit snapshot"
+    },
+    {
+      "id": 6,
+      "question": "Which command checks whether Git is installed on your machine?",
+      "options": [
+        "git check",
+        "git --version",
+        "git status",
+        "git installed"
+      ],
+      "answer": "git --version"
+    },
+    {
+      "id": 7,
+      "question": "What does the 'git help' command do?",
+      "options": [
+        "Opens a web browser to the Git documentation site",
+        "Prints a summary of the most common Git commands",
+        "Creates a help file in your repository",
+        "Sends an error report to the Git developers"
+      ],
+      "answer": "Prints a summary of the most common Git commands"
+    },
+    {
+      "id": 8,
+      "question": "Which command opens the manual page for the 'git init' command?",
+      "options": [
+        "git manual init",
+        "git docs init",
+        "git help init",
+        "git info init"
+      ],
+      "answer": "git help init"
+    },
+    {
+      "id": 9,
+      "question": "Why must you configure your name and email before making commits?",
+      "options": [
+        "Git uses them to encrypt your files",
+        "Git needs to know who you are so it can attribute commits",
+        "They are required to install Git",
+        "They are used as your login credentials for GitHub"
+      ],
+      "answer": "Git needs to know who you are so it can attribute commits"
+    },
+    {
+      "id": 10,
+      "question": "Which command sets your Git username globally?",
+      "options": [
+        "git config --global user.name \"Your Name\"",
+        "git set --global username \"Your Name\"",
+        "git config --local user.name \"Your Name\"",
+        "git user --name \"Your Name\""
+      ],
+      "answer": "git config --global user.name \"Your Name\""
+    },
+    {
+      "id": 11,
+      "question": "What does the '--global' flag mean in 'git config --global'?",
+      "options": [
+        "The setting applies only to the current repository",
+        "The setting applies to all repositories on your machine",
+        "The setting is shared with all Git users on the internet",
+        "The setting applies only to remote repositories"
+      ],
+      "answer": "The setting applies to all repositories on your machine"
+    },
+    {
+      "id": 12,
+      "question": "Which command displays all Git configuration values on your machine?",
+      "options": [
+        "git config --show",
+        "git config --all",
+        "git config --list",
+        "git config --display"
+      ],
+      "answer": "git config --list"
+    },
+    {
+      "id": 13,
+      "question": "Which command sets the default text editor Git will use?",
+      "options": [
+        "git config --global default.editor \"nano\"",
+        "git config --global core.editor \"nano\"",
+        "git set-editor \"nano\"",
+        "git config --global text.editor \"nano\""
+      ],
+      "answer": "git config --global core.editor \"nano\""
+    },
+    {
+      "id": 14,
+      "question": "When does Git open a text editor?",
+      "options": [
+        "Every time you run 'git status'",
+        "When you clone a repository",
+        "For tasks like writing commit messages and resolving merge conflicts",
+        "When you run 'git init'"
+      ],
+      "answer": "For tasks like writing commit messages and resolving merge conflicts"
+    },
+    {
+      "id": 15,
+      "question": "What is the modern convention for the default branch name?",
+      "options": [
+        "master",
+        "main",
+        "default",
+        "trunk"
+      ],
+      "answer": "main"
+    },
+    {
+      "id": 16,
+      "question": "Which command sets the default branch name for new repositories to 'main'?",
+      "options": [
+        "git config --global branch.default main",
+        "git config --global init.defaultBranch main",
+        "git branch --set-default main",
+        "git config --global default.branch main"
+      ],
+      "answer": "git config --global init.defaultBranch main"
+    },
+    {
+      "id": 17,
+      "question": "Which command initializes a new Git repository in the current directory?",
+      "options": [
+        "git create",
+        "git new",
+        "git start",
+        "git init"
+      ],
+      "answer": "git init"
+    },
+    {
+      "id": 18,
+      "question": "What hidden folder does Git create when you initialize a repository?",
+      "options": [
+        ".gitconfig",
+        ".git",
+        ".gitrepo",
+        ".repository"
+      ],
+      "answer": ".git"
+    },
+    {
+      "id": 19,
+      "question": "Which of the following is NOT typically found inside the .git directory?",
+      "options": [
+        "objects",
+        "refs",
+        "HEAD",
+        "README.md"
+      ],
+      "answer": "README.md"
+    },
+    {
+      "id": 20,
+      "question": "Why should you avoid manually editing files inside the .git directory?",
+      "options": [
+        "The files are encrypted and cannot be read",
+        "It could corrupt your repository's history and data",
+        "The files are automatically regenerated every time you run a command",
+        "The .git directory is read-only by default"
+      ],
+      "answer": "It could corrupt your repository's history and data"
+    },
+    {
+      "id": 21,
+      "question": "What does 'git status' tell you?",
+      "options": [
+        "The total size of your repository on disk",
+        "What branch you're on, what's staged, modified, and untracked",
+        "How many collaborators have access to the repository",
+        "The date the repository was created"
+      ],
+      "answer": "What branch you're on, what's staged, modified, and untracked"
+    },
+    {
+      "id": 22,
+      "question": "Before running 'git add', a newly created file shows up in 'git status' as what?",
+      "options": [
+        "Staged",
+        "Modified",
+        "Committed",
+        "Untracked"
+      ],
+      "answer": "Untracked"
+    },
+    {
+      "id": 23,
+      "question": "What does 'git add README.md' do?",
+      "options": [
+        "Creates a new file called README.md",
+        "Moves README.md to the staging area so it is ready to be committed",
+        "Commits README.md directly to the repository",
+        "Deletes README.md from the working directory"
+      ],
+      "answer": "Moves README.md to the staging area so it is ready to be committed"
+    },
+    {
+      "id": 24,
+      "question": "What does the '-m' flag do in 'git commit -m \"Initial commit\"'?",
+      "options": [
+        "Merges the commit into the main branch",
+        "Marks the commit as a milestone",
+        "Lets you provide the commit message inline without opening an editor",
+        "Makes the commit a minor (non-breaking) change"
+      ],
+      "answer": "Lets you provide the commit message inline without opening an editor"
+    },
+    {
+      "id": 25,
+      "question": "What does 'git log' display?",
+      "options": [
+        "A list of all files currently in the repository",
+        "The commit history including hash, author, date, and message",
+        "A log of all commands you have run in the terminal",
+        "A list of all branches in the repository"
+      ],
+      "answer": "The commit history including hash, author, date, and message"
+    }
+  ]
+}

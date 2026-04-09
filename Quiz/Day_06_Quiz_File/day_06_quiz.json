@@ -1,0 +1,282 @@
+{
+  "quiz_title": "Day 6: Branching Basics",
+  "passing_score": 20,
+  "total_questions": 25,
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is a branch in Git?",
+      "options": [
+        "A complete copy of all files in the repository",
+        "A movable pointer to a commit",
+        "A separate folder on disk that holds a version of the project",
+        "A backup of the main branch stored remotely"
+      ],
+      "answer": "A movable pointer to a commit"
+    },
+    {
+      "id": 2,
+      "question": "Which command lists all local branches?",
+      "options": [
+        "git list",
+        "git branch",
+        "git branches --all",
+        "git show-branches"
+      ],
+      "answer": "git branch"
+    },
+    {
+      "id": 3,
+      "question": "When you create a new branch with 'git branch <name>', what happens?",
+      "options": [
+        "Git copies all files into a new directory",
+        "Git creates a new pointer but you remain on your current branch",
+        "Git creates a new pointer and automatically switches to it",
+        "Git creates a new remote tracking branch"
+      ],
+      "answer": "Git creates a new pointer but you remain on your current branch"
+    },
+    {
+      "id": 4,
+      "question": "Which command switches to an existing branch called 'dev'?",
+      "options": [
+        "git branch dev",
+        "git move dev",
+        "git switch dev",
+        "git switch -c dev"
+      ],
+      "answer": "git switch dev"
+    },
+    {
+      "id": 5,
+      "question": "What does the '-c' flag do when used with 'git switch'?",
+      "options": [
+        "Copies a branch",
+        "Cleans the working directory before switching",
+        "Creates a new branch and switches to it in one step",
+        "Checks the branch for merge conflicts"
+      ],
+      "answer": "Creates a new branch and switches to it in one step"
+    },
+    {
+      "id": 6,
+      "question": "When you run 'git branch' and see a '*' next to a branch name, what does that indicate?",
+      "options": [
+        "The branch has uncommitted changes",
+        "The branch is your current (active) branch",
+        "The branch has been marked as important",
+        "The branch is ready to be merged"
+      ],
+      "answer": "The branch is your current (active) branch"
+    },
+    {
+      "id": 7,
+      "question": "What is 'git switch' described as in the assignment?",
+      "options": [
+        "A legacy command for changing directories",
+        "The modern replacement for 'git checkout' when switching branches",
+        "A command only available in Git 1.0",
+        "An alias for 'git branch'"
+      ],
+      "answer": "The modern replacement for 'git checkout' when switching branches"
+    },
+    {
+      "id": 8,
+      "question": "If you create commits on a feature branch and then switch back to main, what happens to the files you created on the feature branch?",
+      "options": [
+        "They remain visible in the working directory",
+        "They are permanently deleted",
+        "They disappear from the working directory but still exist on the feature branch",
+        "They are moved to a hidden .git/stash folder"
+      ],
+      "answer": "They disappear from the working directory but still exist on the feature branch"
+    },
+    {
+      "id": 9,
+      "question": "Which command creates a new branch AND switches to it in one step?",
+      "options": [
+        "git branch -s <name>",
+        "git switch -c <name>",
+        "git branch -c <name>",
+        "git new <name>"
+      ],
+      "answer": "git switch -c <name>"
+    },
+    {
+      "id": 10,
+      "question": "What does 'git branch -d <name>' do?",
+      "options": [
+        "Duplicates a branch",
+        "Detaches a branch from remote",
+        "Deletes a branch safely (refuses if unmerged work exists)",
+        "Force-deletes a branch regardless of merge status"
+      ],
+      "answer": "Deletes a branch safely (refuses if unmerged work exists)"
+    },
+    {
+      "id": 11,
+      "question": "What is the difference between 'git branch -d' and 'git branch -D'?",
+      "options": [
+        "-d deletes local branches while -D deletes remote branches",
+        "-d is a safe delete that refuses unmerged branches; -D forces deletion",
+        "-d deletes the branch files; -D also deletes the commits",
+        "There is no difference; they are interchangeable"
+      ],
+      "answer": "-d is a safe delete that refuses unmerged branches; -D forces deletion"
+    },
+    {
+      "id": 12,
+      "question": "Which command renames a branch from 'old-name' to 'new-name'?",
+      "options": [
+        "git branch -r old-name new-name",
+        "git rename old-name new-name",
+        "git branch -m old-name new-name",
+        "git mv old-name new-name"
+      ],
+      "answer": "git branch -m old-name new-name"
+    },
+    {
+      "id": 13,
+      "question": "When you rename a branch, what happens to its commit history?",
+      "options": [
+        "The history is reset to the initial commit",
+        "The history is unchanged",
+        "The history is copied to a new branch and the old one is deleted",
+        "All commit messages are updated with the new branch name"
+      ],
+      "answer": "The history is unchanged"
+    },
+    {
+      "id": 14,
+      "question": "What does 'git branch -v' display?",
+      "options": [
+        "A verbose list of all remote branches",
+        "The version of Git installed",
+        "Each branch with its latest commit hash and message",
+        "A visual graph of the branch structure"
+      ],
+      "answer": "Each branch with its latest commit hash and message"
+    },
+    {
+      "id": 15,
+      "question": "Which command shows a visual graph of all branches and their commit history?",
+      "options": [
+        "git log --oneline --graph --all",
+        "git branch --graph",
+        "git show --tree",
+        "git log --visual --branches"
+      ],
+      "answer": "git log --oneline --graph --all"
+    },
+    {
+      "id": 16,
+      "question": "If you create a branch from main, what commit does the new branch initially point to?",
+      "options": [
+        "The first commit in the repository",
+        "No commit — it starts empty",
+        "The same commit that main currently points to",
+        "A new automatically generated commit"
+      ],
+      "answer": "The same commit that main currently points to"
+    },
+    {
+      "id": 17,
+      "question": "When you switch branches, what does Git do to your working directory?",
+      "options": [
+        "Nothing — all branches share the same working directory files",
+        "It swaps the working directory contents to match the branch you switch to",
+        "It creates a new working directory for each branch",
+        "It archives the current files and downloads new ones"
+      ],
+      "answer": "It swaps the working directory contents to match the branch you switch to"
+    },
+    {
+      "id": 18,
+      "question": "In the branch diagram from the assignment, if main has commits A-B-C and feature branches off at C with commits D-E, how many total unique commits exist?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "8"
+      ],
+      "answer": "5"
+    },
+    {
+      "id": 19,
+      "question": "What happens when you try to delete a branch that has unmerged changes using 'git branch -d'?",
+      "options": [
+        "The branch is deleted and unmerged changes are lost",
+        "Git warns you and refuses to delete the branch",
+        "The unmerged changes are automatically stashed",
+        "The branch is moved to a trash folder"
+      ],
+      "answer": "Git warns you and refuses to delete the branch"
+    },
+    {
+      "id": 20,
+      "question": "If two branches are created from the same point on main, what is true about them?",
+      "options": [
+        "They share all future commits automatically",
+        "They are independent and can have different commits",
+        "The second branch contains all commits from the first",
+        "Only one branch can receive new commits at a time"
+      ],
+      "answer": "They are independent and can have different commits"
+    },
+    {
+      "id": 21,
+      "question": "Does Git copy any files when you create a new branch?",
+      "options": [
+        "Yes, it duplicates the entire project directory",
+        "Yes, but only tracked files are copied",
+        "No, Git only creates a new pointer — no files are copied",
+        "No files are copied, but a snapshot is stored in the stash"
+      ],
+      "answer": "No, Git only creates a new pointer — no files are copied"
+    },
+    {
+      "id": 22,
+      "question": "You are on the 'feature-greeting' branch and run 'git switch main'. Which files would you expect to NOT see in your working directory?",
+      "options": [
+        "Files that existed on main before the branch was created",
+        "Files that were committed only on feature-greeting",
+        "Files in the .git directory",
+        "All tracked files"
+      ],
+      "answer": "Files that were committed only on feature-greeting"
+    },
+    {
+      "id": 23,
+      "question": "Can you delete the branch you are currently on?",
+      "options": [
+        "Yes, Git automatically switches to main first",
+        "Yes, but only with the -D flag",
+        "No, you must switch to a different branch before deleting it",
+        "No, branches cannot be deleted once checked out"
+      ],
+      "answer": "No, you must switch to a different branch before deleting it"
+    },
+    {
+      "id": 24,
+      "question": "What is the purpose of creating multiple branches in a project?",
+      "options": [
+        "To increase the repository's storage size for backups",
+        "To enable parallel development where each branch is independent",
+        "To automatically synchronize changes across team members",
+        "To prevent anyone from committing to the main branch"
+      ],
+      "answer": "To enable parallel development where each branch is independent"
+    },
+    {
+      "id": 25,
+      "question": "In the assignment, what command was used to create the 'feature-about' branch and switch to it simultaneously?",
+      "options": [
+        "git branch feature-about && git switch feature-about",
+        "git checkout -b feature-about",
+        "git switch -c feature-about",
+        "git new-branch feature-about"
+      ],
+      "answer": "git switch -c feature-about"
+    }
+  ]
+}
