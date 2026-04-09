@@ -22,6 +22,7 @@ IMAGES_DIR = PROJECT_ROOT / "images"
 AUDIO_DIR = PROJECT_ROOT / "audio"
 HTML_DIR = PROJECT_ROOT / "html"
 SCRIPTS_DIR = PROJECT_ROOT / "scripts"
+QUIZ_DIR = PROJECT_ROOT / "Quiz"
 TEMPLATE_PATH = SCRIPTS_DIR / "module_template.html"
 
 # Module registry
@@ -336,11 +337,114 @@ def extract_toc_from_pages(pages):
 
 
 def build_toc_html(toc_entries):
-    """Build sidebar TOC HTML."""
-    html = ""
+    """Build sidebar TOC HTML grouped by page."""
+    html = '<ul class="toc-list">\n'
+    current_group_open = False
+
     for entry in toc_entries:
-        css_class = "toc-h3" if entry["level"] == 3 else ""
-        html += f'<a href="#" data-page="{entry["page"]}" class="{css_class}">{entry["title"]}</a>\n'
+        if entry["level"] == 2:
+            # Close previous group if open
+            if current_group_open:
+                html += '  </ul>\n</li>\n'
+            html += f'<li class="toc-page-group" data-toc-page="{entry["page"]}">\n'
+            html += f'  <a href="#" data-page="{entry["page"]}" class="toc-h2-link">{entry["title"]}</a>\n'
+            html += '  <ul class="toc-subsections">\n'
+            current_group_open = True
+        elif entry["level"] == 3 and current_group_open:
+            html += f'    <li><a href="#" data-page="{entry["page"]}" class="toc-h3-link">{entry["title"]}</a></li>\n'
+
+    if current_group_open:
+        html += '  </ul>\n</li>\n'
+
+    html += '</ul>\n'
+    return html
+
+
+def split_merged_blockquotes(html):
+    """Split <blockquote> elements containing multiple <p> tags when any paragraph
+    starts with a recognized emoji marker. Python-Markdown merges adjacent > lines
+    into a single blockquote, which prevents the emoji processors from matching."""
+    marker_re = re.compile(
+        r"[\U0001F3F7\uFE0F\U0001F3AF\U0001F399\uFE0F\U0001F504\U0001F4A1]"
+    )
+
+    def split_one(match):
+        inner = match.group(1)
+        # Split on paragraph boundaries
+        paragraphs = re.split(r"</p>\s*<p>", inner)
+        if len(paragraphs) <= 1:
+            return match.group(0)
+        # Check if any paragraph contains a marker emoji
+        has_marker = any(marker_re.search(p) for p in paragraphs)
+        if not has_marker:
+            return match.group(0)
+        # Rewrap each paragraph in its own blockquote
+        result = []
+        for p in paragraphs:
+            # Ensure proper <p> wrapping
+            text = p.strip()
+            if not text.startswith("<p>"):
+                text = "<p>" + text
+            if not text.endswith("</p>"):
+                text = text + "</p>"
+            result.append(f"<blockquote>\n{text}\n</blockquote>")
+        return "\n".join(result)
+
+    return re.sub(
+        r"<blockquote>\s*(.*?)\s*</blockquote>",
+        split_one,
+        html,
+        flags=re.DOTALL,
+    )
+
+
+def generate_quiz_html(module_num, module_slug):
+    """Generate interactive quiz HTML from a quiz JSON file."""
+    import json as _json
+
+    quiz_dir = QUIZ_DIR / f"Day_{module_num:02d}_Quiz_File"
+    quiz_path = quiz_dir / f"day_{module_num:02d}_quiz.json"
+
+    if not quiz_path.exists():
+        return ""
+
+    quiz_data = _json.loads(quiz_path.read_text(encoding="utf-8"))
+    title = quiz_data.get("quiz_title", f"Day {module_num} Quiz")
+    passing = quiz_data.get("passing_score", 20)
+    total = quiz_data.get("total_questions", 25)
+    questions = quiz_data.get("questions", [])
+
+    if not questions:
+        return ""
+
+    html = f'<h2 id="quiz">Knowledge Check: {title}</h2>\n'
+    html += '<div class="quiz-container">\n'
+    html += f'<script type="application/json" id="quizData">{{"moduleSlug":"{module_slug}","passingScore":{passing},"totalQuestions":{total}}}</script>\n'
+    html += '<form id="quizForm">\n'
+
+    for q in questions:
+        qid = q["id"]
+        answer = q["answer"]
+        html += f'<div class="quiz-question" data-answer="{answer}">\n'
+        html += f'  <div class="quiz-question-number">Question {qid}</div>\n'
+        html += f'  <div class="quiz-question-text">{q["question"]}</div>\n'
+        html += '  <ul class="quiz-options">\n'
+        for opt in q["options"]:
+            html += f'    <li><label><input type="radio" name="q{qid}" value="{opt}"> {opt}</label></li>\n'
+        html += '  </ul>\n'
+        html += '  <div class="quiz-feedback"></div>\n'
+        html += '</div>\n'
+
+    html += '</form>\n'
+    html += '<button type="button" id="quizSubmitBtn" class="quiz-submit-btn">Submit Answers</button>\n'
+    html += '<div id="quizResults" class="quiz-results">\n'
+    html += '  <div class="quiz-score" id="quizScore"></div>\n'
+    html += '  <div class="quiz-label" id="quizLabel"></div>\n'
+    html += '  <div class="quiz-detail" id="quizDetail"></div>\n'
+    html += '  <button type="button" id="quizRetryBtn" class="quiz-retry-btn">Try Again</button>\n'
+    html += '</div>\n'
+    html += '</div>\n'
+
     return html
 
 
@@ -359,11 +463,23 @@ def build_module(module_info, module_index, all_modules, template, no_embed=Fals
     # Convert markdown to HTML
     html_content, _ = convert_markdown(processed)
 
+    # Split merged blockquotes so emoji processors can match each marker
+    html_content = split_merged_blockquotes(html_content)
+
     # Embed images
     html_content = embed_images(html_content, no_embed)
 
     # Embed audio
     html_content = embed_audio(html_content, filename)
+
+    # Append quiz if available
+    module_slug = Path(filename).stem
+    module_num_match = re.search(r"module-(\d+)", module_slug)
+    if module_num_match:
+        module_num = int(module_num_match.group(1))
+        quiz_html = generate_quiz_html(module_num, module_slug)
+        if quiz_html:
+            html_content += quiz_html
 
     # Paginate at H2 boundaries
     pages = paginate(html_content)
@@ -433,10 +549,13 @@ def build_index(modules):
         cards_html += f'<h2 class="tier-section-title"><span class="tier-badge tier-{tier.lower().replace(" ", "-").replace(chr(39), "")}">{tier}</span></h2>\n'
         cards_html += '<div class="module-grid">\n'
         for m in tiers[tier]:
-            href = f'html/{Path(m["file"]).stem}.html'
-            cards_html += f"""<a href="{href}" class="module-card">
+            slug = Path(m["file"]).stem
+            href = f'html/{slug}.html'
+            cards_html += f"""<a href="{href}" class="module-card" data-module-slug="{slug}">
     <div class="module-card-title">{m['short']}</div>
     <div class="module-card-desc">{m['title']}</div>
+    <span class="quiz-badge not-taken" data-quiz-badge>Quiz</span>
+    <div class="quiz-score-line" data-quiz-score></div>
 </a>\n"""
         cards_html += "</div>\n"
 
@@ -559,6 +678,35 @@ def build_index(modules):
             font-size: 0.9rem;
             color: var(--text-secondary);
         }}
+        .quiz-badge {{
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }}
+        .quiz-badge.not-taken {{
+            background: var(--border);
+            color: var(--text-secondary);
+        }}
+        .quiz-badge.passed {{
+            background: #22c55e;
+            color: white;
+        }}
+        .quiz-badge.failed {{
+            background: #ef4444;
+            color: white;
+        }}
+        [data-theme="dark"] .quiz-badge.not-taken {{
+            background: #334155;
+            color: #94a3b8;
+        }}
+        .quiz-score-line {{
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 0.2rem;
+        }}
         .footer {{
             text-align: center;
             padding: 2rem;
@@ -596,6 +744,28 @@ def build_index(modules):
             document.documentElement.setAttribute('data-theme', savedTheme);
             document.getElementById('themeBtn').textContent = savedTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
         }}
+
+        // Update quiz badges from localStorage
+        (function() {{
+            var results = JSON.parse(localStorage.getItem('git-fundamentals-quiz-results') || '{{}}');
+            document.querySelectorAll('.module-card[data-module-slug]').forEach(function(card) {{
+                var slug = card.getAttribute('data-module-slug');
+                var badge = card.querySelector('[data-quiz-badge]');
+                var scoreLine = card.querySelector('[data-quiz-score]');
+                if (!badge || !results[slug]) return;
+                var r = results[slug];
+                if (r.passed) {{
+                    badge.className = 'quiz-badge passed';
+                    badge.textContent = 'Passed';
+                }} else {{
+                    badge.className = 'quiz-badge failed';
+                    badge.textContent = 'Retry';
+                }}
+                if (scoreLine) {{
+                    scoreLine.textContent = r.score + '/' + r.total + ' correct';
+                }}
+            }});
+        }})();
     </script>
 </body>
 </html>"""
