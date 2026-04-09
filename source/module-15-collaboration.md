@@ -4,11 +4,11 @@
 
 > 🏷️ Advanced
 
-> 🎙️ This is the final day -- and it's where everything comes together. You've learned commits, branches, merges, rebases, stashes, and tags. Now you'll see how real teams combine all of those tools into structured workflows.
-
 > 🎯 **Teach:** The three most common Git collaboration workflows and when to use each.
 > **See:** Feature branches merged in sequence, naming conventions in practice, and a forking workflow with upstream syncing.
 > **Feel:** Ready to collaborate on real team projects with confidence.
+
+> 🎙️ This is the final day -- and it's where everything comes together. You've learned commits, branches, merges, rebases, stashes, and tags. Now you'll see how real teams combine all of those tools into structured workflows.
 
 > 🔄 **Where this fits:** This is the capstone of the course. Every skill from Days 1 through 14 feeds into these workflows. Branching, merging, conflict resolution, rebasing, stashing, tagging -- they're all tools in the collaboration toolbox you're building here.
 
