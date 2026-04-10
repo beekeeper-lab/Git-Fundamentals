@@ -10,6 +10,8 @@
 
 > 🎙️ So far, everything you've done has been on your own machine. Today that changes. You'll connect your local repository to GitHub, push your commits to the cloud, and learn how remotes work. This is the bridge between working alone and working with a team -- and it also means your code is backed up somewhere that isn't just your laptop.
 
+![Local repo connects to GitHub cloud](../images/module-08/local-meets-cloud-hero.png)
+
 > 🔄 **Where this fits:** Days 1-7 covered local Git -- repositories, commits, branches, and merges all on your machine. Days 8-10 introduce the remote side: pushing, pulling, and collaborating through GitHub. This is where Git becomes a team tool.
 
 A **remote** is a copy of your repository hosted on a server (like GitHub, GitLab, or Bitbucket). Remotes enable collaboration -- multiple people can push and pull changes to/from the same remote.
@@ -72,6 +74,8 @@ You should see `origin` listed twice (once for fetch, once for push).
 > **Feel:** Accomplished -- your code is now backed up and visible on the web.
 
 > 🎙️ Pushing is how you upload your local commits to the remote. The first time you push a branch, you use the dash-u flag to set up tracking. That tells Git that your local main should be linked to origin/main. After this initial push, you can just type git push and Git knows where to send it.
+
+![Push and pull between local and remote](../images/module-08/push-pull-arrows.png)
 
 ```bash
 git push -u origin main
@@ -187,6 +191,8 @@ You can see where `origin/main` is relative to your local `main`.
 > **Feel:** That you always have visibility into what the remote looks like, even without being online.
 
 > 🎙️ The dash-a flag on git branch shows you everything -- both your local branches and the remote-tracking branches. Remote-tracking branches are prefixed with remotes/origin/ and they represent the state of the remote the last time you fetched or pushed. Understanding these is key to working with remotes confidently.
+
+![Remote-tracking branches as snapshots](../images/module-08/remote-tracking-branches.png)
 
 ```bash
 git branch -a

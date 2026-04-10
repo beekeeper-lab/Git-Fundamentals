@@ -20,6 +20,8 @@
 
 > 🎙️ In real-world projects, you rarely push directly to main. Instead, every change follows a loop: create a branch, make commits, push, open a pull request, merge, and sync. This loop is called the feature branch workflow, and it's the heartbeat of modern software development.
 
+![Six-step feature branch workflow loop](../images/module-10/professional-loop-hero.png)
+
 In real-world projects, you rarely push directly to `main`. Instead, you:
 
 1. Create a **feature branch**
@@ -80,6 +82,8 @@ The second `git push` doesn't need `-u` since the tracking is already set up.
 
 > 🎙️ A pull request is how you propose merging your branch into main. It's not a Git feature -- it's a GitHub feature built on top of Git. A PR shows the diff of all your changes, lets reviewers leave comments, and provides a merge button. This is where code review happens on real teams.
 
+![Pull request as a review gateway](../images/module-10/pull-request-gateway.png)
+
 1. Go to your repository on GitHub
 2. Click **"Compare & pull request"** (or go to the Pull Requests tab and click New Pull Request)
 3. Set the base branch to `main` and the compare branch to `feature-login`
@@ -121,6 +125,8 @@ On the PR page:
 > **Feel:** Awareness that local and remote are separate copies that must be kept in sync.
 
 > 🎙️ After merging on GitHub, your remote main has moved forward but your local main is still behind. You need to switch back to main and pull the latest changes. This is how you keep your local copy in sync with the remote.
+
+![Syncing local and remote after merge](../images/module-10/local-remote-sync.png)
 
 ```bash
 git switch main

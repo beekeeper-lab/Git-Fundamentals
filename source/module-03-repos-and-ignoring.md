@@ -10,6 +10,8 @@
 > **See:** A project with proper .gitignore patterns filtering out build artifacts and secrets.
 > **Feel:** Confident about repository setup and keeping repos clean.
 
+![Two ways to get a repository](../images/module-03/two-ways-to-get-repo-hero.png)
+
 There are two ways to get a Git repository:
 1. **`git init`** — Create a new repo from scratch
 2. **`git clone <url>`** — Copy an existing repo from a remote server
@@ -50,6 +52,8 @@ git commit -m "Initial project structure"
 > **Feel:** Aware of the risks of committing the wrong files and ready to prevent it.
 
 > 🎙️ Here's something that trips up beginners — not everything in your project folder should be tracked by Git. Compiled code, dependency folders, IDE settings, and especially secrets like API keys should never be committed. That's what `.gitignore` is for. It's a simple text file that tells Git which files to pretend don't exist.
+
+![Gitignore as a bouncer](../images/module-03/gitignore-bouncer.png)
 
 A `.gitignore` file contains patterns — one per line — that tell Git which files and directories to ignore. Common things to ignore include:
 
@@ -134,6 +138,8 @@ git commit -m "Add App.java source file"
 > **Feel:** Impressed by Git's distributed nature — every clone is a full, independent copy.
 
 > 🎙️ The other way to get a repository is cloning. When you clone, you get the entire history — every commit ever made. This is what "distributed" means: your clone is a complete, independent copy of the repository. You could disconnect from the internet and still have the full history.
+
+![Cloning creates a complete copy](../images/module-03/clone-complete-copy.png)
 
 Cloning creates a local copy of a remote repository. Unlike downloading a ZIP file, cloning preserves:
 - The entire commit history

@@ -10,6 +10,8 @@
 
 > 🎙️ Branches are where Git goes from useful to powerful. A branch lets you work on something new without affecting the stable version of your code. You can have multiple branches going at once, switch between them instantly, and your files literally change on disk when you do. Today you'll create branches, switch between them, and see this magic in action.
 
+![Parallel railroad tracks for branches](../images/module-06/parallel-railroad-tracks-hero.png)
+
 A branch is simply a movable pointer to a commit. When you create a branch, Git creates a new pointer -- it doesn't copy any files.
 
 ```
@@ -112,6 +114,8 @@ These commits are now part of `feature-greeting` but not `main`.
 
 > 🎙️ This is the moment that makes branches click for most people. When you switch back to main, those files you just created are going to disappear from your working directory. They aren't deleted -- they're safely stored in the feature-greeting branch. Git is just showing you what main looks like.
 
+![Files appear and disappear between branches](../images/module-06/files-appear-disappear.png)
+
 ```bash
 git switch main
 ls
@@ -156,6 +160,8 @@ git commit -m "Add about.txt on feature-about branch"
 > **Feel:** That you can always see the big picture of your repository's branching structure.
 
 > 🎙️ Now you have three branches -- main, feature-greeting, and feature-about -- each with different content. The graph view of git log shows you how they all relate. You should see lines diverging from a common point, which is exactly how parallel development works.
+
+![Branch graph visualization](../images/module-06/branch-graph-visualization.png)
 
 ```bash
 git log --oneline --graph --all

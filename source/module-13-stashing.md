@@ -10,6 +10,8 @@
 
 > 🎙️ You're halfway through building a feature and your boss messages you -- there's a bug in production that needs fixing now. You can't commit half-finished work, and you can't switch branches with a messy working directory. This is exactly what git stash is for.
 
+![Bookmark your work and set it aside](../images/module-13/bookmark-your-work-hero.png)
+
 > 🔄 **Where this fits:** Stashing is a workflow tool that complements branching. You've learned to create branches for parallel work -- stashing handles the in-between moments when you need to context-switch quickly without committing incomplete changes.
 
 ## Why Stash Exists
@@ -152,6 +154,8 @@ git stash list
 
 > 🎙️ You can stack up multiple stashes, and each one gets a number. The most recent is always stash at zero. Let's create three stashes so you can see how the numbering works. Commit the current work first so we start clean.
 
+![Stash stack with LIFO ordering](../images/module-13/stash-stack-lifo.png)
+
 Commit current work first, then create several stashes:
 
 ```bash
@@ -208,6 +212,8 @@ All stashes are gone. Use `clear` with caution -- there's no undo.
 > **Feel:** Prepared for the most common real-world stashing scenario you'll encounter on the job.
 
 > 🎙️ This is the scenario that makes stashing indispensable. You're in the middle of a feature, you get pulled away to fix a bug, and you need to switch branches cleanly. Let's walk through it step by step -- stash, switch, fix, switch back, pop.
+
+![Stash-switch-fix-switch-pop pattern](../images/module-13/stash-switch-fix-switch-pop.png)
 
 Start working on a new feature:
 

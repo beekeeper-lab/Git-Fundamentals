@@ -10,6 +10,8 @@
 > **See:** An overview of all 15 days and what you'll build.
 > **Feel:** Excited and confident that this is achievable.
 
+![Course launch hero](../images/module-00/course-launch-hero.png)
+
 This course is designed for **Campbell Reed** and structured as a self-paced, hands-on internship curriculum at Stonewaters Consulting.
 
 ## What You'll Learn: Days 1-5
@@ -19,6 +21,8 @@ This course is designed for **Campbell Reed** and structured as a self-paced, ha
 > **Feel:** Encouraged that the course starts with the essentials and builds gradually.
 
 > 🎙️ The first five days are all about building your foundation. You'll go from "what even is Git?" to comfortably creating repositories, staging files, making commits, and reading your project's history. These are the skills you'll use every single day as a developer.
+
+![Three-week course roadmap](../images/module-00/three-week-roadmap.png)
 
 - **Day 1:** What Is Git — installation, configuration, your first commit
 - **Day 2:** The Edit-Stage-Commit Workflow — tracking multiple files, using git diff
@@ -61,6 +65,8 @@ This course is designed for **Campbell Reed** and structured as a self-paced, ha
 > **Feel:** Reassured that the predictable structure lets you focus on learning, not logistics.
 
 > 🎙️ Every day follows the same three-part structure. First you read some background to build your mental model, then you do hands-on exercises in the terminal, and finally you save your output as proof of completion. The consistency is intentional — it lets you focus on the content, not the format.
+
+![Daily structure overview](../images/module-00/daily-structure.png)
 
 Each day includes:
 1. **Background** — concepts and mental models

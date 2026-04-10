@@ -18,6 +18,8 @@
 
 > 🎙️ So far you've been staging files one at a time. That works, but when you have a project with dozens of files organized into directories, you need faster tools. Here's your toolkit — staging by file, by directory, by pattern, and even unstaging when you change your mind.
 
+![Advanced staging toolkit](../images/module-04/staging-toolkit-hero.png)
+
 | Command | What It Does |
 |---------|-------------|
 | `git add <file>` | Stage one file |
@@ -117,6 +119,8 @@ All files are back to untracked. Nothing was lost.
 
 > 🎙️ Let's talk about commit messages. A good commit message explains why a change was made, not just what was changed. The first line is like a subject line in an email — short and clear. Think of your commit messages as notes to your future self. Six months from now, "fix bug" tells you nothing, but "Fix off-by-one error in loop boundary check" tells you everything.
 
+![Good vs bad commit messages](../images/module-04/good-vs-bad-commit-messages.png)
+
 A good commit message explains **why** a change was made:
 
 ```
@@ -168,6 +172,8 @@ The one-line format only shows the first line — that's why the first line matt
 > **Feel:** Relieved — typos in commit messages are a quick fix, not permanent mistakes.
 
 > 🎙️ Made a typo in your commit message? The `--amend` flag lets you fix the most recent commit's message. Watch — we'll intentionally misspell "critical" and then fix it. The old commit is replaced with a corrected one.
+
+![Amend replaces the last commit](../images/module-04/amend-eraser.png)
 
 ```bash
 echo "important file" > critical.txt

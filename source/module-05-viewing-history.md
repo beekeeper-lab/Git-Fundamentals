@@ -10,6 +10,8 @@
 
 > 🎙️ One of the most powerful things about Git is that nothing is lost. Every commit you've ever made is permanently recorded, and today you'll learn how to explore that history. You'll search through commits, compare versions, and even find out who wrote each line of a file and when. These are the tools that make version control truly useful.
 
+![Git as a time machine](../images/module-05/time-machine-hero.png)
+
 Every commit in Git is a snapshot with a unique hash, author, date, and message. The history commands let you slice through that record in different ways depending on what you need.
 
 ### Key Commands
@@ -36,6 +38,8 @@ Commit hashes are 40-character hex strings, but you only need the first 7 charac
 > **Feel:** Comfortable choosing the right log format for what you need to know.
 
 > 🎙️ The git log command is your window into the past. By default it shows everything in full detail, but there are several flags that change how the output looks. Let's start by looking at the same history in three different formats so you can see what each one highlights.
+
+![Log format comparison](../images/module-05/log-format-comparison.png)
 
 Use your `git-project` repository.
 
@@ -167,6 +171,8 @@ This shows every change that happened between those two commits. Lines prefixed 
 
 > 🎙️ Looking up specific hashes can be tedious. Git provides a relative notation using the tilde character that lets you refer to commits relative to HEAD. HEAD tilde 1 means one commit before HEAD, HEAD tilde 3 means three commits back, and so on. This is often more convenient than copying hashes.
 
+![HEAD tilde navigation](../images/module-05/head-tilde-navigation.png)
+
 ```bash
 git diff HEAD~3 HEAD
 ```
@@ -217,6 +223,8 @@ Each commit adds one line to the file. Now each line has a different commit as i
 > **Feel:** That you have a powerful forensic tool for understanding who changed what and when.
 
 > 🎙️ Now that our file has lines from three different commits, git blame can show us exactly which commit is responsible for each line. It annotates every line with the commit hash, author, date, and the line content. On a team, this is invaluable for understanding who wrote what and when.
+
+![Git blame as detective work](../images/module-05/git-blame-detective.png)
 
 ```bash
 git blame history.txt

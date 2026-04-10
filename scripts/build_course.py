@@ -419,29 +419,42 @@ def generate_quiz_html(module_num, module_slug):
 
     html = f'<h2 id="quiz">Knowledge Check: {title}</h2>\n'
     html += '<div class="quiz-container">\n'
+    html += f'<p class="quiz-meta">{total} questions &middot; {passing} to pass &middot; 45 seconds per question</p>\n'
+
+    # Status bar
+    html += '<div class="quiz-status-bar">\n'
+    html += '  <span id="quizStatusScore">Score: 0 / 0</span>\n'
+    html += '  <span id="quizStatusProgress">0 of ' + str(total) + ' answered</span>\n'
+    html += '  <span class="quiz-timer" id="quizTimer">45s</span>\n'
+    html += '</div>\n'
+
+    # Progress bar
+    html += '<div class="quiz-progress-track"><div class="quiz-progress-fill" id="quizProgressFill" style="width:0%"></div></div>\n'
+
     html += f'<script type="application/json" id="quizData">{{"moduleSlug":"{module_slug}","passingScore":{passing},"totalQuestions":{total}}}</script>\n'
-    html += '<form id="quizForm">\n'
+    html += '<div id="quizForm">\n'
 
     for q in questions:
         qid = q["id"]
         answer = q["answer"]
-        html += f'<div class="quiz-question" data-answer="{answer}">\n'
+        html += f'<div class="quiz-question" data-answer="{answer}" style="display:none">\n'
         html += f'  <div class="quiz-question-number">Question {qid}</div>\n'
         html += f'  <div class="quiz-question-text">{q["question"]}</div>\n'
         html += '  <ul class="quiz-options">\n'
         for opt in q["options"]:
             html += f'    <li><label><input type="radio" name="q{qid}" value="{opt}"> {opt}</label></li>\n'
         html += '  </ul>\n'
-        html += '  <div class="quiz-feedback"></div>\n'
+        html += '  <div class="quiz-feedback-text"></div>\n'
         html += '</div>\n'
 
-    html += '</form>\n'
-    html += '<button type="button" id="quizSubmitBtn" class="quiz-submit-btn">Submit Answers</button>\n'
+    html += '</div>\n'
+    html += '<button type="button" class="quiz-action-btn" id="quizActionBtn" disabled>Submit Answer</button>\n'
     html += '<div id="quizResults" class="quiz-results">\n'
     html += '  <div class="quiz-score" id="quizScore"></div>\n'
+    html += '  <div class="quiz-pct" id="quizScorePct"></div>\n'
     html += '  <div class="quiz-label" id="quizLabel"></div>\n'
     html += '  <div class="quiz-detail" id="quizDetail"></div>\n'
-    html += '  <button type="button" id="quizRetryBtn" class="quiz-retry-btn">Try Again</button>\n'
+    html += '  <button type="button" id="quizRetryBtn" class="quiz-retry-btn">Retake Quiz</button>\n'
     html += '</div>\n'
     html += '</div>\n'
 
