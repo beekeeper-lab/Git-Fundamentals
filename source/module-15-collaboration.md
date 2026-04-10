@@ -20,6 +20,8 @@
 
 > 🎙️ Teams use different Git workflows depending on their size and needs. The three most common are the feature branch workflow (used by most teams), Gitflow (for larger projects with formal releases), and the forking workflow (used by open source). Let's look at each one before we start practicing.
 
+![Three collaboration workflows](../images/module-15/three-workflows-hero.png)
+
 Teams use different Git workflows depending on their size and needs:
 
 ### 1. Feature Branch Workflow (Most Common)
@@ -27,6 +29,8 @@ Teams use different Git workflows depending on their size and needs:
 Everyone works on `main`. For each new feature or bugfix, create a short-lived branch. Code gets to main via pull requests. Branches are deleted after merging.
 
 ### 2. Gitflow Workflow
+
+![Gitflow branch structure](../images/module-15/gitflow-branch-structure.png)
 
 Uses dedicated branches for releases, hotfixes, and development:
 - `main` -- Production releases only
@@ -50,6 +54,8 @@ Original repo (upstream) ← PR ← Your fork (origin)
 > **Feel:** That the workflow is visual and intuitive, not abstract.
 
 > 🎙️ The feature branch workflow is the one you'll use most. The diagram below shows how two features are developed in parallel and merged into main one at a time. Main stays stable because all work happens on branches, and code only enters main through pull requests.
+
+![Feature branch workflow](../images/module-15/feature-branch-workflow-diagram.png)
 
 ```
 main:      A --- B --- M1 --- M2 --- M3
@@ -235,6 +241,8 @@ cd Spoon-Knife
 
 > 🎙️ The key to the forking workflow is having two remotes: origin (your fork, which you can push to) and upstream (the original repository, which you pull from). Adding the upstream remote lets you fetch the latest changes from the original project and keep your fork up to date.
 
+![Origin, upstream, and local](../images/module-15/forking-workflow.png)
+
 ```bash
 git remote add upstream https://github.com/octocat/Spoon-Knife.git
 git remote -v
@@ -307,6 +315,8 @@ git log --oneline -5
 > **Feel:** That these habits are simple, memorable, and immediately applicable.
 
 > 🎙️ Here are the professional habits that tie everything together. These aren't just Git tips -- they're team collaboration skills that will make you a better colleague on any project. Small commits, good names, clean merges, and no leftover branches.
+
+![Your complete Git toolkit](../images/module-15/course-completion-toolkit.png)
 
 - `git log main..HEAD` shows commits on your branch that aren't on main
 - `git diff main...HEAD --stat` shows a summary of all changes vs. main
