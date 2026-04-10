@@ -184,6 +184,8 @@ Tags appear in the log next to their commits.
 
 > 🎙️ You can check out a tag to look at the code as it existed at that point in time. But here's the catch -- it puts you in detached HEAD state. That means you're not on any branch, just viewing a snapshot. Look around all you want, but switch back to a branch when you're done.
 
+![Detached HEAD state explained](../images/module-14/detached-head-warning.png)
+
 ```bash
 git checkout v1.0.0
 ```
