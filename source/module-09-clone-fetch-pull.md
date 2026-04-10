@@ -10,6 +10,8 @@
 
 > 🎙️ Yesterday you pushed your repository to GitHub. Today you'll learn the other side of remote work -- cloning, fetching, and pulling. You'll simulate what collaboration actually looks like by cloning your own repo to a second location and passing changes back and forth. This is the same workflow you'd use with a teammate, just both sides are you.
 
+![Two developers sharing one remote](../images/module-09/two-developers-hero.png)
+
 > 🔄 **Where this fits:** Day 8 covered pushing to a remote. Today covers the receiving side -- cloning a repo, fetching updates, and pulling them in. Tomorrow (Day 10) brings it all together with the feature branch workflow that professional teams actually use.
 
 ## Clone vs Fork vs Fetch vs Pull
@@ -19,6 +21,8 @@
 > **Feel:** That the vocabulary is no longer confusing and you can use each term correctly.
 
 > 🎙️ Before we dive in, let's get the vocabulary straight. These four terms come up constantly in Git conversations and it's easy to mix them up. Clone and fork are about getting a copy of a repo. Fetch and pull are about updating a copy you already have. The key difference between fetch and pull is whether the changes get merged automatically.
+
+![Fetch downloads, pull merges](../images/module-09/fetch-vs-pull.png)
 
 ### Clone vs. Fork
 
@@ -207,6 +211,8 @@ The change from "Developer B" is now in the original repo. This is the basic col
 > **Feel:** That Git ties everyone's work together into a coherent, traceable history.
 
 > 🎙️ From either directory, the git log now shows commits from both developers interleaved in a single history. This is the whole point of Git as a collaboration tool -- everyone contributes to a shared history through a common remote, and the graph shows exactly how all the pieces fit together.
+
+![Push-pull collaboration cycle](../images/module-09/collaboration-cycle.png)
 
 From either directory, view the unified history:
 

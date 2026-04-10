@@ -10,6 +10,8 @@
 
 > 🎙️ Commits have hashes like a3f7b2c -- useful for Git, but not great for humans. When you ship version 1.0 of your software, you want to mark that exact commit with a meaningful name you can find later. That's what tags are for.
 
+![Tags as milestones on a project timeline](../images/module-14/milestones-timeline-hero.png)
+
 > 🔄 **Where this fits:** You've been making commits and merging branches for two weeks. Tags add a naming layer on top of commits -- they're how teams mark releases, milestones, and stable points in the history.
 
 ## What Are Tags?
@@ -36,6 +38,8 @@ Annotated tags are preferred because they contain metadata about who created the
 > **Feel:** Able to choose the right version number for any type of change.
 
 > 🎙️ Before we start creating tags, let's talk about how to name them. Most projects follow semantic versioning -- a three-number system that communicates exactly what kind of changes happened. Understanding this convention will make your tags meaningful to anyone who reads them.
+
+![Semantic versioning MAJOR.MINOR.PATCH](../images/module-14/semantic-versioning.png)
 
 Most projects follow the `MAJOR.MINOR.PATCH` convention:
 
@@ -112,6 +116,8 @@ git tag -a v1.0.0 -m "Version 1.0.0: initial release" HEAD~3
 > **Feel:** Clear on when a lightweight tag is acceptable (quick local bookmarks, not releases).
 
 > 🎙️ For comparison, let's also create a lightweight tag. No dash-a, no dash-m -- just a name. Lightweight tags are quick and simple, but they don't store any metadata. You'll see the difference when we inspect them in a moment.
+
+![Annotated vs lightweight tags](../images/module-14/annotated-vs-lightweight.png)
 
 ```bash
 git tag beta-test

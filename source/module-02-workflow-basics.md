@@ -18,6 +18,8 @@
 
 > 🎙️ Everything in Git flows through three stages: the working directory (where you edit files), the staging area (where you prepare a commit), and the repository (where commits are stored permanently). Understanding this flow is the key to understanding Git.
 
+![The three stages of Git](../images/module-02/three-stages-hero.png)
+
 The core Git workflow has three stages:
 
 ```
@@ -67,6 +69,8 @@ All three files should show as **untracked** in red.
 > **Feel:** The power of selective staging — you decide what goes together.
 
 > 🎙️ Here's where the staging area shines. Instead of committing all three files at once, we're going to stage just two of them. This gives you control over what goes into each commit — a habit that makes your project history clean and meaningful.
+
+![Selective staging of files](../images/module-02/selective-staging.png)
 
 ```bash
 git add file1.txt file2.txt
@@ -134,6 +138,8 @@ Lines starting with `+` are additions, `-` are deletions.
 > **Feel:** Sharp understanding of the difference between unstaged and staged — a key Git distinction.
 
 > 🎙️ Here's a subtle but important detail. Once you stage a file, `git diff` shows nothing — because there are no more unstaged changes. To see what's staged and about to be committed, you need `git diff --staged`. Understanding this distinction is key.
+
+![Unstaged vs staged diffs](../images/module-02/diff-unstaged-vs-staged.png)
 
 ```bash
 git add file1.txt

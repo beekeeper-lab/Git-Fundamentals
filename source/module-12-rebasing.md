@@ -10,6 +10,8 @@
 
 > 🎙️ Yesterday you learned how to resolve merge conflicts. Today you'll learn a different way to integrate changes -- rebasing. Where merging preserves the full branching history, rebasing replays your commits on top of another branch, creating a clean, linear timeline. Both are valid tools, and knowing when to use each one is a key professional skill.
 
+![Rebase replays commits onto a new base](../images/module-12/rewriting-timeline-hero.png)
+
 > 🔄 **Where this fits:** You've been merging branches since Day 7. Rebasing gives you a second integration strategy. Many teams use rebase to keep feature branches up to date and merge for the final integration into main.
 
 ## Merge vs. Rebase
@@ -19,6 +21,8 @@
 > **Feel:** Clear mental models for both approaches -- no confusion about which does what.
 
 > 🎙️ Before we touch the keyboard, let's understand what makes rebase different from merge. Both integrate changes from one branch into another, but they do it in fundamentally different ways. Merge preserves history as it happened; rebase rewrites history to be linear.
+
+![Merge vs rebase side by side](../images/module-12/merge-vs-rebase-comparison.png)
 
 **Merge** preserves the full branching history:
 
@@ -49,6 +53,8 @@ The commits `C'` and `D'` have different hashes than `C` and `D` because they no
 > **Feel:** A healthy respect for the rule -- not fear, but understanding of why it exists.
 
 > 🎙️ This is the most important rule in all of rebasing, and you need to internalize it before we go any further. Never rebase commits that have been pushed to a shared remote. If other people have those commits, rewriting them causes real problems. Rebase is for local cleanup only.
+
+![Never rebase shared commits](../images/module-12/golden-rule-warning.png)
 
 > **Never rebase commits that have been pushed to a shared remote.** Rebasing rewrites history, which causes problems for anyone else who has those commits.
 
@@ -138,6 +144,8 @@ After the rebase:
 > **Feel:** Appreciation for the cleanest possible integration strategy.
 
 > 🎙️ Since feature-x is now directly ahead of main with no divergence, merging is a simple fast-forward. Git just moves the main pointer up to match feature-x. No merge commit needed. This is the cleanest possible integration.
+
+![Rebase then fast-forward merge](../images/module-12/rebase-then-merge-flow.png)
 
 ```bash
 git switch main

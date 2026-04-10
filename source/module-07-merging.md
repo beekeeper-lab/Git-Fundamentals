@@ -10,6 +10,8 @@
 
 > 🎙️ Yesterday you learned to create branches and work on them independently. But branches aren't useful if you can't bring the work back together. That's what merging does -- it combines the changes from one branch into another. Today you'll learn the two types of merges Git performs and what determines which one happens.
 
+![Merging branches together](../images/module-07/merging-hero.png)
+
 > 🔄 **Where this fits:** Branching (Day 6) and merging (today) are two halves of the same workflow. You branch to isolate work, you merge to integrate it. Starting from Day 8, you'll push these branches to GitHub and merge them through pull requests.
 
 When you're done working on a branch, you **merge** it back into another branch (usually `main`). Git has two types of merges:
@@ -40,6 +42,8 @@ After:   main:    A --- B --- E --- M  (M is the merge commit)
                            \       /
          feature:           C --- D
 ```
+
+![Fast-forward vs three-way merge](../images/module-07/fast-forward-vs-three-way.png)
 
 ## Set Up a Fresh Repo
 
@@ -161,6 +165,8 @@ You should see two branches diverging -- `main` and `add-about` each have commit
 > **Feel:** That three-way merges are automatic and reliable when there are no conflicting changes.
 
 > 🎙️ When you run git merge now, Git looks at three things: the common ancestor, the tip of main, and the tip of add-about. It figures out what changed on each side and combines them into a new merge commit. Your editor will open for the merge commit message -- just accept the default and save.
+
+![Merge commit diamond pattern](../images/module-07/merge-commit-diamond.png)
 
 ```bash
 git merge add-about

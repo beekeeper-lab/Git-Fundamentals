@@ -18,6 +18,8 @@
 
 > 🎙️ Imagine writing an essay and saving it as `essay_v1.doc`, `essay_v2.doc`, `essay_final.doc`, `essay_final_FINAL.doc`. That's version control the hard way. Git does the same thing — but automatically, efficiently, and without cluttering your folder with duplicate files.
 
+![Version control chaos vs Git](../images/module-01/version-control-chaos-hero.png)
+
 **Git** is a distributed version control system. It tracks changes to files over time, letting you revisit any previous version, collaborate with others, and work on multiple features simultaneously without breaking things.
 
 ## Key Concepts
@@ -27,6 +29,8 @@
 > **Feel:** Grounded in the vocabulary so nothing in today's exercises feels mysterious.
 
 > 🎙️ Before you touch the terminal, let's build a mental model. There are five terms you'll see over and over again in Git. Don't worry about memorizing them now — you'll understand them deeply by the end of today just by using them.
+
+![Five core Git concepts](../images/module-01/five-core-concepts.png)
 
 - **Repository (repo):** A project tracked by Git — it contains your files plus a hidden `.git` folder with the entire history
 - **Commit:** A snapshot of your project at a point in time, with a message describing what changed
@@ -200,6 +204,8 @@ The file shows as **untracked** — Git sees it exists but isn't tracking it yet
 
 > 🎙️ This is the moment — your first commit. You're going to stage the file with `git add`, then commit it with `git commit`. Pay close attention to how `git status` changes at each step, because that's the edit-stage-commit workflow in action.
 
+![Edit, stage, commit flow](../images/module-01/edit-stage-commit-flow.png)
+
 ```bash
 git add README.md
 git status
@@ -219,6 +225,8 @@ Pay attention to how `git status` changes at each step:
 > **Feel:** Proud — you just made history, literally. Your first commit is in the books.
 
 > 🎙️ You just made history — literally. Let's look at the log to see your commit. You'll see the commit hash (a long string of letters and numbers), your name and email, the date, and the message you wrote. Every commit you ever make will have this same structure.
+
+![First commit celebration](../images/module-01/first-commit-celebration.png)
 
 ```bash
 git log

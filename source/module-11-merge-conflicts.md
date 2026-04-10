@@ -10,6 +10,8 @@
 
 > 🎙️ Merge conflicts sound scary, but they're actually one of the most normal things in Git. A conflict just means two people -- or two branches -- changed the same line in the same file, and Git needs you to decide which version wins. Once you've resolved a few, it becomes second nature.
 
+![Two writers editing the same whiteboard line](../images/module-11/two-writers-whiteboard-hero.png)
+
 > 🔄 **Where this fits:** You already know how to branch and merge from Days 6 and 7. Now you'll handle the cases where Git can't automatically combine changes -- the skill that separates beginners from confident Git users.
 
 ## What Is a Conflict?
@@ -29,6 +31,8 @@ A **merge conflict** happens when two branches modify the **same lines** of the 
 > **Feel:** Able to parse conflict markers at a glance without confusion.
 
 > 🎙️ When Git hits a conflict, it marks the file with special lines that show you both versions side by side. Learning to read these markers is the key skill here. Once you can parse them at a glance, resolving conflicts becomes mechanical.
+
+![Anatomy of conflict markers](../images/module-11/conflict-markers-anatomy.png)
 
 When a conflict occurs, Git marks the file with **conflict markers**:
 
@@ -154,6 +158,8 @@ The key rule: **remove all `<<<<<<<`, `=======`, and `>>>>>>>` lines** and leave
 
 > 🎙️ After editing the file, you need to tell Git you're done resolving. Stage the file with git add, then commit. This merge commit records that you combined both branches and made a decision about the conflict. Check the graph afterward to see both branches joining together.
 
+![Three steps: edit, add, commit](../images/module-11/three-step-resolution.png)
+
 ```bash
 git add shared.txt
 git commit -m "Merge branch-a: resolve conflict in shared.txt"
@@ -225,6 +231,8 @@ Every conflicting file must be resolved and staged before you can complete the m
 > **Feel:** Relief that you always have a safe escape hatch if a merge gets overwhelming.
 
 > 🎙️ Sometimes you start a merge, see the conflicts, and realize you're not ready to deal with them yet. Maybe you need to think about the right approach, or maybe you merged the wrong branch. No problem -- git merge dash dash abort takes you right back to where you started. Nothing is lost.
+
+![Merge abort as a safety net](../images/module-11/merge-abort-safety-net.png)
 
 ```bash
 git switch -c branch-c
